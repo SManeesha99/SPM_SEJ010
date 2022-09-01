@@ -1,11 +1,13 @@
 import React from 'react';
 import './createReview.css';
-import Video from "../htmlCss.mp4"
+import Video from "../htmlCss.mp4";
+import Header from "../Header/Header";
 
 export default function CreateReview() {
   return (
 
     <div >
+      <Header/>
     <div className='create'>
         <div className='courseDetails'>
             <h1>Course Title</h1>
@@ -29,6 +31,7 @@ export default function CreateReview() {
         <div className='videoContainer'>
             
         </div>
+        
         
     </div>
 
