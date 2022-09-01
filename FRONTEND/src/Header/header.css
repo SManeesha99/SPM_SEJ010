@@ -1,0 +1,36 @@
+.navbar{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.rightheder{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchbtn{
+    outline: solid 1px #495C83;
+}
+
+.searchbtn:hover{
+    background: #495C83;
+    outline: none;
+    color: white;
+}
+
+.profilearea{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #495C83;
+}
+
+
+.cart{
+    font-size: 30px;
+}
+
+.rightheder ul li{
+    margin-right: 10px;
+}
+
