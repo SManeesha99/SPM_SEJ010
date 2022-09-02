@@ -1,0 +1,46 @@
+.registerArea{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(241, 242, 243);
+    font-family: 'Poppins',sans-serif;
+}
+
+.regArea{
+    width: 500px;
+    height: auto;
+    border: 1px solid rgba(137, 137, 137, 0.689);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 100px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+    padding: 30px 10px;
+}
+
+.regArea h2{
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #002B5B;
+}
+
+.regui label{
+    text-align: left;
+    width: 50%;
+    position: relative;
+    left: -70px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.regui input{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+}
+
+.regArea button{
+    margin-top: 20px;
+}
