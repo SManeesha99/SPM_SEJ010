@@ -13,10 +13,25 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+
 .courseDetails{
    padding-right: 10%;
     text-align: left;
     color: white;
+}
+
+.courseDetails .viewreview{
+    display: block;
+    color: rgb(74, 202, 253);
+    text-decoration: none;
+}
+
+
+
+.courseDetails .viewreview:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .courseDetails button{
@@ -44,6 +59,8 @@
     color: white;
 }
 
+
+
 .videoContainer{
     background-color: #ffffff;
     margin: 10px;
@@ -64,7 +81,7 @@
 
 .recentReview{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     padding: 20px 10%;
     font-family: 'Poppins', sans-serif;
 }
@@ -73,14 +90,28 @@
     text-align: left;
 }
 
+
+.recentReview h2 span{
+    font-size: 50px;
+    color: #037ad6;
+}
+
 .reviewArea{
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     padding: 20px;
     background-color: white;
     border-radius: 5px;
-    overflow: hidden;
+    overflow-y: scroll;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
 }
+
+.reviewArea::-webkit-scrollbar {
+    display: none;
+}
+
 
 .item{
     width: 100%;
@@ -92,9 +123,14 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     text-align: left;
 }
+
+.item p{
+    width: 95%;
+}
 .stproimg{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #0cf0b3;
 }
+

@@ -16,6 +16,7 @@ export default function AddCartCourse() {
 
             <button className='enrollbtn'>Enroll Now $12.49(USD)</button>
             <button className='addcrtbtn'>Add to Cart $12.49(USD)</button>
+            <a  class="viewreview" href="#review">View Review..</a>
 
         </div>
         <div className='courseIntro'>
@@ -23,13 +24,33 @@ export default function AddCartCourse() {
         </div>
     </div>
 
-    <section id='review'>
+    <section id="review">
 
     <div className='recentReview'>
 
-        <h2>Review</h2>
+        <h2><span>R</span>eview</h2>
 
         <div className='reviewArea'>
+            <div class='item row'>
+                <div class='col-sm-2 stproimg'>
+
+                </div>
+                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
+
+            </div>
+
+            <div class='item row'>
+                <div class='col-sm-2 stproimg'>
+
+                </div>
+                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
+
+            </div>
+
             <div class='item row'>
                 <div class='col-sm-2 stproimg'>
 
