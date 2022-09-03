@@ -4,6 +4,7 @@ import StudentProfile from './Student Profile/StudentProfile';
 import Register from './LoginRegister/Register';
 import Login from './LoginRegister/Login';
 import EditProfile from './Edit Profile/EditProfile';
+import AddCartCourse from './Add cart Course/AddCartCourse';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <StudentProfile/> */}
       {/* <Register/> */}
       {/* <Login/> */}
-      <EditProfile/>
+      {/* <EditProfile/> */}
+      <AddCartCourse/>
       
     </div>
   );
