@@ -14,20 +14,39 @@ export default function () {
                 <div className='regui'>
                     <div className='name'>
                         <label>User Name</label>
-                        <input placeholder='Enter Your User Name'></input>
+                        <input class="form-control" placeholder='Enter Your User Name'></input>
                     </div>
                     <div className='name'>
                         <label>Mobile Number</label>
-                        <input placeholder='Enter Your Mobile Number'></input>
+                        <input class="form-control" placeholder='Enter Your Mobile Number'></input>
                     </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Instrutor or Student</label>
+                        <select class="form-control selectstNin" id="exampleFormControlSelect1">
+                        <option>Instrutor</option>
+                        <option>Student</option>
+                        </select>
+                    </div>
+
                     <div className='name'>
                         <label>Email</label>
-                        <input placeholder='Enter Your Email'></input>
+                        <input class="form-control" placeholder='Enter Your Email'></input>
                     </div>
                     <div className='name'>
                         <label>Password</label>
-                        <input placeholder='Enter Your Password'></input>
+                        <input class="form-control" placeholder='Enter Your Password'></input>
                     </div>
+
+                    <div class="form-group chk">
+                        <div class="form-check">
+                        <input class="form-check-input checkbox" type="checkbox" id="gridCheck"/>
+                        <p class="chkA">
+                        I agree that I have read and accepted the Terms of Use and Privacy Policy.
+                        </p>
+                        </div>
+                    </div>
+
                 </div>
 
                 <button class='btn btn-primary'>Register</button>

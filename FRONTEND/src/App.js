@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       {/* <CreateReview/> */}
       {/* <StudentProfile/> */}
-      {/* <Register/> */}
+      <Register/>
       {/* <Login/> */}
       {/* <EditProfile/> */}
-      <AddCartCourse/>
+      {/* <AddCartCourse/> */}
       
     </div>
   );

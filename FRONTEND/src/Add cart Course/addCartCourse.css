@@ -5,10 +5,9 @@
     padding-bottom: 100px;
     padding-left: 10%;
     padding-right: 10%;
-    background: #4568DC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: grid;
+    background: #4568DC; 
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  
+    background: linear-gradient(to right, #B06AB3, #4568DC);
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     font-family: 'Poppins', sans-serif;
 }
@@ -23,14 +22,15 @@
 
 .courseDetails .viewreview{
     display: block;
-    color: rgb(74, 202, 253);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 
 
 .courseDetails .viewreview:hover{
-    color: rgb(255, 255, 255);
+    transition: 0.3s;
+    font-size: 20px;
     text-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 

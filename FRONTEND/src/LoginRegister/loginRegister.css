@@ -11,8 +11,7 @@
     border: 1px solid rgba(137, 137, 137, 0.689);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
-    position: relative;
-    top: 100px;
+    margin: 70px auto;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
     padding: 30px 10px;
 }
@@ -31,7 +30,7 @@
     font-size: 16px;
     margin-bottom: 5px;
 }
-.regui input{
+.regui input {
     width: 80%;
     height: 40px;
     border-radius: 5px;
@@ -41,6 +40,34 @@
     padding: 5px 10px;
 }
 
+.selectstNin{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+}
+
+
+.checkbox{
+    width: 10px !important;
+    height: 20px !important;
+}
+
 .regArea button{
     margin-top: 20px;
 }
+
+.chk{
+    margin: 0 10%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.chkA{
+    margin-left: 10px;
+}
+
+
