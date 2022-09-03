@@ -1,0 +1,24 @@
+.editproArea{
+    width: 100%;
+    height: auto;
+    padding: 70px 10% 50px 10%;
+    font-family: 'Poppins',sans-serif;
+}
+
+.proimg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin: 20px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.uploadimg{
+    width: auto;
+    margin: 0 auto;
+}
+
+.editproArea h6{
+    text-align: left;
+}

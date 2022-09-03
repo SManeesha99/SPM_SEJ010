@@ -3,6 +3,7 @@ import CreateReview from './Create Review/CreateReview';
 import StudentProfile from './Student Profile/StudentProfile';
 import Register from './LoginRegister/Register';
 import Login from './LoginRegister/Login';
+import EditProfile from './Edit Profile/EditProfile';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <CreateReview/> */}
       {/* <StudentProfile/> */}
       {/* <Register/> */}
-      <Login/>
+      {/* <Login/> */}
+      <EditProfile/>
       
     </div>
   );
