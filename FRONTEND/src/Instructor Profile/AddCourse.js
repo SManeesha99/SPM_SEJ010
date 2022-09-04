@@ -10,15 +10,15 @@ export default function AddCourse() {
         <div className='addcourseArea'>
             <h2>Add Course</h2>
             <div className='addcourse'>
-                    <div className='name'>
+                    <div className='namee'>
                         <label>Title</label>
                         <input class="form-control" placeholder='Enter Title'></input>
                     </div>
-                    <div className='name'>
+                    <div className='namee'>
                         <label>Description</label>
                         <textarea class="form-control" id="" name="" required placeholder="Enter Description" ></textarea>
                     </div>
-                    <div className='name'>
+                    <div className='namee'>
                         <label>Course Video</label>
                             <div className='courseVideo'>
                                 <img src="select.png" alt="" class="vimage"></img>
@@ -34,7 +34,7 @@ export default function AddCourse() {
                         
                         </form>
                     
-                     <div className='name'>
+                     <div className='namee'>
                         <label>Thumbnail</label>
                             <div className='thumbnail'>
                             <img src="select.png" alt="" class="timage"></img>

@@ -13,14 +13,10 @@ function App() {
       {/* <CreateReview/> */}
       {/* <StudentProfile/> */}
       {/* <Register/> */}
-
-      {/* <Login/> */}
-
       <Login/>
-
       {/* <EditProfile/> */}
       {/* <AddCartCourse/> */}
-      <AddCourse/>
+      {/* <AddCourse/> */}
       
     </div>
   );
