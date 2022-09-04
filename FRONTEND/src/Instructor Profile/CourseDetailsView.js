@@ -1,15 +1,15 @@
 import React from 'react';
-import './addCourse.css';
+import './courseDetailsView.css';
 import Header from '../Header/Header';
 
-export default function AddCourse() {
+export default function CourseDetailsView() {
   return (
     <div>
         <Header/>
 
-        <div className='addcourseArea'>
-            <h2>Add Course</h2>
-            <div className='addcourse'>
+        <div className='viewcourseArea'>
+            <h2>Course Details</h2>
+            <div className='viewcourse'>
 
                     <div className='namee'>
                         <label>Title</label>
@@ -28,15 +28,6 @@ export default function AddCourse() {
                             </div>
                     </div>
                     
-                        <form className="form">
-                        
-                            <lable for="form_input" class="form_lable">
-                                <input type="file" class="form_input" id="form_input"/>
-                            <span class="form_text">Browse</span>
-                            </lable>
-                        
-                        </form>
-                    
                      <div className='namee'>
                         <label>Thumbnail</label>
                             <div className='thumbnail'>
@@ -44,18 +35,20 @@ export default function AddCourse() {
                             </div>
                     </div>
                         
-                    <form className="form">
-                        
-                        <lable for="form_input" class="form_lable">
-                            <input type="file" class="form_input" id="form_input"/>
-                        <span class="form_text">Browse</span>
-                        </lable>
-                    
-                    </form>
 
                 </div>
 
-                <button class='btn btn-primary'>Add Course</button>
+                <div className='namee'>
+
+                <div className='cUpdate'>
+                    <button class='btn btn-primary'>Update Course</button>
+                </div>
+
+                <div className='cDelete'>
+                    <button class='btn btn-primary'>Delete Course</button>
+                </div>
+                
+                </div>
 
         </div>
  
