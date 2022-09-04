@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       {/* <CreateReview/> */}
       {/* <StudentProfile/> */}
-      <Register/>
-      {/* <Login/> */}
+      {/* <Register/> */}
+      <Login/>
       {/* <EditProfile/> */}
       {/* <AddCartCourse/> */}
       
