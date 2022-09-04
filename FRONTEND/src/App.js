@@ -5,16 +5,18 @@ import Register from './LoginRegister/Register';
 import Login from './LoginRegister/Login';
 import EditProfile from './Edit Profile/EditProfile';
 import AddCartCourse from './Add cart Course/AddCartCourse';
+import AddCourse from './Instructor Profile/AddCourse';
 
 function App() {
   return (
     <div className="App">
       {/* <CreateReview/> */}
       {/* <StudentProfile/> */}
-      <Register/>
+      {/* <Register/> */}
       {/* <Login/> */}
       {/* <EditProfile/> */}
       {/* <AddCartCourse/> */}
+      <AddCourse/>
       
     </div>
   );
