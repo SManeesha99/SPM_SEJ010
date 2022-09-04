@@ -7,6 +7,7 @@ import EditProfile from './Edit Profile/EditProfile';
 import AddCartCourse from './Add cart Course/AddCartCourse';
 import AddCourse from './Instructor Profile/AddCourse';
 import CourseDetailsView from './Instructor Profile/CourseDetailsView';
+import UpdateCourseDetails from './Instructor Profile/UpdateCourseDetails';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <EditProfile/> */}
       {/* <AddCartCourse/> */}
       {/* <AddCourse/> */}
-      <CourseDetailsView/>
+      {/* <CourseDetailsView/> */}
+      <UpdateCourseDetails/>
       
     </div>
   );
