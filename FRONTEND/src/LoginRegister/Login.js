@@ -14,11 +14,11 @@ export default function Login() {
                     
                     <div className='name'>
                         <label>Email</label>
-                        <input placeholder='Enter Your Email'></input>
+                        <input class="form-control" placeholder='Enter Your Email'></input>
                     </div>
                     <div className='name'>
                         <label>Password</label>
-                        <input placeholder='Enter Your Password'></input>
+                        <input class="form-control" placeholder='Enter Your Password'></input>
                     </div>
                 </div>
 
