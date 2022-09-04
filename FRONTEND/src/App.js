@@ -5,6 +5,7 @@ import Register from './LoginRegister/Register';
 import Login from './LoginRegister/Login';
 import EditProfile from './Edit Profile/EditProfile';
 import AddCartCourse from './Add cart Course/AddCartCourse';
+import AddCourse from './Instructor Profile/AddCourse';
 
 function App() {
   return (
@@ -12,9 +13,14 @@ function App() {
       {/* <CreateReview/> */}
       {/* <StudentProfile/> */}
       {/* <Register/> */}
+
+      {/* <Login/> */}
+
       <Login/>
+
       {/* <EditProfile/> */}
       {/* <AddCartCourse/> */}
+      <AddCourse/>
       
     </div>
   );
