@@ -1,0 +1,139 @@
+.viewcourseArea{
+    width: 96%;
+    height: 1120px;
+    border: 1px solid rgba(137, 137, 137, 0.689);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 95px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+    padding: 30px 10px;
+}
+
+.viewcourseArea h2{
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #002B5B;
+}
+
+.viewcourse label{
+    text-align: left;
+    width: 50%;
+    position: relative;
+    left: 350px;
+    height: 0px;
+    font-size: 18px; 
+    margin-bottom:70px;
+}
+.viewcourse input {
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    margin: 0px 330px 0px 0px;
+    padding: 5px 10px;  
+}
+
+.viewcourse textarea {
+    width: 50%;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    margin: 0px 330px 30px 0px;
+    padding: 5px 10px;  
+}
+
+.courseVideo{
+    width: 500px;
+    height: 250px;
+    background-color: rgb(235, 225, 225);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-right: 499px;
+    margin-bottom: 20px;
+
+}
+
+.thumbnail{
+    width: 500px;
+    height: 250px;
+    background-color: rgb(235, 225, 225);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-right: 499px;
+    margin-bottom: 20px;
+}
+
+.uploadimg{
+    width: auto;
+    margin: 0 auto;
+}
+
+.viewcourseArea button{
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 90px;
+    padding: 12px 18px;
+}
+
+.cUpdate button{
+    margin-left: 550px;
+}
+
+.cDelete button{
+    background: rgb(245, 20, 32);
+}
+
+.cDelete button:hover {
+    background: rgb(156, 14, 21);
+}
+
+.namee{
+    display: flex;
+}
+
+.form{
+    position: relative;
+}
+
+.form_input{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.form_lable{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(245, 20, 32);
+    padding: 7px 30px;
+    border-radius: 7px;
+    cursor:pointer;
+    transition: .3s;
+    margin-bottom: 30px;
+    margin-right: 220px;
+}
+
+.form_text{
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.form_lable:hover {
+    background: rgb(156, 14, 21);
+}
+
+.vimage{
+    width:60%;
+    padding: 20px 10px;
+    opacity: 30%;
+}
+
+.timage{
+    width:60%;
+    padding: 20px 10px;
+    opacity: 30%;
+}
+
