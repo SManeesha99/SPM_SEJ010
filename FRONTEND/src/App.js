@@ -14,13 +14,13 @@ function App() {
     <div className="App">
       {/* <CreateReview/> */}
       {/* <StudentProfile/> */}
-      {/* <Register/> */}
+      <Register/>
       {/* <Login/> */}
       {/* <EditProfile/> */}
       {/* <AddCartCourse/> */}
       {/* <AddCourse/> */}
       {/* <CourseDetailsView/> */}
-      <UpdateCourseDetails/>
+      {/* <UpdateCourseDetails/> */}
       
     </div>
   );
