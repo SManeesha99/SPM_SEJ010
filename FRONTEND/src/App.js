@@ -8,19 +8,21 @@ import AddCartCourse from './Add cart Course/AddCartCourse';
 import AddCourse from './Instructor Profile/AddCourse';
 import CourseDetailsView from './Instructor Profile/CourseDetailsView';
 import UpdateCourseDetails from './Instructor Profile/UpdateCourseDetails';
+import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
 
 function App() {
   return (
     <div className="App">
       {/* <CreateReview/> */}
       {/* <StudentProfile/> */}
-      <Register/>
+      {/* <Register/> */}
       {/* <Login/> */}
       {/* <EditProfile/> */}
       {/* <AddCartCourse/> */}
       {/* <AddCourse/> */}
       {/* <CourseDetailsView/> */}
       {/* <UpdateCourseDetails/> */}
+      <Instructor_Req_Req/>
       
     </div>
   );
