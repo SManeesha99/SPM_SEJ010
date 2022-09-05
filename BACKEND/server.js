@@ -27,6 +27,9 @@ mongoose.connect(URL,{
     console.log("MongoDB Connected");
 });
 
+const StudentRoutes = require('./routes/StudentRegistration');
+app.use(StudentRoutes);
+
 app.listen(PORT,()=>{
     console.log(`Server is up and running on port ${PORT}`);
 })
