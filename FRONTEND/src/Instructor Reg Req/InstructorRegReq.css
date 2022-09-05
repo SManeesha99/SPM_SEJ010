@@ -33,7 +33,7 @@ body{
 
 .req_list .user_instructor{
     position: relative;
-    background: rgb(1, 7, 69);
+    background: rgba(1, 7, 69, 0.988);
     color: #fff;
     height: 150px;
     display: flex;
@@ -82,13 +82,15 @@ body{
     color: rgb(169, 169, 169);
 }
 
-.navigation{
-    position: relative;
-    width: 175px;
-    height: 98px;
-    display: grid;
-    background: rgb(224, 224, 231);
+/* .navigation{
+    position: relative; */
+    /* display: grid; */
+    /* background: rgb(224, 224, 231);
     border-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
 
-}
+} */
+
+
 
