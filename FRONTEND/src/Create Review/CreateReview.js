@@ -36,6 +36,11 @@ export default function CreateReview() {
     </div>
 
     <div className='addReview'>
+
+    <div class="form-group addReviewarea">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
         
     </div>
 

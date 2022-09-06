@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import {Link} from 'react-router-dom';
 
 export default function notRegHeader() {
   return (
@@ -13,10 +14,10 @@ export default function notRegHeader() {
             <div class="collapse navbar-collapse rightheder" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Login</a>
+                <Link className="nav-link active" aria-current="page" to="/login">Login</Link>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+                <Link className="nav-link active" aria-current="page" to="/">Register</Link>
                 </li>
                 
             </ul>

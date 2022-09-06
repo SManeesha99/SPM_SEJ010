@@ -12,7 +12,7 @@ export default function EditProfile() {
             <div className='proimg'>
 
             </div>
-            <label for="formFileSm" class="form-label">Upload Your Profile Image</label>
+            <center><label for="formFileSm" class="form-label edtprotitle">Upload Your Profile Image</label></center>
             <input class="form-control form-control-sm uploadimg" id="formFileSm" type="file" />
 
             <div className='name'>
@@ -78,7 +78,7 @@ export default function EditProfile() {
             </div>
 
             <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                <center><input class="btn btn-primary btn-lg" type="submit" value="Submit" /></center>
             </div>
 
 
