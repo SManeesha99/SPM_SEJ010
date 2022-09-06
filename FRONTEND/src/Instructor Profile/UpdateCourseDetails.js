@@ -8,7 +8,9 @@ export default function UpdateCourseDetails() {
         <Header/>
 
         <div className='updatecourseArea'>
-            <h2>Update Course</h2>
+
+        <h2><span>U</span>pdate <span>C</span>ourse</h2>
+
             <div className='updatecourse'>
 
                     <div className='namee'>

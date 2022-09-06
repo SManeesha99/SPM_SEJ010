@@ -137,3 +137,13 @@
     opacity: 30%;
 }
 
+.viewcourseArea h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.viewcourseArea h2 span{
+    font-size: 35px;
+    color: #256D85;
+}

@@ -125,3 +125,14 @@
     opacity: 30%;
 }
 
+.updatecourseArea h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.updatecourseArea h2 span{
+    font-size: 35px;
+    color: #256D85;
+}
+
