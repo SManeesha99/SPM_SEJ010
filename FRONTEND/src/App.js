@@ -11,8 +11,9 @@ import UpdateCourseDetails from './Instructor Profile/UpdateCourseDetails';
 
 import AllCoursesView from './Instructor Profile/AllCoursesView';
 import Home from './Home/Home';
-
+import CreateOffer from './Offers/CreateOffer';
 import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
+
 import { Routes,Route } from 'react-router-dom';
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/instructorReqReg' element={<Instructor_Req_Req/>} />
         </Route>
       </Routes>
+
 
 
   );
