@@ -35,6 +35,7 @@ function App() {
           <Route path='/updateCourseDetails' element={<UpdateCourseDetails/>} />
           <Route path='/allCourseView' element={<AllCoursesView/>} />
           <Route path='/instructorReqReg' element={<Instructor_Req_Req/>} />
+          <Route path='/createOffer' element={<CreateOffer/>} />
         </Route>
       </Routes>
 
