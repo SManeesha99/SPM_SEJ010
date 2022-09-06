@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import Header from "../Header/Header";
 import './InstructorRegReq.css';
 import {Helmet} from "react-helmet";
-// import './script.js';
+// import './script.js'; 
 import profile from '../Instructor Reg Req/Profile.png';
 
 class Instructor_Req_Req extends Component{
@@ -14,8 +14,10 @@ class Instructor_Req_Req extends Component{
             <div>
                 <Header/>
                 <body>
-                    <div className='box'>
-                        <h1>Instructor Registration Request</h1>
+                    <div className='boxx'>
+                
+                        <h1><span>I</span>nstructor <span>R</span>egistration <span>R</span>equest</h1>
+                        
                             <div className='req_list'>
                             <div className='user_instructor'>
                                 <div className='imgBx'>
