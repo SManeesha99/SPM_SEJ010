@@ -10,6 +10,7 @@ import CourseDetailsView from './Instructor Profile/CourseDetailsView';
 import UpdateCourseDetails from './Instructor Profile/UpdateCourseDetails';
 
 import AllCoursesView from './Instructor Profile/AllCoursesView';
+import Home from './Home/Home';
 
 import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
 import { Routes,Route } from 'react-router-dom';
@@ -21,7 +22,8 @@ function App() {
     
       <Routes>
         <Route>
-          <Route path='/' element={<Register/>} />
+          <Route path='/' element={<Home/>} />
+          <Route path='/register' element={<Register/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/createReview' element={<CreateReview/>} />
           <Route path='/studentProfile' element={<StudentProfile/>} />
