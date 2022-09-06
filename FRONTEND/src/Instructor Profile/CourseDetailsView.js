@@ -8,7 +8,9 @@ export default function CourseDetailsView() {
         <Header/>
 
         <div className='viewcourseArea'>
-            <h2>Course Details</h2>
+
+        <h2><span>C</span>ourse <span>D</span>etails</h2>
+
             <div className='viewcourse'>
 
                     <div className='namee'>

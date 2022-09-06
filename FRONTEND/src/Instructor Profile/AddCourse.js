@@ -8,7 +8,11 @@ export default function AddCourse() {
         <Header/>
 
         <div className='addcourseArea'>
-            <h2>Add Course</h2>
+        
+
+        <h2><span>A</span>dd <span>C</span>ourse</h2>
+
+        
             <div className='addcourse'>
 
                     <div className='namee'>
