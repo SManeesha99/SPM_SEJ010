@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       {/* <CreateReview/> */}
-      <StudentProfile/>
+      {/* <StudentProfile/> */}
       {/* <Register/> */}
       {/* <Login/> */}
       {/* <EditProfile/> */}
@@ -27,7 +27,7 @@ function App() {
       {/* <CourseDetailsView/> */}
       {/* <UpdateCourseDetails/> */}
 
-      {/* <AllCoursesView/> */}
+      <AllCoursesView/>
 
       {/* <Instructor_Req_Req/> */}
 
