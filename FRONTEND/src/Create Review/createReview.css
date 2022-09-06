@@ -18,6 +18,11 @@
     text-align: left;
     color: white;
 }
+
+.courseDetails a{
+    color: white;
+}
+
 .videoContainer{
     background-color: #ffffff;
     margin: 10px;
@@ -28,7 +33,7 @@
 
 .courseVideos{
     width: 100%;
-    height: 100vh;
+    height: auto;
     padding-top: 50px;
     padding-left: 10%;
     padding-right: 10%;
@@ -37,5 +42,22 @@
 }
 .addReview{
     width: 100%;
-    height: 100vh;
+    height: auto;
+    padding: 0 10%;
+    padding-top: 70px;
+}
+
+.addReviewarea{
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.addReviewarea textarea{
+    height: 200px;
+}
+ 
+.addReviewarea label{
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 500;
 }

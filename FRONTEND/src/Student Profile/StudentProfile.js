@@ -12,6 +12,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 import "../index.css";
+import {Link} from 'react-router-dom';
 
 // import required modules
 import { FreeMode, Pagination } from "swiper";
@@ -33,7 +34,7 @@ export default function StudentProfile() {
                 
                 </div>
                 <div class="col-sm-4 right">
-                    <button className='editprofile'>Edit Profile</button>
+                    <button className='editprofile'><Link className="nav-link active" aria-current="page" to="/editProfile">Edit Profile</Link></button>
                     <button className='dltprofile'>Delete Profile</button>
                     
                 </div>

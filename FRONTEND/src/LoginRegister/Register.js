@@ -1,6 +1,7 @@
 import React from 'react';
 import NotRegHeader from '../Header/notRegHeader';
-import './loginRegister.css'
+import './loginRegister.css';
+import {Link} from 'react-router-dom';
 
 export default function () {
   return (
@@ -59,7 +60,7 @@ export default function () {
                 <button class='btn btn-primary'>Register</button>
 
                 <hr/>
-                <p>Already have an account? <a href='#'>Log in</a></p>
+                <p>Already have an account? <Link className="nav-link active" aria-current="page" to="/login">Login</Link></p>
 
 
             </div>
