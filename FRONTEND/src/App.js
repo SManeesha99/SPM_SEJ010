@@ -12,7 +12,7 @@ import UpdateCourseDetails from './Instructor Profile/UpdateCourseDetails';
 import AllCoursesView from './Instructor Profile/AllCoursesView';
 
 import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
-
+import CreateOffer from './Offers/CreateOffer';
 
 function App() {
   return (
@@ -20,16 +20,17 @@ function App() {
       {/* <CreateReview/> */}
       {/* <StudentProfile/> */}
       {/* <Register/> */}
-      {/* <Login/> */}
+      <Login/>
       {/* <EditProfile/> */}
       {/* <AddCartCourse/> */}
       {/* <AddCourse/> */}
       {/* <CourseDetailsView/> */}
       {/* <UpdateCourseDetails/> */}
 
-      <AllCoursesView/>
+      {/* <AllCoursesView/> */}
 
       {/* <Instructor_Req_Req/> */}
+      {/* <CreateOffer/> */}
 
       
     </div>
