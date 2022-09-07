@@ -13,6 +13,7 @@ import AllCoursesView from './Instructor Profile/AllCoursesView';
 import Home from './Home/Home';
 import CreateOffer from './Offers/CreateOffer';
 import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
+import CreateCategory from './Admin/CreateCategory';
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/allCourseView' element={<AllCoursesView/>} />
           <Route path='/instructorReqReg' element={<Instructor_Req_Req/>} />
           <Route path='/createOffer' element={<CreateOffer/>} />
+          <Route path='/createCategories' element={<CreateCategory/>} />
         </Route>
       </Routes>
 
