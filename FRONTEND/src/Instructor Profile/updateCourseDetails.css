@@ -1,6 +1,6 @@
 .updatecourseArea{
     width: 96%;
-    height: 1190px;
+    height: 1070px;
     border: 1px solid rgba(137, 137, 137, 0.689);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
@@ -100,7 +100,11 @@
     cursor:pointer;
     transition: .3s;
     margin-bottom: 30px;
-    margin-right: 220px;
+    margin-left: 550px;
+}
+
+.Upbtn{
+    margin-left: 550px;
 }
 
 .form_text{
@@ -117,12 +121,7 @@
     width:60%;
     padding: 20px 10px;
     opacity: 30%;
-}
-
-.timage{
-    width:60%;
-    padding: 20px 10px;
-    opacity: 30%;
+    margin-left: 80px;
 }
 
 .updatecourseArea h2{
