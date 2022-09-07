@@ -14,8 +14,23 @@ export default function UpdateCourseDetails() {
             <div className='updatecourse'>
 
                     <div className='namee'>
-                        <label>Title</label>
-                        <input class="form-control" placeholder='Enter Title'></input>
+                        <label>Instructor Usrename</label>
+                        <input class="form-control" placeholder='Enter Username'></input>
+                    </div>
+
+                    <div className='namee'>
+                        <label>Course Title</label>
+                        <input class="form-control" placeholder='Enter Course Title'></input>
+                    </div>
+
+                    <div className='namee'>
+                        <label>Course Duration</label>
+                        <input class="form-control" placeholder='Enter Course Duration'></input>
+                    </div>
+
+                    <div className='namee'>
+                        <label>Course Price</label>
+                        <input class="form-control" placeholder='Enter Course Price'></input>
                     </div>
 
                     <div className='namee'>
@@ -38,26 +53,10 @@ export default function UpdateCourseDetails() {
                             </lable>
                         
                         </form>
-                    
-                     <div className='namee'>
-                        <label>Thumbnail</label>
-                            <div className='thumbnail'>
-                            <img src="select.png" alt="" class="timage"></img>
-                            </div>
-                    </div>
-                        
-                    <form className="form">
-                        
-                        <lable for="form_input" class="form_lable">
-                            <input type="file" class="form_input" id="form_input"/>
-                        <span class="form_text">Browse</span>
-                        </lable>
-                    
-                    </form>
 
                 </div>
 
-                <button class='btn btn-primary'>Update Course</button>
+                <button class='btn btn-primary Upbtn'>Update Course</button>
 
         </div>
  

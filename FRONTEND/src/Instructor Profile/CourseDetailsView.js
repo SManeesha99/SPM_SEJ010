@@ -14,8 +14,23 @@ export default function CourseDetailsView() {
             <div className='viewcourse'>
 
                     <div className='namee'>
-                        <label>Title</label>
-                        <input class="form-control" placeholder='Enter Title'></input>
+                        <label>Instructor Usrename</label>
+                        <input class="form-control" placeholder='Enter Username'></input>
+                    </div>
+
+                    <div className='namee'>
+                        <label>Course Title</label>
+                        <input class="form-control" placeholder='Enter Course Title'></input>
+                    </div>
+
+                    <div className='namee'>
+                        <label>Course Duration</label>
+                        <input class="form-control" placeholder='Enter Course Duration'></input>
+                    </div>
+
+                    <div className='namee'>
+                        <label>Course Price</label>
+                        <input class="form-control" placeholder='Enter Course Price'></input>
                     </div>
 
                     <div className='namee'>
@@ -27,13 +42,6 @@ export default function CourseDetailsView() {
                         <label>Course Video</label>
                             <div className='courseVideo'>
                                 <img src="select.png" alt="" class="vimage"></img>
-                            </div>
-                    </div>
-                    
-                     <div className='namee'>
-                        <label>Thumbnail</label>
-                            <div className='thumbnail'>
-                            <img src="select.png" alt="" class="timage"></img>
                             </div>
                     </div>
                         
