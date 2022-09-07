@@ -1,0 +1,30 @@
+.categoryArea{
+    width: 100%;
+    height: 100vh;
+    padding: 80px 10%;
+}
+
+.categoryArea h2{
+    margin: 20px auto;
+    text-align: center;
+    font-weight: 600;
+}
+
+.categoryArea h2 span{
+    font-size: 45px;
+    color: rgb(19, 110, 146);
+}
+
+.categoryArea input{
+    width: 100%;
+}
+
+.categoryArea textarea{
+    width: 100%;
+} 
+
+.categoriContainer{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+}
