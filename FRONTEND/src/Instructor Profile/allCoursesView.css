@@ -17,7 +17,7 @@
 
 .allcoursesviewArea h2{
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: 600;
 }
 
@@ -61,7 +61,7 @@ video{
 .allcoursesview{
     width: 100%;
     height: auto;
-    padding: 70px 5%;
+    padding: 0 5%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
