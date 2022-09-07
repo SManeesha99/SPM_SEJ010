@@ -26,7 +26,7 @@ export default function Login() {
                 <button class='btn btn-primary'>Login</button>
 
                 <hr/>
-                <p>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/">Register</Link></p>
+                <p>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
 
 
             </div>
