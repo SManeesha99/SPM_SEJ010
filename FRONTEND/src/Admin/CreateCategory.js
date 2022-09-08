@@ -12,11 +12,15 @@ export default function CreateCategory() {
 
                 <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Title</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Description"/>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Title"/>
+                </div>
+                <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Date</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" />
                 </div>
                 <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Description" rows="3"></textarea>
                 </div>
                 <button type='submit' class="btn btn-primary">Add</button>
 
