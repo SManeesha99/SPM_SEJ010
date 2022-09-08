@@ -30,6 +30,9 @@ mongoose.connect(URL,{
 const StudentRoutes = require('./routes/StudentRegistration');
 app.use(StudentRoutes);
 
+const CourseRoutes = require('./routes/Courses');
+app.use("/Courses",CourseRoutes);
+
 app.listen(PORT,()=>{
     console.log(`Server is up and running on port ${PORT}`);
 })
