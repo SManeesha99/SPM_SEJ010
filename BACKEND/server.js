@@ -5,20 +5,27 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express();
 require("dotenv").config();
-const routes = require(".routes");
+const cookieParser = require('cookie-parse');
+const fileUpload = require("express-fileupload");
+// const routes = require(".routes");
 
 const PORT = process.env.PORT || 8090;
 
-app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json())
+app.use(cors())
+app.use(fileUpload({
+    useTempFiles: true
+}))
+
+
 
 const URL=process.env.MONGODB_URL;
 
 mongoose.connect(URL,{
   
+    
     useNewUrlParser:true,
-    useUnifiedTopology:true,
- 
+    useUnifiedTopology:true 
  
  });
 
@@ -30,6 +37,8 @@ mongoose.connect(URL,{
 
 const StudentRoutes = require('./routes/StudentRegistration');
 app.use(StudentRoutes);
+
+app.use('/admin', require('./routes/AdminRegister'))
 
 app.listen(PORT,()=>{
     console.log(`Server is up and running on port ${PORT}`);
