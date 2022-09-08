@@ -27,8 +27,15 @@ connection.once("open",()=>{
     console.log("MongoDB Connected");
 });
 
-const adminRouter = require("./routes/AdminRegister.js");
+
+
+const CourseRoutes = require('./routes/Courses');
+app.use("/Courses",CourseRoutes);
+
+app.use('/admin', require('./routes/AdminRegister'));
 app.use("/admin", adminRouter);
+
+
 
 app.listen(PORT,()=>{
     console.log(`Server is up and running on port ${PORT}`);

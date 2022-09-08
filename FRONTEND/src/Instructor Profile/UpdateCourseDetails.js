@@ -45,16 +45,11 @@ export default function UpdateCourseDetails() {
                             </div>
                     </div>
                     
-                        <form className="form">
-                        
-                            <lable for="form_input" class="form_lable">
-                                <input type="file" class="form_input" id="form_input"/>
-                            <span class="form_text">Browse</span>
-                            </lable>
-                        
-                        </form>
+                    <div className='uploadvid'>          
+                            <input class="form-control form-control-sm " id="formFileSm" type="file" />
+                    </div>  
 
-                </div>
+                    </div>
 
                 <button class='btn btn-primary Upbtn'>Update Course</button>
 
