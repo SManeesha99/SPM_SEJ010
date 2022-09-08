@@ -35,8 +35,8 @@ app.use("/Courses",CourseRoutes);
 const adminRoutes = require('./routes/AdminRegister');
 app.use("/admin", adminRoutes);
 
-const AdminLoginRoutes = require('./routes/AdminLogin');
-app.use("/adminlogin", AdminLoginRoutes);
+const offerRoutes = require('./routes/offers');
+app.use("/offer", offerRoutes);
 
 
 
