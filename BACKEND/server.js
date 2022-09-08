@@ -32,8 +32,11 @@ connection.once("open",()=>{
 const CourseRoutes = require('./routes/Courses');
 app.use("/Courses",CourseRoutes);
 
-app.use('/admin', require('./routes/AdminRegister'));
-app.use("/admin", adminRouter);
+const adminRoutes = require('./routes/AdminRegister');
+app.use("/admin", adminRoutes);
+
+const AdminLoginRoutes = require('./routes/AdminLogin');
+app.use("/adminlogin", AdminLoginRoutes);
 
 
 
