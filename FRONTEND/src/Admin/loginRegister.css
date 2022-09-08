@@ -1,0 +1,89 @@
+.registerArea{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins',sans-serif;
+}
+
+.regArea{
+    width: 500px;
+    height: auto;
+    border: 1px solid rgba(137, 137, 137, 0.689);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 70px auto 0 auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+    padding: 30px 10px;
+}
+
+.fullname{
+    width: 93%;
+}
+.fullname label{
+    margin-left: 80px;
+}
+
+.regArea h2{
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #002B5B;
+}
+
+
+.regui label{
+    text-align: left;
+    width: 70%;
+    position: relative;
+    left: -70px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    opacity: 50%;
+    margin-left: 95px;
+}
+.regui input {
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.selectstNin{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+}
+
+
+.checkbox{
+    width: 10px !important;
+    height: 20px !important;
+}
+
+.regArea button{
+    margin-top: 20px;
+}
+
+.chk{
+    margin: 0 10%;
+    margin-top: 20px;
+    text-align: left;
+}
+.privacypolicybtn{
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 145, 255);
+    margin-left: 4px;
+}
+
+.chkA{
+    margin-left: 10px;
+}
+
+
