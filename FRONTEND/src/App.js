@@ -15,6 +15,7 @@ import CreateOffer from './Offers/CreateOffer';
 import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
 import CreateCategory from './Admin/CreateCategory';
 import RegisterAdmin from './Admin/RegisterAdmin';
+import AdminLogin from './Admin/AdminLogin';
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -40,6 +41,7 @@ function App() {
           <Route path='/createOffer' element={<CreateOffer/>} />
           <Route path='/createCategories' element={<CreateCategory/>} />
           <Route path='/registeradmin' element={<RegisterAdmin/>} />
+          <Route path='/adminlogin' element={<AdminLogin/>} />
 
         </Route>
       </Routes>
