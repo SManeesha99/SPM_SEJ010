@@ -101,7 +101,7 @@ router.route("/delete/:id").delete(async (req, res) => {
 
 //get one course----------------------
 
-router.get("/get/:id",(req,res)=>{
+router.get("/Courses/:id",(req,res)=>{
 
     let courseId = req.params.id;
     
