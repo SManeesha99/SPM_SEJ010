@@ -27,6 +27,11 @@ mongoose.connect(URL,{
     console.log("MongoDB Connected");
 });
 
+
+const makeReviewRoutes = require('./routes/makeReview');
+app.use("/makeReview",makeReviewRoutes);
+
+
 const StudentRoutes = require('./routes/StudentRegistration');
 app.use(StudentRoutes);
 
