@@ -2,8 +2,9 @@ import React, { Component} from 'react';
 import Header from "../Header/Header";
 import '../Offers/CreateOffer.css';
 import axios from "axios";
-import swal from 'sweetalert2';
+import swal from 'sweetalert';
 import offerpng from '../Offers/offerpng.png';
+import { Link } from 'react-router-dom';
 
 class CreateOffer extends Component{
 
@@ -143,7 +144,7 @@ class CreateOffer extends Component{
 
                 </div>
 
-                <button class='btn btn-primary' type='submit' onClick={this.onSubmit}>Add Offer</button>
+                <button class='btn btn-primary' type='submit' onClick={this.onSubmit}><a href="/alloffer" style={{textDecoration:'none', color:'white'}}>ADD OFFER</a></button>
 
                 
 
