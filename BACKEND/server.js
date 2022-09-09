@@ -46,7 +46,8 @@ app.use("/admin", adminRoutes);
 const offerRoutes = require('./routes/offers');
 app.use("/offer", offerRoutes);
 
-
+const categoryRoutes = require('./routes/Category');
+app.use("/category", categoryRoutes);
 
 
 app.listen(PORT,()=>{
