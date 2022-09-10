@@ -1,9 +1,50 @@
 import React from 'react';
 import './createReview.css';
+import { useState } from 'react';
+import axios from "axios";
+import swal from "sweetalert";
 import Video from "../htmlCss.mp4";
 import Header from "../Header/Header";
 
 export default function CreateReview() {
+
+
+    const [fireRedirect, setFireRedirect] = useState(false);
+
+  const [Review, setReview] = useState("");
+ 
+
+  function sendData(e){
+    const newForm={
+
+        Review
+ 
+
+  }
+
+  if( Review==='' ) {
+    swal(" Fields are empty");
+}
+
+  axios.post('http://localhost:8090/makeReview/add',newForm).then(()=>{
+
+    swal({
+      title: "Success!",
+      text: "Review Added Successfully",
+      icon: 'success',
+      timer: 2000,
+      button: false,
+    });  
+
+    //setFireRedirect(true);                                  
+}).catch((e)=>{
+  alert(e);
+})
+
+  }
+
+
+
   return (
 
     <div >
@@ -52,8 +93,12 @@ export default function CreateReview() {
     <div class="form-group addReviewarea">
         <form>
             <label for="exampleFormControlTextarea1">Give Review</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder='Enter Review here....'></textarea>
-            <button type="button" class="btn btn-primary">Send</button>
+            <textarea
+            onChange={(e) => (
+                setReview(e.target.value)
+                 )} 
+            class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder='Enter Review here....'></textarea>
+            <button onClick={sendData} type="button" class="btn btn-primary">Send</button>
         </form>
     </div>
         
