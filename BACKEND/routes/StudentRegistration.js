@@ -3,21 +3,24 @@ const StudentsRegstration = require('../models/StudentsRegstration.models');
 
 const router = express.Router();
 
+// register student----------------------------
+
 router.route("/add").post((req,res)=>{
     const firstName = req.body.firstName;
     const lastName = req.body.lastName;
     const mobileNumber = req.body.mobileNumber;
-    const Field = req.body.Field;
+    const field = req.body.field;
     const email = req.body.email;
+    const password = req.body.password;
     
 
-    const newstudent = new Notice({
+    const newstudent = new StudentsRegstration({
         firstName,
         lastName,
         mobileNumber,
-        Field,
+        field,
         email,
-        passwor
+        password
         // userRoleStatus,
         // accountStatus,
         
@@ -30,6 +33,9 @@ router.route("/add").post((req,res)=>{
     })
 })
 
+//---------------------------------------------------
+
+//get all-----------------------------------------------
 
 router.route("/").get((req,res)=>{
     StudentsRegstration.find().then((Student)=>{
@@ -39,8 +45,28 @@ router.route("/").get((req,res)=>{
     })
 })
 
+//----------------------------------------
 
-router.get("/studentregister/:id",(req,res)=>{
+//delete---------------------------------
+
+router.route("/delete/:id").delete(async (req, res) => {
+    let studentId = req.params.id;
+
+    await StudentsRegstration.findByIdAndDelete(studentId)
+    .then(() => {
+        res.status(200).send({status: "User Deleted"});
+    }).catch((err) => {
+        console.log(err.message);
+        res.status(500).send({status: "Error withe delete User", error: err.message});
+    })
+})
+
+//--------------------------------------
+
+//get one-----------------------------
+
+
+router.get("/get/:id",(req,res)=>{
 
     let studentId = req.params.id;
     
@@ -55,6 +81,8 @@ router.get("/studentregister/:id",(req,res)=>{
         });
     });
 });
+
+//--------------------------------------
 
 // router.route("/update/:id").put(async(req,res)=>{
 //     let noticeID = req.params.id;

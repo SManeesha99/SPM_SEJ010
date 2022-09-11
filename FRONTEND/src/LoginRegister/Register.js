@@ -1,9 +1,68 @@
 import React from 'react';
 import NotRegHeader from '../Header/notRegHeader';
 import './loginRegister.css';
+import { useState } from 'react';
+import axios from "axios";
+import swal from "sweetalert";
 import {Link} from 'react-router-dom';
 
 export default function () {
+
+    
+  const [fireRedirect, setFireRedirect] = useState(false);
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [field, setField] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function sendData(e){
+    const newForm={
+
+        firstName,
+        lastName,
+        mobileNumber,
+        field,
+        email,
+        password
+
+  }
+
+  if( firstName==='' && lastName === '' && mobileNumber === '' && field === '' && email === '' && password === '') {
+    swal("All Fields are empty");
+}else if(firstName === ''){
+    swal("firstName Field is empty")
+}else if(lastName === ''){
+    swal("lastName Field is empty")
+}else if(mobileNumber === ''){
+    swal("Course Price Field is empty")
+}else if(field === ''){
+    swal("Course Description Field is empty")
+}else if(email === ''){
+    swal("Course Description Field is empty")
+}else if(password === ''){
+    swal("Course Description Field is empty")
+}
+
+  axios.post('http://localhost:8090/Student/add',newForm).then(()=>{
+
+    swal({
+      title: "Success!",
+      text: "Registered Successfully",
+      icon: 'success',
+      timer: 2000,
+      button: false,
+    });  
+
+    setFireRedirect(true);                                  
+}).catch((e)=>{
+  alert(e);
+})
+
+  }
+
   return (
     <div>
         <div className='registerArea'>
@@ -16,31 +75,62 @@ export default function () {
                     <div className='name'>
                         <div class='row fullname'>
                             <div class="col-sm-6">
-                                <input class="form-control" placeholder='First Name'></input>
+                                <input
+                                name='firstName'
+                                onChange={(e) => (
+                                    setFirstName(e.target.value)
+                                     )} 
+                                 class="form-control" placeholder='First Name'></input>
                             </div>
                             <div class="col-sm-6">
-                                <input class="form-control" placeholder='Last Name'></input>
+                                <input
+                                name='lastName'
+                                onChange={(e) => (
+                                    setLastName(e.target.value)
+                                     )} 
+                                 class="form-control" placeholder='Last Name'></input>
                             </div>
                         </div>
                         
                     </div>
                     <div className='name'>
-                        <input class="form-control" placeholder='Mobile Number'></input>
+                        <input
+                        name='mobileNumber'
+                        onChange={(e) => (
+                            setMobileNumber(e.target.value)
+                             )} 
+                         class="form-control" placeholder='Mobile Number'></input>
                     </div>
 
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Select who are you ? (Instrutor or Student)</label>
-                        <select class="form-control selectstNin" id="exampleFormControlSelect1">
-                        <option>Instrutor</option>
-                        <option>Student</option>
+                        <select
+                        name='field'
+                        onChange={(e) => (
+                            setField(e.target.value)
+                             )}
+                         class="form-control selectstNin" id="exampleFormControlSelect1">
+                            <option >Please Select</option>
+                        <option value="Instructor">Instrutor</option>
+                        <option value="Student">Student</option>
                         </select>
                     </div>
 
                     <div className='name'>
-                        <input class="form-control" placeholder='Email'></input>
+                        <input
+                        name='email'
+                        onChange={(e) => (
+                            setEmail(e.target.value)
+                             )}
+                         class="form-control" placeholder='Email'></input>
                     </div>
                     <div className='name'>
-                        <input class="form-control" placeholder='Password'></input>
+                        <input
+                        name='password'
+                        onChange={(e) => (
+                            setPassword(e.target.value)
+                             )}
+                         class="form-control" placeholder='Password'></input>
                     </div>
 
                     <div class="form-group chk">
@@ -57,7 +147,7 @@ export default function () {
 
                 </div>
 
-                <button class='btn btn-primary'>Register</button>
+                <button class='btn btn-primary' onClick={sendData}>Register</button>
 
                 <hr/>
                 <p>Already have an account? <Link className="nav-link active" aria-current="page" to="/login">Login</Link></p>

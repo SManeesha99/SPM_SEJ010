@@ -1,8 +1,34 @@
-import React from 'react';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import './editProfile.css';
 import Header from '../Header/Header';
 
-export default function EditProfile() {
+const EditProfile =() => {
+
+    const [input, setInput]=useState({});
+    const id =useParams().id;
+    console.log(id);
+    useEffect(()=>{ 
+        const fetchHandler = async()=>{
+            await axios.get(`http://localhost:8090/Student/get/${id}`)
+            .then((res)=> res.data )
+            .then((data)=>setInput(data.userProfile));
+        }
+        fetchHandler()
+        .then((data)=>setInput(data.userProfile));
+    },[id])
+
+    
+    // const handleSubmit = (e) =>{
+    //     e.preventDefault();
+    // }
+
+    // const handleChange =(e)=>{
+    //     console.log(e);
+    // }
+    console.log(input);
+
   return (
     <div>
         <Header/>
@@ -19,12 +45,27 @@ export default function EditProfile() {
                 <div class="row align-items-center pt-4 pb-3">
                 <div class="col-md-3 ps-5">
 
-                    <h6 class="mb-0">Full name</h6>
+                    <h6 class="mb-0">First name</h6>
 
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input type="text" class="form-control form-control-lg" />
+                    <input value={input.firstName} type="text" class="form-control form-control-lg" />
+
+                </div>
+                </div>
+            </div>
+
+            <div className='name'>
+                <div class="row align-items-center pt-4 pb-3">
+                <div class="col-md-3 ps-5">
+
+                    <h6 class="mb-0">Last name</h6>
+
+                </div>
+                <div class="col-md-9 pe-5">
+
+                    <input value={input.lastName} type="text" class="form-control form-control-lg" />
 
                 </div>
                 </div>
@@ -39,7 +80,7 @@ export default function EditProfile() {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input type="text" class="form-control form-control-lg" />
+                    <input value={input.mobileNumber} type="text" class="form-control form-control-lg" />
 
                 </div>
                 </div>
@@ -55,7 +96,7 @@ export default function EditProfile() {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input type="text" class="form-control form-control-lg" />
+                    <input value={input.email} type="text" class="form-control form-control-lg" />
 
                 </div>
                 </div>
@@ -71,7 +112,7 @@ export default function EditProfile() {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input type="text" class="form-control form-control-lg" />
+                    <input value={input.password} type="text" class="form-control form-control-lg" />
 
                 </div>
                 </div>
@@ -87,4 +128,5 @@ export default function EditProfile() {
 
     </div>
   )
-}
+};
+export default EditProfile;

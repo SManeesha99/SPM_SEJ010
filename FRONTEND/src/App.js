@@ -15,6 +15,7 @@ import CreateOffer from './Offers/CreateOffer';
 import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
 import CreateCategory from './Admin/CreateCategory';
 import RegisterAdmin from './Admin/RegisterAdmin';
+import ViewProfiles from './Admin/ViewProfiles';
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -30,7 +31,8 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/createReview' element={<CreateReview/>} />
           <Route path='/studentProfile' element={<StudentProfile/>} />
-          <Route path='/editProfile' element={<EditProfile/>} />
+          <Route path='/viewProfiles' element={<ViewProfiles/>} />
+          <Route path='/editProfile/:id' element={<EditProfile/>} />
           <Route path='/addCartCourse' element={<AddCartCourse/> } />
           <Route path='/addCourse' element={<AddCourse/> }/>
           <Route path='/courseDetailsView' element={<CourseDetailsView/>} />
