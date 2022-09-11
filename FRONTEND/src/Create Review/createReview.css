@@ -52,6 +52,10 @@
     margin-bottom: 70px;
 }
 
+.addReviewarea button{
+    margin-top: 15px;
+}
+
 .addReviewarea textarea{
     height: 200px;
 }

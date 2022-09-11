@@ -1,8 +1,58 @@
 import React from 'react';
 import './addCourse.css';
+import { useState } from 'react';
+import axios from "axios";
+import swal from "sweetalert";
 import Header from '../Header/Header';
 
 export default function AddCourse() {
+
+  const [fireRedirect, setFireRedirect] = useState(false);
+
+  const [ctitle, setCtitle] = useState("");
+  const [cduration, setCduration] = useState("");
+  const [cprice, setCprice] = useState("");
+  const [cdescription, setCdescription] = useState("");
+
+  function sendData(e){
+    const newForm={
+
+    ctitle,
+    cduration,
+    cprice,
+    cdescription
+
+  }
+
+  if( ctitle==='' && cduration === '' && cprice === '' && cdescription === '') {
+    swal("All Fields are empty");
+}else if(ctitle === ''){
+    swal("Course title Field is empty")
+}else if(cduration === ''){
+    swal("Course Duration Field is empty")
+}else if(cprice === ''){
+    swal("Course Price Field is empty")
+}else if(cdescription === ''){
+    swal("Course Description Field is empty")
+}
+
+  axios.post('http://localhost:8090/Courses/add',newForm).then(()=>{
+
+    swal({
+      title: "Success!",
+      text: "New Course Added Successfully",
+      icon: 'success',
+      timer: 2000,
+      button: false,
+    });  
+
+    //setFireRedirect(true);                                  
+}).catch((e)=>{
+  alert(e);
+})
+
+  }
+
   return (
     <div>
         <Header/>
@@ -17,27 +67,43 @@ export default function AddCourse() {
 
                     <div className='namee'>
                         <label>Instructor Usrename</label>
-                        <input class="form-control" placeholder='Enter Username'></input>
+                        <input class="form-control" placeholder='Enter Username' type="text"></input>
                     </div>
 
                     <div className='namee'>
                         <label>Course Title</label>
-                        <input class="form-control" placeholder='Enter Course Title'></input>
+                        <input
+                          onChange={(e) => (
+                            setCtitle(e.target.value)
+                             )} 
+                        class="form-control" placeholder='Enter Course Title' type="text"></input>
                     </div>
 
                     <div className='namee'>
                         <label>Course Duration</label>
-                        <input class="form-control" placeholder='Enter Course Duration'></input>
+                        <input 
+                         onChange={(e) => (
+                            setCduration(e.target.value)
+                             )} 
+                        class="form-control" placeholder='Enter Course Duration' type="text"></input>
                     </div>
 
                     <div className='namee'>
                         <label>Course Price</label>
-                        <input class="form-control" placeholder='Enter Course Price'></input>
+                        <input
+                          onChange={(e) => (
+                            setCprice(e.target.value)
+                             )} 
+                         class="form-control" placeholder='Enter Course Price' type="text"></input>
                     </div>
 
                     <div className='namee'>
                         <label>Description</label>
-                        <textarea class="form-control" id="" name="" required placeholder="Enter Description" ></textarea>
+                        <textarea
+                        onChange={(e) => (
+                            setCdescription(e.target.value)
+                             )} 
+                         class="form-control" id="" name="" required placeholder="Enter Description" type="text"></textarea>
                     </div>
                     
                     <div className='namee'>
@@ -52,7 +118,7 @@ export default function AddCourse() {
 
                 </div>
 
-                <button class='btn btn-primary btnadd'>Add Course</button>
+                <button class='btn btn-primary btnadd' type= "submit" onClick={sendData}>Add Course</button>
 
         </div>
  
