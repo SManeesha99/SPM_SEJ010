@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from "axios";
-import swal from 'sweetalert2'
+import swal from 'sweetalert'
 import NotRegHeader from '../Header/notRegHeader';
 import './loginRegister.css';
 import {Link} from 'react-router-dom';
@@ -51,7 +51,7 @@ class RegisterAdmin extends React.Component{
 
         console.log(data)
 
-        axios.post("http://localhost:8090/admin/add",data).then((res)=>{
+        axios.post("http://localhost:8090/admin/register",data).then((res)=>{
             swal.fire({
                 title: "Success!",
                 text: "New Notice Added Successfully",
