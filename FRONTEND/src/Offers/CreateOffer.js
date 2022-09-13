@@ -59,11 +59,11 @@ class CreateOffer extends Component{
         axios.post("http://localhost:8090/offer/add",data).then((res) =>{
             swal.fire({
                 title: "Success!",
-                text: "New Offer Added Successfully",
+                text: "New Notice Updated Successfully",
                 icon: 'success',
                 timer: 2000,
                 button: false,
-              }); 
+              });
              // setFireRedirect(true);  
             if(res.data){
                 // alert("Notice Added Success!");
@@ -144,7 +144,7 @@ class CreateOffer extends Component{
 
                 </div>
 
-                <button class='btn btn-primary' type='submit' onClick={this.onSubmit}><a href="/alloffer" style={{textDecoration:'none', color:'white'}}>ADD OFFER</a></button>
+                <button class='btn btn-primary' type='submit' onClick={this.onSubmit}><Link to={'/alloffer'} style={{textDecoration:'none', color:'white'}}>ADD OFFER</Link></button>
 
                 
 
