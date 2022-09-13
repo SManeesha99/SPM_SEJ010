@@ -8,6 +8,7 @@ import AddCartCourse from './Add cart Course/AddCartCourse';
 import AddCourse from './Instructor Profile/AddCourse';
 import CourseDetailsView from './Instructor Profile/CourseDetailsView';
 import UpdateCourseDetails from './Instructor Profile/UpdateCourseDetails';
+import CourseInfo from './Instructor Profile/CourseInfo';
 
 import AllCoursesView from './Instructor Profile/AllCoursesView';
 import Home from './Home/Home';
@@ -15,11 +16,18 @@ import CreateOffer from './Offers/CreateOffer';
 import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
 import CreateCategory from './Admin/CreateCategory';
 import RegisterAdmin from './Admin/RegisterAdmin';
+
+import ViewProfiles from './Admin/ViewProfiles';
+
 import AdminLogin from './Admin/AdminLogin';
 import ViewAllOffers from './Offers/ViewAllOffers';
 import OfferInfo from './Offers/OfferDetails';
 import UpdateOffer from './Offers/UpdateOffer';
+
 import AdminProfile from './Admin/AdminProfile';
+
+import ViewAllCategoies from './Admin/ViewAllCategoies';
+
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -34,13 +42,16 @@ function App() {
           <Route path='/register' element={<Register/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/createReview' element={<CreateReview/>} />
+          <Route path='/ViewAllCategoies' element={<ViewAllCategoies/>} />
           <Route path='/studentProfile' element={<StudentProfile/>} />
-          <Route path='/editProfile' element={<EditProfile/>} />
+          <Route path='/viewProfiles' element={<ViewProfiles/>} />
+          <Route path='/editProfile/:id' element={<EditProfile/>} />
           <Route path='/addCartCourse' element={<AddCartCourse/> } />
           <Route path='/addCourse' element={<AddCourse/> }/>
-          <Route path='/courseDetailsView' element={<CourseDetailsView/>} />
+          <Route path='/courseDetailsView/:id' element={<CourseDetailsView/>} />
           <Route path='/updateCourseDetails' element={<UpdateCourseDetails/>} />
           <Route path='/allCourseView' element={<AllCoursesView/>} />
+          <Route path='/courseInfo/:id' element={<CourseInfo/>} />
           <Route path='/instructorReqReg' element={<Instructor_Req_Req/>} />
           <Route path='/createOffer' element={<CreateOffer/>} />
           <Route path='/createCategories' element={<CreateCategory/>} />

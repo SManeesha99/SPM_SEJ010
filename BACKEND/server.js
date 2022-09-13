@@ -29,8 +29,24 @@ connection.once("open",()=>{
 
 
 
+const makeReviewRoutes = require('./routes/makeReview');
+app.use("/makeReview",makeReviewRoutes);
+
+
+const StudentRoutes = require('./routes/StudentRegistration');
+app.use(StudentRoutes);
+
+
 const CourseRoutes = require('./routes/Courses');
 app.use("/Courses",CourseRoutes);
+
+
+// app.use('/admin', require('./routes/AdminRegister'));
+// app.use("/admin", adminRouter);
+
+const StudentRoutes = require('./routes/StudentRegistration');
+app.use("/Student",StudentRoutes);
+
 
 const adminRoutes = require('./routes/AdminRegister');
 app.use("/admin", adminRoutes);
@@ -38,6 +54,9 @@ app.use("/admin", adminRoutes);
 const offerRoutes = require('./routes/offers');
 app.use("/offer", offerRoutes);
 
+
+const categoryRoutes = require('./routes/Category');
+app.use("/category", categoryRoutes);
 
 
 app.listen(PORT,()=>{

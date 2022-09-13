@@ -1,0 +1,51 @@
+.categoryArea{
+    width: 100%;
+    height: auto;
+    padding: 90px 10% 50px 10%;
+}
+
+.categorydiv{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.29);
+    margin: 10px;
+    border-radius: 10px;
+}
+.title{
+    text-align: center;
+    margin: 20px;
+}
+
+
+.categoryContainer{
+    width: 100%;
+    height: auto;
+    padding: 40px;
+}
+
+.left {
+    height: auto;
+    display: block;
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+.left p{
+    margin: 5px !important;
+}
+
+.right{
+    height: auto;
+}
+
+.right a{
+    margin: 21px 10px;
+}
+
+.right button{
+    margin: 21px 10px;
+}
+
