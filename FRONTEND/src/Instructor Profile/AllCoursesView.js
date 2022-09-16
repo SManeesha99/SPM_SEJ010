@@ -2,6 +2,7 @@ import React from 'react';
 import { useState ,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import axios from "axios";
+import swal from "sweetalert";
 import './allCoursesView.css';
 import Header from '../Header/Header';
 
@@ -39,9 +40,15 @@ onDelete = (id) =>{
 
   axios.delete(`http://localhost:8090/Courses/delete/${id}`).then((res)=>{
 
-      alert("Delete successfully");
-
       this.retrieveCourses();
+
+      swal({
+        title: "Success!",
+        text: "Course Delete Successfull",
+        icon: 'success',
+        timer: 2000,
+        button: false,
+      });
 
   });
 
