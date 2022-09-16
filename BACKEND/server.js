@@ -34,7 +34,9 @@ app.use("/makeReview",makeReviewRoutes);
 
 
 // const StudentRoutes = require('./routes/StudentRegistration');
+
 // app.use("StudentRegister",StudentRoutes);
+
 
 
 const CourseRoutes = require('./routes/Courses');

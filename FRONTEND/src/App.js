@@ -27,6 +27,7 @@ import UpdateOffer from './Offers/UpdateOffer';
 import AdminProfile from './Admin/AdminProfile';
 
 import ViewAllCategoies from './Admin/ViewAllCategoies';
+import EditCategory from './Admin/EditCategory';
 
 
 import { Routes,Route } from 'react-router-dom';
@@ -43,6 +44,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/createReview' element={<CreateReview/>} />
           <Route path='/ViewAllCategoies' element={<ViewAllCategoies/>} />
+          <Route path='/EditCategory/:id' element={<EditCategory/>} />
           <Route path='/studentProfile' element={<StudentProfile/>} />
           <Route path='/viewProfiles' element={<ViewProfiles/>} />
           <Route path='/editProfile/:id' element={<EditProfile/>} />
