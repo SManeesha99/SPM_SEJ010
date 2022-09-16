@@ -56,10 +56,7 @@ router.get("/offer/:id",(req,res)=>{
 
 router.route("/update/:id").put(async(req,res)=>{
     let offerID = req.params.id;
-    const{tittle,
-        description,
-        discount,
-        closingDate}=req.body;
+    const{tittle,description,discount,closingDate}=req.body;
 
     const updateoffer={
         tittle,

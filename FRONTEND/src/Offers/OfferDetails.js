@@ -19,7 +19,6 @@ const OfferInfo =() => {
         .then((data)=>setInput(data.offer));
     },[id])
 
-    
     // const handleSubmit = (e) =>{
     //     e.preventDefault();
     // }
@@ -30,35 +29,47 @@ const OfferInfo =() => {
     console.log(input);
     
     return <div>
-        {input && (  
-            <div>
-                <Header/>
+        
+        <div>
+        <Header/>
+    {input && (
+        <div className='viewcourseAreaoffer'>
 
-        <div className="col-md-8 mt-4 mx-auto">
-            <div style={{marginTop:'20px'}}>
-         <h4>{input.tittle}</h4>
-         <hr></hr>
+        <h2><span>O</span>ffer <span>D</span>etails</h2>
 
-         <dl className="row">
-         <dt className="col-sm-3">Tittle</dt>
-             <dt className="col-sm-9">{input.tittle}</dt>
+            <div className='viewcourse'>
 
-             <dt className="col-sm-3">Description</dt>
-             <dt className="col-sm-9">{input.description}</dt>
+                    <div className='namee'>
+                        <label>Title</label>
+                        <input name='tittle' class="form-control" readOnly value={input.tittle} />
+                    </div>
 
-             <dt className="col-sm-3">Discount</dt>
-             <dt className="col-sm-9">{input.discount}</dt>
+                    <div className='namee'>
+                        <label>Description</label>
+                        <input value={input.description} name='description' class="form-control" readOnly></input>
+                    </div>
 
-             <dt className="col-sm-3">Closing Date</dt>
-             <dt className="col-sm-9">{input.closingDate}</dt>
-        </dl>
+                    <div className='namee'>
+                        <label>Discount</label>
+                        <input value={input.discount} class="form-control" name="discount" readOnly></input>
+                    </div>
+
+                    <div className='namee'>
+                        <label>Closing Date</label>
+                        <input value={input.closingDate}  name="closingDate"  readOnly></input>
+                    </div>
+                    
+                    
+                        
+
+                </div>
+
 
         </div>
-        <button className="btn noticeAdd"><a href="/alloffer" style={{textDecoration:'none', color:'white'}}>View All Offer</a></button>
         
-                </div>
-                </div>
-        ) }
+        )}
+
+    </div>
         
     </div>;
 

@@ -7,6 +7,7 @@ import '../Offers/ViewAllOffer.css';
 import Header from "../Header/Header";
 
 
+
 class ViewAllOffers extends React.Component{
 
     constructor(props) {
@@ -37,14 +38,7 @@ class ViewAllOffers extends React.Component{
 
     }
 
-    onDelete = (id) =>{
-        axios.delete(`http://localhost:8090/offers/delete/${id}`).then((res)=>{
-            alert("Delete successfully");
-            this.retrieveOffers();
-        });
-      
-        
-};
+   
 
 
 // handleTextSearch =(e)=>{
@@ -82,87 +76,70 @@ class ViewAllOffers extends React.Component{
     render(){
         return(
             <div>
-                <Header/>
-            
-            <div>
+        <Header/>
 
-                <div className="headAll">
-                
-                <h1>All Offers</h1>
+        <div className='allcoursesviewArea'>
 
-                <p>Lorem ipsum is a placeholder text commonly !</p> 
-                <div className="addBHutton">
-                    <button className="btn noticeAdd"><a href="/createOffer" style={{textDecoration:'none', color:'white'}}>Create Offer</a></button>
-                    </div>
-                   
-                {/* <button type="button" class="btn btn-outline-dark" href="#AllNotice">View All Notice</button> */}
-                </div>
+        <h2><span>A</span>ll <span>O</span>ffers</h2>
 
+        
 
-                <div className="constainerAllNotice">
-                 <div className="constainerAllNotice container-fluid" id="AllNotice">
-                    <div className="all-notice">
-                    <center><h2>All Offers</h2></center>
+            <div className='allcoursesview'>
 
-                    {/* <div className="col-lg-3 mt-2 mb-2">
-                        <input
-                            className="form-control"
-                            type="search"
-                            placeholder="search"
-                            name="searchTerm"
-                            onChange={this.handleTextSearch}
-                        ></input>
-                    </div> */}
-                <table className="table table-hover">
-                <thead>
-                    <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Discount</th>
-                    <th scope="col">Closing Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {this.state.offers.map((offers,index)=>(
-
-                        <tr key={index}> 
-                        <td><strong><Link to={`/offerInfo/${offers._id}`} style={{textDecoration:'none', fontSize:'20px'}}>{offers.tittle}</Link></strong></td>
-                        <td style={{ fontSize:'20px'}}>
-                        {offers.description}</td>
-                        <td style={{fontSize:'20px'}}>{offers.discount}</td>
-                        <td style={{fontSize:'20px'}}>{offers.closingDate}</td>
-                         <td>
-                             
-                         <a href={`/updateoffer/${offers._id}`}>
-                            <button className="btn-ed btn-warning-notice" >
-                                Edit
-                            </button>
-                            </a>
-                            
-                        </td>
-                        
-                        
-
-
-                        </tr>
-
-                    ))}
-                    
-                    
-                    
-                    
-                </tbody>
-                </table>
-
-                    </div>
-                
-
-
-                </div>
-                
+            {this.state.offers.map((offers,index)=>
+         
+          <div className="card allcoursescontainer" key={index}>
+            <div className="card-header">
+            {offers.tittle}
+                       
             </div>
+
+            <div className="card-body">
+              <video src="./Videos/tujhe.mp4" controls = "video/mp4"></video>
+
+            </div>
+
+            <div className="card-footer">
+                <div className='discri'  style={{height:'20px'}}>
+
+                {offers.description}
+                
+                 </div>
+                 <br />
+
+                 Discount : {offers.discount} %
+
+                 <br />
+
+                 Closing Date : {offers.closingDate}
+
+                 
+                 <br />
+
+                 <div>
+          
+                 <button class="btn btn-primary btn-sm cn" ><Link to={`/offerInfo/${offers._id}`}  style={{textDecoration:'none', color:'white'}}>View More</Link></button>
+                 <button class="btn btn-success btn-sm cn"><Link to={`/updateoffer/${offers._id}`}  style={{textDecoration:'none', color:'white'}}>Update
+                 
+                 </Link></button>
+                 </div>
+                 
+            </div>
+
+
+          </div>
+         
+         
+
+          )}
+           </div>
+
+            
+
         </div>
-        </div>
+ 
+
+    </div>
         )
     }
 }

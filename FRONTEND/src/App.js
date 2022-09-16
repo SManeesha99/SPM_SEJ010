@@ -23,6 +23,9 @@ import AdminLogin from './Admin/AdminLogin';
 import ViewAllOffers from './Offers/ViewAllOffers';
 import OfferInfo from './Offers/OfferDetails';
 import UpdateOffer from './Offers/UpdateOffer';
+
+import AdminProfile from './Admin/AdminProfile';
+
 import ViewAllCategoies from './Admin/ViewAllCategoies';
 import EditCategory from './Admin/EditCategory';
 
@@ -59,6 +62,8 @@ function App() {
           <Route path='/alloffer' element={<ViewAllOffers/>} />
           <Route path='/offerInfo/:id' element={<OfferInfo/>} />
           <Route path='/updateoffer/:id' element={<UpdateOffer/>} />
+          <Route path='/adminProfile' element={<AdminProfile/>} />
+
 
         </Route>
       </Routes>

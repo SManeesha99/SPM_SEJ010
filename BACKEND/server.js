@@ -34,7 +34,9 @@ app.use("/makeReview",makeReviewRoutes);
 
 
 // const StudentRoutes = require('./routes/StudentRegistration');
-// app.use(StudentRoutes);
+
+// app.use("StudentRegister",StudentRoutes);
+
 
 
 const CourseRoutes = require('./routes/Courses');
@@ -48,8 +50,8 @@ const StudentRoutes = require('./routes/StudentRegistration');
 app.use("/Student",StudentRoutes);
 
 
-const adminRoutes = require('./routes/AdminRegister');
-app.use("/admin", adminRoutes);
+// const adminRoutes = require('./routes/AdminRegister');
+// app.use("/admin", adminRoutes);
 
 const offerRoutes = require('./routes/offers');
 app.use("/offer", offerRoutes);
