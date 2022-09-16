@@ -65,10 +65,10 @@ export default function AddCourse() {
         
             <div className='addcourse'>
 
-                    <div className='namee'>
+                    {/* <div className='namee'>
                         <label>Instructor Usrename</label>
                         <input class="form-control" placeholder='Enter Username' type="text"></input>
-                    </div>
+                    </div> */}
 
                     <div className='namee'>
                         <label>Course Title</label>

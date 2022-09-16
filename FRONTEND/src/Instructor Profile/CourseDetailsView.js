@@ -20,6 +20,7 @@ const CourseDetailsView =() => {
     },[id])
 
     console.log(input);
+    
 
   return (
     <div>
@@ -31,14 +32,15 @@ const CourseDetailsView =() => {
 
             <div className='viewcourse'>
 
-                    <div className='namee'>
+                    {/* <div className='namee'>
                         <label>Instructor Usrename</label>
                         <input class="form-control" placeholder='Enter Username'/>
-                    </div>
+                    </div> */}
+                    
 
                     <div className='namee'>
                         <label>Course Title</label>
-                        <input class="form-control" readOnly value={input.ctitle}/>
+                        <input class="form-control" value={input.ctitle}/>
                     </div>
 
                     <div className='namee'>
@@ -56,12 +58,12 @@ const CourseDetailsView =() => {
                         <textarea value={input.cdescription} class="form-control" id="" name="" required placeholder="Enter Description" ></textarea>
                     </div>
                     
-                    <div className='namee'>
+                    {/* <div className='namee'>
                         <label>Course Video</label>
                             <div className='courseVideo'>
                                 <img src="select.png" alt="" class="vimage"></img>
                             </div>
-                    </div>
+                    </div> */}
                         
 
                 </div>

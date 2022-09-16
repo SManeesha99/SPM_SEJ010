@@ -35,14 +35,17 @@ retrieveCourses(){
 
 }
 
-// onDelete = (id) =>{
-//   axios.delete(`http://localhost:8090/offers/delete/${id}`).then((res)=>{
-//       alert("Delete successfully");
-//       this.retrieveOffers();
-//   });
+onDelete = (id) =>{
 
-  
-// };
+  axios.delete(`http://localhost:8090/Courses/delete/${id}`).then((res)=>{
+
+      alert("Delete successfully");
+
+      this.retrieveCourses();
+
+  });
+
+};
 
   render(){
     return(
@@ -68,7 +71,7 @@ retrieveCourses(){
             
             {/* <img src="./images/dddd.jpg" alt="" /> */}
 
-            <video src="./Videos/tujhe.mp4" controls = "video/mp4"></video>
+            <video src="./Videos/shanthi.mp4" controls = "video/mp4"></video>
 
           </div>
 
@@ -89,10 +92,11 @@ retrieveCourses(){
                
                <br />
 
-               <div>
+               <div className='btnarea'>
         
                <button class="btn btn-primary btn-sm cn" > <Link to={`/courseDetailsView/${courses._id}`} style={{textDecoration:'none', color:'white'}}>View More</Link></button>
                <button class="btn btn-success btn-sm cn"> Add Offer</button>
+               <button type="button" class="btn btn-danger btn-sm cn" onClick={() => this.onDelete(courses._id)}>Remove</button>
                </div>
                
           </div>
