@@ -1,6 +1,7 @@
 import React from 'react';
 import './addCourse.css';
 import { useState } from 'react';
+import {Link} from 'react-router-dom';
 import axios from "axios";
 import swal from "sweetalert";
 import Header from '../Header/Header';
@@ -27,14 +28,16 @@ export default function AddCourse() {
   if( ctitle==='' && cduration === '' && cprice === '' && cdescription === '') {
     swal("All Fields are empty");
 }else if(ctitle === ''){
-    swal("Course title Field is empty")
+    swal("Course title Field is empty");
 }else if(cduration === ''){
-    swal("Course Duration Field is empty")
+    swal("Course Duration Field is empty");
 }else if(cprice === ''){
-    swal("Course Price Field is empty")
+    swal("Course Price Field is empty");
 }else if(cdescription === ''){
-    swal("Course Description Field is empty")
+    swal("Course Description Field is empty");
 }
+
+else {
 
   axios.post('http://localhost:8090/Courses/add',newForm).then(()=>{
 
@@ -44,12 +47,14 @@ export default function AddCourse() {
       icon: 'success',
       timer: 2000,
       button: false,
-    });  
+    });
 
-    //setFireRedirect(true);                                  
+    // setFireRedirect(true);                                  
 }).catch((e)=>{
   alert(e);
 })
+
+}
 
   }
 
@@ -118,7 +123,7 @@ export default function AddCourse() {
 
                 </div>
 
-                <button class='btn btn-primary btnadd' type= "submit" onClick={sendData}>Add Course</button>
+                <button class='btn btn-primary btnadd' type= "submit" onClick={sendData}><Link to ="/allCourseView" style={{textDecoration:'none', color:'white'}}>Add Course</Link></button>
 
         </div>
  
