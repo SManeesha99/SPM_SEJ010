@@ -113,10 +113,10 @@ class RegisterAdmin extends React.Component{
                     </div>
 
                 </div>
-                </form>
+                
                 <button class='btn btn-primary' type='submit' onClick={this.onSubmit}>
-                    <Link to={'/allCourseView'}></Link>Register Admin</button>
-
+                    Register Admin</button>
+                    </form>
             </div>
             </center>
 
