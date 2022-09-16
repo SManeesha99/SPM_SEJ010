@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const Category = require("../models/Category.model");
 // const multer = require("multer");
 let Category_models = require("../models/Category.model");
 
@@ -68,6 +69,23 @@ router.route("/delete/:id").delete(async (req, res) => {
         res.status(500).send({status: "Error withe delete course", error: err.message});
     })
 })
+
+
+router.get("/category/:id",(req,res)=>{
+
+    let CategoryId = req.params.id;
+    
+    Category_models.findById(CategoryId,(err,category)=>{
+        if(err){
+            return res.status(400).json({success:false, err});
+        }
+
+        return res.status(200).json({
+            success:true,
+            category
+        });
+    });
+});
 
 
 
