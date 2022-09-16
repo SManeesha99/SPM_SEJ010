@@ -51,7 +51,7 @@ class RegisterAdmin extends React.Component{
 
         console.log(data)
 
-        axios.post("http://localhost:8090/admin/register",data).then((res)=>{
+        axios.post("http://localhost:8090/admin/add",data).then((res)=>{
             swal.fire({
                 title: "Success!",
                 text: "New Notice Added Successfully",

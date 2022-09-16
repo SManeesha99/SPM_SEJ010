@@ -1,3 +1,33 @@
+const router = require("express").Router();
+let Admin = require("../models/RegisterAdmin.models");
+
+router.route("/add").post((req,res)=>{
+
+    const name = req.body.name;
+    const email = req.body.email;
+    const password = req.body.password;
+
+    const newAdmin = new Admin({
+        name,
+        email,
+        password
+    })
+
+    newAdmin.save().then(()=>{
+        res.json("new Admin Added")
+    }).catch((err)=>{
+        console.log(err)
+    })
+})
+
+module.exports = router;
+
+
+
+
+
+
+
 // const router =require('express').Router()
 // const adminCtrl = require('../controllers/AdminRegister.controller')
 
@@ -39,9 +69,5 @@
 // 	}
 // });
 
-
-
-
-
-
 // module.exports = router;
+
