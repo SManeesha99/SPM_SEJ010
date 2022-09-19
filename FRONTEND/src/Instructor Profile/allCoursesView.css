@@ -71,6 +71,17 @@ video{
     margin: 20px;
 }
 
+.btnarea{
+    display: flex;
+}
+
+.btnarea button{
+    height: 28px;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+}
+
+
 .allcoursescontainer:hover{
     transition: 0.4s;
     box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.68);

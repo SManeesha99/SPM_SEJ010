@@ -25,7 +25,7 @@ const UpdateOffer =() =>{
     const sendRequest = async() =>{
         await axios.put(`http://localhost:8090/offer/update/${id}` , {
 
-            tittele:String(input.tittle),
+            tittle:String(input.tittle),
             description:String(input.description),
             discount:String(input.discount),
             closingDate:String(input.closingDate)
@@ -54,6 +54,7 @@ const UpdateOffer =() =>{
         }))
     }
     console.log(input);
+    
 
 
 
@@ -64,27 +65,25 @@ const UpdateOffer =() =>{
                 <center>
                     {input && (
             <div className='coArea'>
-                <h2>Add Offers</h2>
+                <h2>Update Offers</h2>
                 <div className='coui'>
                 
-                    <div className='coname'>
-                    <label className='coffer'>Offer Discription</label>
+                <div className='coname'>
+                    <label className='coffer'>Tittle</label>
                         <input class="form-control"
                         name='tittle' 
-                        placeholder='Eneter here'
-                        value={this.state.tittle}
+                        value={input.tittle}
                         onChange={handleChange}
-                        required></input>
+                        ></input>
                     </div>
 
                     <div className='coname'>
                     <label className='coffer'>Offer Discription</label>
                         <input class="form-control"
                         name='description' 
-                        placeholder='Eneter here'
-                        value={this.state.description}
+                        value={input.description}
                         onChange={handleChange}
-                        required></input>
+                        ></input>
                     </div>
 
                     <div className='coname'>
@@ -93,7 +92,7 @@ const UpdateOffer =() =>{
                         name='discount'
                         class="form-control" 
                         placeholder='Eneter here'
-                        value={this.state.discount}
+                        value={input.discount}
                         onChange={handleChange}
                         required></input>
                     </div>
@@ -108,7 +107,7 @@ const UpdateOffer =() =>{
                         <input class="form-control"
                         name='closingDate'
                         type='date'
-                        value={this.state.closingDate}
+                        value={input.closingDate}
                         onChange={handleChange}
                         ></input>
                     </div>
@@ -120,7 +119,7 @@ const UpdateOffer =() =>{
 
                 </div>
 
-                <button class='btn btn-primary' type='submit' onClick={handleSubmit}><a href="/alloffer" style={{textDecoration:'none', color:'white'}}>UPDATE OFFER</a></button>
+                <button class='btn btn-primary' type='submit' onClick={handleSubmit}>UPDATE OFFER</button>
 
                 
 

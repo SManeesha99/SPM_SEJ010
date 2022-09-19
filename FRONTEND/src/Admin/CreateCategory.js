@@ -28,7 +28,7 @@ export default function CreateCategory() {
     swal("CourcategoryTitlese title Field is empty")
 }else if(categoryDescription === ''){
     swal("Course Duration Field is empty")
-}
+}else{
 
   axios.post('http://localhost:8090/category/add',newForm).then(()=>{
 
@@ -44,6 +44,7 @@ export default function CreateCategory() {
 }).catch((e)=>{
   alert(e);
 })
+}
 
   }
 

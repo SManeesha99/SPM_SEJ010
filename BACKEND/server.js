@@ -33,12 +33,15 @@ const makeReviewRoutes = require('./routes/makeReview');
 app.use("/makeReview",makeReviewRoutes);
 
 
+
 // const StudentRoutes = require('./routes/StudentRegistration');
 // app.use(StudentRoutes);
 
 
+
 const CourseRoutes = require('./routes/Courses');
 app.use("/Courses",CourseRoutes);
+
 
 
 // app.use('/admin', require('./routes/AdminRegister'));
@@ -47,9 +50,10 @@ app.use("/Courses",CourseRoutes);
 const UserRoutes = require('./routes/UserRegistration');
 app.use("/User",UserRoutes);
 
+const StudentRoutes = require('./routes/StudentRegistration');
+app.use("/Student",StudentRoutes);
 
-const adminRoutes = require('./routes/AdminRegister');
-app.use("/admin", adminRoutes);
+
 
 const offerRoutes = require('./routes/offers');
 app.use("/offer", offerRoutes);
@@ -57,6 +61,9 @@ app.use("/offer", offerRoutes);
 
 const categoryRoutes = require('./routes/Category');
 app.use("/category", categoryRoutes);
+
+const AdminRoutes = require('./routes/AdminRegister');
+app.use("/admin", AdminRoutes)
 
 
 app.listen(PORT,()=>{
