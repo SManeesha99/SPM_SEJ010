@@ -42,7 +42,7 @@ function App() {
           <Route path='/ViewAllCategoies' element={<ViewAllCategoies/>} />
           <Route path='/studentProfile' element={<StudentProfile/>} />
           <Route path='/viewProfiles' element={<ViewProfiles/>} />
-          <Route path='/editProfile/:id' element={<EditProfile/>} />
+          <Route path='/editProfile' element={<EditProfile/>} />
           <Route path='/addCartCourse' element={<AddCartCourse/> } />
           <Route path='/addCourse' element={<AddCourse/> }/>
           <Route path='/courseDetailsView/:id' element={<CourseDetailsView/>} />

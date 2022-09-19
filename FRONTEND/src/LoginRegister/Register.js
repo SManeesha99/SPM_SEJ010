@@ -37,16 +37,17 @@ export default function () {
 }else if(lastName === ''){
     swal("lastName Field is empty")
 }else if(mobileNumber === ''){
-    swal("Course Price Field is empty")
+    swal("mobileNumber Field is empty")
 }else if(field === ''){
-    swal("Course Description Field is empty")
+    swal("field Field is empty")
 }else if(email === ''){
-    swal("Course Description Field is empty")
+    swal("email Field is empty")
 }else if(password === ''){
-    swal("Course Description Field is empty")
+    swal("password Field is empty")
 }
+else{
 
-  axios.post('http://localhost:8090/Student/add',newForm).then(()=>{
+  axios.post('http://localhost:8090/User/add',newForm).then(()=>{
 
     swal({
       title: "Success!",
@@ -60,6 +61,8 @@ export default function () {
 }).catch((e)=>{
   alert(e);
 })
+
+}
 
   }
 
@@ -111,7 +114,7 @@ export default function () {
                              )}
                          class="form-control selectstNin" id="exampleFormControlSelect1">
                             <option >Please Select</option>
-                        <option value="Instructor">Instrutor</option>
+                        <option value="Instructor">Instructor</option>
                         <option value="Student">Student</option>
                         </select>
                     </div>
@@ -147,7 +150,7 @@ export default function () {
 
                 </div>
 
-                <button class='btn btn-primary' onClick={sendData}>Register</button>
+                <button class='btn btn-primary' onClick={sendData}><Link to ="/login" style={{textDecoration:'none', color:'white'}}>Register</Link></button>
 
                 <hr/>
                 <p>Already have an account? <Link className="nav-link active" aria-current="page" to="/login">Login</Link></p>

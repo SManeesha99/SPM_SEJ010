@@ -11,7 +11,7 @@ const EditProfile =() => {
     console.log(id);
     useEffect(()=>{ 
         const fetchHandler = async()=>{
-            await axios.get(`http://localhost:8090/Student/get/${id}`)
+            await axios.get(`http://localhost:8090/User/get/${id}`)
             .then((res)=> res.data )
             .then((data)=>setInput(data.userProfile));
         }
