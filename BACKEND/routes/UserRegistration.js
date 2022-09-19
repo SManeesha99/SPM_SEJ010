@@ -1,9 +1,9 @@
 const express = require('express');
-const StudentsRegstration = require('../models/StudentsRegstration.models');
+const UserRegstration = require('../models/UserRegstration.models');
 
 const router = express.Router();
 
-// register student----------------------------
+// register User----------------------------
 
 router.route("/add").post((req,res)=>{
     const firstName = req.body.firstName;
@@ -14,7 +14,7 @@ router.route("/add").post((req,res)=>{
     const password = req.body.password;
     
 
-    const newstudent = new StudentsRegstration({
+    const newuser = new UserRegstration({
         firstName,
         lastName,
         mobileNumber,
@@ -26,8 +26,8 @@ router.route("/add").post((req,res)=>{
         
     })
 
-    newstudent.save().then(()=>{
-        res.json("Student Added")
+    newuser.save().then(()=>{
+        res.json("New User Added")
     }).catch((err)=>{
         console.log(err);
     })
@@ -38,8 +38,8 @@ router.route("/add").post((req,res)=>{
 //get all-----------------------------------------------
 
 router.route("/").get((req,res)=>{
-    StudentsRegstration.find().then((Student)=>{
-        res.json(Student)
+    UserRegstration.find().then((User)=>{
+        res.json(User)
     }).catch((err)=>{
         console.log(err);
     })
@@ -50,9 +50,9 @@ router.route("/").get((req,res)=>{
 //delete---------------------------------
 
 router.route("/delete/:id").delete(async (req, res) => {
-    let studentId = req.params.id;
+    let userId = req.params.id;
 
-    await StudentsRegstration.findByIdAndDelete(studentId)
+    await UserRegstration.findByIdAndDelete(userId)
     .then(() => {
         res.status(200).send({status: "User Deleted"});
     }).catch((err) => {
@@ -68,16 +68,16 @@ router.route("/delete/:id").delete(async (req, res) => {
 
 router.get("/get/:id",(req,res)=>{
 
-    let studentId = req.params.id;
+    let userId = req.params.id;
     
-    StudentsRegstration.findById(studentId,(err,student)=>{
+    UserRegstration.findById(userId,(err,User)=>{
         if(err){
             return res.status(400).json({success:false, err});
         }
 
         return res.status(200).json({
             success:true,
-            student
+            User
         });
     });
 });

@@ -11,7 +11,7 @@ export default function ViewProfiles() {
     const [userProfile,setuserProfile] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:8090/Student/').then(res =>{
+        axios.get('http://localhost:8090/User/').then(res =>{
             setuserProfile(res.data);
             console.log(res);
         }).catch(err =>{
@@ -21,7 +21,7 @@ export default function ViewProfiles() {
 
     function onDelete (id) {
 
-        axios.delete(`http://localhost:8090/Student/delete/${id}`).then((res)=>{
+        axios.delete(`http://localhost:8090/User/delete/${id}`).then((res)=>{
     
         alert("Delete Successfully");
     
@@ -48,8 +48,8 @@ export default function ViewProfiles() {
 
                     </div> */}
                     
-                        <h2>Name : {userProfile.firstName} {userProfile.lasttName}</h2>
-                        <p>Field : {userProfile.field} </p>
+                        <h2>Name : {userProfile.firstName} {userProfile.lastName}</h2>
+                        <p> Field : {userProfile.field} </p>
                     
 
                 </div>
