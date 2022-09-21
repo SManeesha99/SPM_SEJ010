@@ -30,7 +30,7 @@ retrieveCourses(){
               courses:res.data
           });
 
-          console.log(this.state.courses)
+          console.log(this.state.courses);
       }
   });
 
@@ -54,10 +54,63 @@ onDelete = (id) =>{
 
 };
 
+handleTextSearch =(e)=>{
+  const searchTerm = e.currentTarget.value;
+  axios.get("http://localhost:8090/Courses").then(res => {
+      if(res.data){ 
+          this.filterContent(res.data , searchTerm)
+      }
+  });
+}; 
+
+filterContent(courses, searchTerm){
+  const result = courses.filter(
+      (courses) => 
+      courses.ctitle.toLowerCase().includes(searchTerm)
+  );
+  this.setState({ courses: result });
+}
+
   render(){
     return(
       <div>
-      <Header/>
+
+{/* <div className="col-lg-3 mt-2 mb-2">
+                        <input
+                            className="form-control searchbar"
+                            type="search"
+                            placeholder="search"
+                            name="searchTerm"
+                            onChange={this.handleTextSearch}
+                        ></input>
+                    </div> */}
+
+      <div>
+        <nav class="navbar navbar-expand-lg bg-light navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LOGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" name="searchTerm" onChange={this.handleTextSearch} aria-label="Search"></input>
+                <button class="btn searchbtn" type="submit">Search</button>
+            </form>
+            <div class="collapse navbar-collapse rightheder" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#"><div className='profilearea'></div></a>
+                </li>
+                
+            </ul>
+            
+            </div>
+        </div>
+        </nav>
+    </div>
 
       <div className='allcoursesviewArea'>
 
