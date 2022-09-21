@@ -15,7 +15,7 @@ export default function AddCartCourse() {
                  Lorem ipsum may be used as a placeholder before final copy is available.</p>
 
             <button className='enrollbtn'>Enroll Now $12.49(USD)</button>
-            <button className='addcrtbtn'>Add to Cart $12.49(USD)</button>
+            
             <a  class="viewreview" href="#review">View Review..</a>
 
         </div>

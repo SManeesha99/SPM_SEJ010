@@ -16,3 +16,24 @@
 -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.68);
 -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.68);
 }
+
+.card-footer button{
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 2px;
+}
+
+.card-footer button:hover{
+    background-color: #2076c7 !important;
+    transition: 0.4s !important;
+}
+
+.card-footer .addcrtbtn{
+    background-color: #0a3057 !important;
+    color: white !important;
+}

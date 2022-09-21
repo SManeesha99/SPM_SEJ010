@@ -49,7 +49,10 @@ const categoryRoutes = require('./routes/Category');
 app.use("/category", categoryRoutes);
 
 const AdminRoutes = require('./routes/AdminRegister');
-app.use("/admin", AdminRoutes)
+app.use("/admin", AdminRoutes);
+
+const LoginRoutes = require('./routes/Login');
+app.use("/login", LoginRoutes)
 
 
 app.listen(PORT,()=>{
