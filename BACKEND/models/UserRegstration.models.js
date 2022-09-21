@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+// const Schema = mongoose.Schema;
 
-const UserSchema = new Schema(
+const UserSchema = new mongoose.Schema(
     {
       firstName:{type: String, requried: true, trim: true},
       lastName: {type: String, requried: true, trim: true},
@@ -11,10 +11,8 @@ const UserSchema = new Schema(
       password: {type: String,required: false,}
       // userRoleStatus:{type: String, requried: true,trim: true},
       // accountStatus:{type: String, requried: true,trim: true},
-    },
-    {
-      timestamps: true,
     }
+ 
   );
   
 const User = mongoose.model("User",UserSchema);
