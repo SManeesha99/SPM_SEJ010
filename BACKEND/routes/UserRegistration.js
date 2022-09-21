@@ -1,7 +1,6 @@
-const express = require('express');
-const UserRegstration = require('../models/UserRegstration.models');
+const router = require('express').Router();
+let UserRegstration = require('../models/UserRegstration.models');
 
-const router = express.Router();
 
 // register User----------------------------
 

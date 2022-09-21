@@ -13,20 +13,24 @@ const EditProfile =() => {
         const fetchHandler = async()=>{
             await axios.get(`http://localhost:8090/User/get/${id}`)
             .then((res)=> res.data )
-            .then((data)=>setInput(data.userProfile));
+            .then((data)=>setInput(data.User));
         }
         fetchHandler()
-        .then((data)=>setInput(data.userProfile));
+        .then((data)=>setInput(data.User));
     },[id])
 
-    
-    // const handleSubmit = (e) =>{
-    //     e.preventDefault();
-    // }
 
-    // const handleChange =(e)=>{
-    //     console.log(e);
-    // }
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+    }
+
+    const handleChange =(e)=>{
+        
+        setInput((prevState)=>({
+            ...prevState,
+            [e.target.name]:e.target.value,
+        }))
+    }
     console.log(input);
 
   return (
@@ -50,7 +54,7 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.firstName} type="text" class="form-control form-control-lg" />
+                    <input value={input.firstName} name="firstName" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
@@ -65,7 +69,7 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.lastName} type="text" class="form-control form-control-lg" />
+                    <input value={input.lastName} name="lastName" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
@@ -80,7 +84,22 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.mobileNumber} type="text" class="form-control form-control-lg" />
+                    <input value={input.mobileNumber} name="mobileNumber" class="form-control form-control-lg"></input>
+
+                </div>
+                </div>
+            </div>
+
+            <div className='name'>
+                <div class="row align-items-center pt-4 pb-3">
+                <div class="col-md-3 ps-5">
+
+                    <h6 class="mb-0">Field</h6>
+
+                </div>
+                <div class="col-md-9 pe-5">
+
+                    <input value={input.field} name="field" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
@@ -96,7 +115,7 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.email} type="text" class="form-control form-control-lg" />
+                    <input value={input.email} name="email" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
@@ -112,14 +131,14 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.password} type="text" class="form-control form-control-lg" />
+                    <input value={input.password} name="password" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
             </div>
 
             <div class="mt-4 pt-2">
-                <center><input class="btn btn-primary btn-lg" type="submit" value="Submit" /></center>
+                <center><button class="btn btn-primary btn-lg">Edit Profile</button></center>
             </div>
 
 
