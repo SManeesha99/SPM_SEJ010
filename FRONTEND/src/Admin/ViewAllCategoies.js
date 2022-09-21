@@ -33,14 +33,16 @@ class ViewAllCategoies extends React.Component{
     
     }
 
-//     onDelete = (id) =>{
-//     axios.delete(`http://localhost:8090/category/delete/${id}`).then((res)=>{
-//       alert("Delete successfully");
-//       this.retrieveCategory();
-//   });
+
+
+    onDelete = (id) =>{
+    axios.delete(`http://localhost:8090/category/delete/${id}`).then((res)=>{
+      alert("Delete successfully");
+      this.retrieveCategory();
+  });
 
   
-// };
+};
 
     render(){
 
@@ -64,7 +66,7 @@ class ViewAllCategoies extends React.Component{
                     <div class="col right">
                         <a href='#' class="btn btn-primary">View More..</a>
                         <a href='#' class="btn btn-success"> <Link to={`/EditCategory/${category._id}`} style={{textDecoration:'none', color:'white'}}>Edit Category</Link></a>
-                        <button class="btn btn-danger" type='button'>Remove</button>
+                        <button class="btn btn-danger" type='button' onClick={()=> this.onDelete(category._id)}>Remove</button>
                     </div>
 
 
@@ -84,3 +86,4 @@ class ViewAllCategoies extends React.Component{
 
 }
 export default ViewAllCategoies;
+

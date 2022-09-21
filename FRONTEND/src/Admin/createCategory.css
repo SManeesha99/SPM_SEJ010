@@ -4,13 +4,13 @@
     padding: 80px 10%;
 }
 
-.categoryArea h2{
+.categoryArea h1{
     margin: 20px auto;
     text-align: center;
     font-weight: 600;
 }
 
-.categoryArea h2 span{
+.categoryArea h1 span{
     font-size: 45px;
     color: rgb(19, 110, 146);
 }

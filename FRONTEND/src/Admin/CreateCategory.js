@@ -53,7 +53,7 @@ export default function CreateCategory() {
          <Header/>
         <div className='categoryArea'>
             <div className='categoriContainer'>
-                <h2><span>C</span>reate <span>C</span>ategories</h2>
+                <h1><span>C</span>reate <span>C</span>ategories</h1>
 
                 <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Title</label>
