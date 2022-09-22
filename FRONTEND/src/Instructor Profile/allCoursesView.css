@@ -4,7 +4,7 @@
     border: 1px solid rgba(137, 137, 137, 0.689);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
-    margin: 90px auto;
+    margin: 90px auto 20px auto;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
     padding: 30px 10px;
 }
@@ -75,10 +75,10 @@ video{
     display: flex;
 }
 
-.btnarea button{
+.card-footer button{
     height: 28px;
+    padding: 10px 0 !important;
     font-size: 11px !important;
-    font-weight: 600 !important;
 }
 
 
