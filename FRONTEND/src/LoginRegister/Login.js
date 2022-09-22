@@ -11,6 +11,10 @@ export default function Login() {
 
     // const history = useNavigate();
 
+
+                <hr/>
+                <p className='bottm'>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
+
     const login = ()  => {
 
         const loginUser = {email, password};
