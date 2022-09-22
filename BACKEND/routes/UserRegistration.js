@@ -81,7 +81,7 @@ router.get("/get/:id",(req,res)=>{
     });
 });
 
-//--------------------------------------
+//update--------------------------------
 
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
@@ -104,6 +104,26 @@ router.route("/update/:id").put(async(req,res)=>{
     })
  
 })
+
+//login----------------------------------------
+
+router.post("/login", async (req, res) => {
+   
+    const user = await UserRegstration.findOne({email:req.body.email, password:req.body.password});
+    if (user){
+        res.send({
+            status:true,
+            details:user
+        })
+    }else{
+        res.send({
+            status:false
+        })
+    }
+
+  });
+
+//---------------------------------------------
 
 // router.route("/delete/:id").delete(async(req,res)=>{
 //     let noticeID = req.params.id;
