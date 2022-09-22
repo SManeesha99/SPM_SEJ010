@@ -12,6 +12,7 @@ import CourseInfo from './Instructor Profile/CourseInfo';
 
 import AllCoursesView from './Instructor Profile/AllCoursesView';
 import Home from './Home/Home';
+import HomeLogged from './Home/HomeLogged';
 import CreateOffer from './Offers/CreateOffer';
 import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
 import CreateCategory from './Admin/CreateCategory';
@@ -40,6 +41,7 @@ function App() {
       <Routes>
         <Route>
           <Route path='/' element={<Home/>} />
+          <Route path='/homeLogged' element={<HomeLogged/>} />
           <Route path='/register' element={<Register/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/createReview' element={<CreateReview/>} />
