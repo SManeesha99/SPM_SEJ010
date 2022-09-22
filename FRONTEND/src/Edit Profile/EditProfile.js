@@ -1,14 +1,16 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import './editProfile.css';
 import Header from '../Header/Header';
+import swal from "sweetalert";
 
 const EditProfile =() => {
 
     const [input, setInput]=useState({});
     const id =useParams().id;
     console.log(id);
+    const history = useNavigate();
     useEffect(()=>{ 
         const fetchHandler = async()=>{
             await axios.get(`http://localhost:8090/User/get/${id}`)
@@ -19,10 +21,34 @@ const EditProfile =() => {
         .then((data)=>setInput(data.User));
     },[id])
 
+    const sendRequest = async()=>{
+
+        await axios.put(`http://localhost:8090/User/update/${id}`, {
+
+            firstName:String(input.firstName),
+            lastName:String(input.lastName),
+            mobileNumber:Number(input.mobileNumber),
+            field:String(input.field),
+            email:String(input.email),
+            password:String(input.password)
+
+        }).then(()=>{
+
+            swal({
+                title:"Success",
+                text: "User Updated Successfull",
+                icon: 'success',
+                timer: 2000,
+                button: false,
+            });
+        })
+    }
+
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-    }
+        sendRequest().then(()=>history("/viewProfiles"));
+    };
 
     const handleChange =(e)=>{
         
@@ -54,7 +80,7 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.firstName} name="firstName" class="form-control form-control-lg"></input>
+                    <input value={input.firstName} onChange={handleChange} name="firstName" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
@@ -69,7 +95,7 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.lastName} name="lastName" class="form-control form-control-lg"></input>
+                    <input value={input.lastName} onChange={handleChange} name="lastName" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
@@ -84,7 +110,7 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.mobileNumber} name="mobileNumber" class="form-control form-control-lg"></input>
+                    <input value={input.mobileNumber} onChange={handleChange} name="mobileNumber" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
@@ -99,7 +125,7 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.field} name="field" class="form-control form-control-lg"></input>
+                    <input value={input.field} readOnly name="field" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
@@ -115,7 +141,7 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.email} name="email" class="form-control form-control-lg"></input>
+                    <input value={input.email} onChange={handleChange} name="email" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
@@ -131,14 +157,14 @@ const EditProfile =() => {
                 </div>
                 <div class="col-md-9 pe-5">
 
-                    <input value={input.password} name="password" class="form-control form-control-lg"></input>
+                    <input value={input.password} onChange={handleChange} name="password" class="form-control form-control-lg"></input>
 
                 </div>
                 </div>
             </div>
 
             <div class="mt-4 pt-2">
-                <center><button class="btn btn-primary btn-lg">Edit Profile</button></center>
+                <center><button class="btn btn-primary btn-lg" onClick={handleSubmit}>Edit Profile</button></center>
             </div>
 
 
