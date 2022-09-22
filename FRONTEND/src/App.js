@@ -49,7 +49,7 @@ function App() {
           <Route path='/EditCategory/:id' element={<EditCategory/>} />
           <Route path='/studentProfile' element={<StudentProfile/>} />
           <Route path='/viewProfiles' element={<ViewProfiles/>} />
-          <Route path='/editProfile/:id' element={<EditProfile/>} />
+          <Route path='/editProfile' element={<EditProfile/>} />
           <Route path='/viewCourse/:id' element={<ViewCourse/> } />
           <Route path='/addCourse' element={<AddCourse/> }/>
           <Route path='/courseDetailsView/:id' element={<CourseDetailsView/>} />

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 let UserRegstration = require('../models/UserRegstration.models');
+const jwt =require('jsonwebtoken');
 
 
 // register User----------------------------
@@ -111,10 +112,20 @@ router.post("/login", async (req, res) => {
    
     const user = await UserRegstration.findOne({email:req.body.email, password:req.body.password});
     if (user){
-        res.send({
-            status:true,
-            details:user
-        })
+
+        
+    const tokendetails= {email:req.body.email};
+    const accessToken=jwt.sign(tokendetails,process.env.TOKEN_KEY,{expiresIn: '1d'});
+
+    const data = {
+        status:true,
+        email:user.email,
+        id:user._id,
+        accesstoken: accessToken,
+
+    };
+
+        res.send(data)
     }else{
         res.send({
             status:false
