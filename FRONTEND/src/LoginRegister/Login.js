@@ -12,9 +12,7 @@ export default function Login() {
     // const history = useNavigate();
 
 
-                <hr/>
-                <p className='bottm'>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
-
+                
     const login = ()  => {
 
         const loginUser = {email, password};
@@ -72,9 +70,8 @@ export default function Login() {
 
                         <button class='btn btn-primary' onClick={(e)=>login()}>Login</button>
 
-                        <hr />
-                        <p>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
-
+                        <hr/>
+                <p className='bottm'>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
 
                     </div>
                 </center>
