@@ -29,7 +29,7 @@ export default function Login() {
                 //   history("/");
 
                   setTimeout(()=>{
-                    window.location.replace("http://localhost:3000/")
+                    window.location.replace("http://localhost:3000/homeLogged")
                   }, 2000)
 
             }else{
