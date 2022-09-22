@@ -75,16 +75,6 @@ filterContent(courses, searchTerm){
     return(
       <div>
 
-{/* <div className="col-lg-3 mt-2 mb-2">
-                        <input
-                            className="form-control searchbar"
-                            type="search"
-                            placeholder="search"
-                            name="searchTerm"
-                            onChange={this.handleTextSearch}
-                        ></input>
-                    </div> */}
-
       <div>
         <nav class="navbar navbar-expand-lg bg-light navbar fixed-top">
         <div class="container-fluid">
