@@ -83,26 +83,27 @@ router.get("/get/:id",(req,res)=>{
 
 //--------------------------------------
 
-// router.route("/update/:id").put(async(req,res)=>{
-//     let noticeID = req.params.id;
-//     const{select,date,time,subject,message}=req.body;
+router.route("/update/:id").put(async(req,res)=>{
+    let userId = req.params.id;
+    const{firstName,lastName,mobileNumber,field,email,password}=req.body;
 
-//     const updateNotice={
-//         select,
-//         date,
-//         time,
-//         subject,
-//         message
+    const updateUser={
+        firstName,
+        lastName,
+        mobileNumber,
+        field,
+        email,
+        password
         
-//     }
-//     const update = await Notice.findByIdAndUpdate(noticeID,updateNotice).then(()=>{
-//         res.status(200).send({status: "Notice updated"})
-//     }).catch((err)=>{
-//         console.log(err);
-//         res.status(500).send({status:"Error with updating data",error:err.message})
-//     })
+    }
+    const update = await UserRegstration.findByIdAndUpdate(userId,updateUser).then(()=>{
+        res.status(200).send({status: "User Details Updated"})
+    }).catch((err)=>{
+        console.log(err);
+        res.status(500).send({status:"Error with updating data",error:err.message})
+    })
  
-// })
+})
 
 // router.route("/delete/:id").delete(async(req,res)=>{
 //     let noticeID = req.params.id;

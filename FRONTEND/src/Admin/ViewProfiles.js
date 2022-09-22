@@ -54,7 +54,7 @@ import Header from "../Header/Header";
 
         <div className='viewProfilesArea'>
 
-            <h1 className="profileTopic">User Profiles</h1>
+            <h1 className="profileTopic"><span>U</span>ser <span>P</span>rofiles</h1>
 
             {this.state.userprof.map((userprof, index)=>
             
@@ -66,7 +66,7 @@ import Header from "../Header/Header";
                     </div> */}
                     
                         <h2>Name : {userprof.firstName} {userprof.lastName}</h2>
-                        <p> Field : {userprof.field} </p>
+                        <p className="fieldp"> Field : {userprof.field} </p>
                     
 
                 </div>
