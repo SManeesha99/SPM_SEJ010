@@ -20,7 +20,7 @@ export default function Header() {
                 <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#"><div className='profilearea'></div></a>
+                <a class="nav-link" href="/editProfile"><div className='profilearea'></div></a>
                 </li>
                 
             </ul>
