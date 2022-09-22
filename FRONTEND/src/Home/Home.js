@@ -38,7 +38,7 @@ retrieveCourses(){
   render() {
     return (
       <div>
-        <Header/> 
+        <NotRegHeaderWithSearch/> 
 
         
       <div className='HomeArea'>
