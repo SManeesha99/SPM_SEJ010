@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './home.css';
 import Header from '../Header/Header';
-import NotRegHeaderWithSearch from '../Header/NotRegHeaderWithSearch';
 import { useState ,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import axios from "axios";
 import swal from "sweetalert";
 
-export default class Home extends Component {
+export default class HomeLogged extends Component {
 
   constructor(props) {
     super (props);
@@ -85,3 +84,4 @@ retrieveCourses(){
     )
   }
 }
+

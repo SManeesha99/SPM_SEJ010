@@ -50,8 +50,8 @@ app.use("/Courses",CourseRoutes);
 const UserRoutes = require('./routes/UserRegistration');
 app.use("/User",UserRoutes);
 
-const StudentRoutes = require('./routes/StudentRegistration');
-app.use("/Student",StudentRoutes);
+// const StudentRoutes = require('./routes/StudentRegistration');
+// app.use("/Student",StudentRoutes);
 
 
 
