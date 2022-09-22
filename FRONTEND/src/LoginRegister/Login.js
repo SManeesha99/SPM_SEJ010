@@ -71,7 +71,7 @@ export default function Login() {
                         <button class='btn btn-primary' onClick={(e)=>login()}>Login</button>
 
                         <hr/>
-                <p className='bottm'>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
+                        <p className='bottm'>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
 
                     </div>
                 </center>
