@@ -26,7 +26,7 @@ export default function Login() {
                 <button class='btn btn-primary'><Link to={'/adminProfile'} style={{textDecoration:'none', color:'white'}}>Login</Link></button>
 
                 <hr/>
-                <p>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
+                <p className='bottm'>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
 
 
             </div>
