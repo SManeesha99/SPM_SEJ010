@@ -1,38 +1,85 @@
-import React from 'react';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import swal from "sweetalert";
 import NotRegHeader from '../Header/notRegHeader';
 import './loginRegister.css';
-import {Link} from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 
 export default function Login() {
-  return (
-    <div>
-        <div className='registerArea'>
-            <NotRegHeader/>
-            <center>
-            <div className='regArea'>
-                <h2>Login Now</h2>
-                <div className='regui'>
-                    
-                    <div className='name'>
-                        <label>Email</label>
-                        <input class="form-control" placeholder='Enter Your Email'></input>
-                    </div>
-                    <div className='name'>
-                        <label>Password</label>
-                        <input class="form-control" placeholder='Enter Your Password'></input>
-                    </div>
-                </div>
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
 
-                <button class='btn btn-primary'><Link to={'/adminProfile'} style={{textDecoration:'none', color:'white'}}>Login</Link></button>
+    // const history = useNavigate();
+
 
                 <hr/>
                 <p className='bottm'>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
 
+    const login = ()  => {
+
+        const loginUser = {email, password};
+
+        axios.post(`http://localhost:8090/User/login`,loginUser).then((res)=>{
+
+            if(res.data.status){
+                swal({
+                    title: "Success!",
+                    text: "Login Successfull !",
+                    icon: 'success',
+                    timer: 2000,
+                    button: false,
+                  });
+
+                //   history("/");
+
+                  setTimeout(()=>{
+                    window.location.replace("http://localhost:3000/homeLogged")
+                  }, 2000)
+
+            }else{
+                swal({
+                    title: "Warning!",
+                    text: "Login Unsuccessfull !",
+                    icon: 'error',
+                    timer: 2000,
+                    button: false,
+                  });
+            }
+      
+        });
+      
+    };
+
+
+    return (
+        <div>
+            <div className='registerArea'>
+                <NotRegHeader />
+                <center>
+                    <div className='regArea'>
+                        <h2>Login Now</h2>
+                        <div className='regui'>
+
+                            <div className='name'>
+                                <label>Email</label>
+                                <input class="form-control" value={email} onChange={e => setEmail(e.target.value)} placeholder='Enter Your Email'></input>
+                            </div>
+                            <div className='name'>
+                                <label>Password</label>
+                                <input class="form-control" value={password} onChange={e => setPassword(e.target.value)} placeholder='Enter Your Password'></input>
+                            </div>
+                        </div>
+
+                        <button class='btn btn-primary' onClick={(e)=>login()}>Login</button>
+
+                        <hr />
+                        <p>Already haven't an account? <Link className="nav-link active" aria-current="page" to="/register">Register</Link></p>
+
+
+                    </div>
+                </center>
 
             </div>
-            </center>
-
-            </div>
-    </div>
-  )
+        </div>
+    )
 }

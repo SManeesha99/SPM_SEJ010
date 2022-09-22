@@ -80,7 +80,7 @@ const CourseDetailsView =() => {
 
                     <div className='namee'>
                         <label>Course Title</label>
-                        <input name="ctitle" class="form-control" value={input.ctitle} onChange={handleChange}/>
+                        <input name="ctitle" class="form-control" placeholder='Enter Course Title' value={input.ctitle} onChange={handleChange}/>
                     </div>
 
                     <div className='namee'>
@@ -90,7 +90,7 @@ const CourseDetailsView =() => {
 
                     <div className='namee'>
                         <label>Course Price</label>
-                        <input name="cprice" value={input.cprice} onChange={handleChange} class="form-control" placeholder='Enter Course Price'></input>
+                        <input name="cprice" value={input.cprice} onChange={handleChange} class="form-control" placeholder='Rs 0000.00'></input>
                     </div>
 
                     <div className='namee'>
