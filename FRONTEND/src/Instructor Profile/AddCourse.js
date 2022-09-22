@@ -99,7 +99,7 @@ else {
                           onChange={(e) => (
                             setCprice(e.target.value)
                              )} 
-                         class="form-control" placeholder='Enter Course Price' type="text"></input>
+                         class="form-control" placeholder='Rs 0000.00' type="text"></input>
                     </div>
 
                     <div className='namee'>
