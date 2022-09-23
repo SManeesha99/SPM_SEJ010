@@ -28,14 +28,12 @@ export default function Header() {
                     
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="/editProfile">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <hr/>
                     <li><a class="dropdown-item" href="#">Sign Out</a></li>
                   </ul>
                   </div>
-
-                <a class="nav-link" href="/editProfile"><div className='profilearea'></div></a>
 
                 </li>
                 
