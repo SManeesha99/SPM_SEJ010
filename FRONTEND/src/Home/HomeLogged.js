@@ -6,7 +6,9 @@ import {Link} from 'react-router-dom';
 import axios from "axios";
 import swal from "sweetalert";
 
+
 export default class HomeLogged extends Component {
+
 
   constructor(props) {
     super (props);

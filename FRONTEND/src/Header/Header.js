@@ -19,11 +19,30 @@ export default function Header() {
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></a>
                 </li>
+                <span>0</span>
                 <li class="nav-item">
+
+                {/* <a class="nav-link" href="#"><div className='profilearea'></div></a> */}
+                  <div class="dropdown">
+                  <button class="btn btn-secondary  profilearea" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <hr/>
+                    <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                  </ul>
+                  </div>
+
                 <a class="nav-link" href="/editProfile"><div className='profilearea'></div></a>
+
                 </li>
                 
             </ul>
+
+              
+            
             
             </div>
         </div>
