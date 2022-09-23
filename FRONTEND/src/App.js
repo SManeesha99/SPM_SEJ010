@@ -29,6 +29,7 @@ import AdminProfile from './Admin/AdminProfile';
 
 import ViewAllCategoies from './Admin/ViewAllCategoies';
 import EditCategory from './Admin/EditCategory';
+import Cart from './Cart/Cart';
 
 
 import { Routes,Route } from 'react-router-dom';
@@ -51,6 +52,7 @@ function App() {
           <Route path='/viewProfiles' element={<ViewProfiles/>} />
           <Route path='/editProfile/:id' element={<EditProfile/>} />
           <Route path='/addCartCourse' element={<AddCartCourse/> } />
+          <Route path='/Cart' element={<Cart/> } />
           <Route path='/addCourse' element={<AddCourse/> }/>
           <Route path='/courseDetailsView/:id' element={<CourseDetailsView/>} />
           <Route path='/updateCourseDetails' element={<UpdateCourseDetails/>} />

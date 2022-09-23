@@ -37,3 +37,15 @@
     margin-right: 10px;
 }
 
+.rightheder span{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+    position: relative;
+    left: -22px;
+}
+
