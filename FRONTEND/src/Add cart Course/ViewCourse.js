@@ -1,20 +1,36 @@
-import React from 'react';
-import './addCartCourse.css';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import './ViewCourse.css';
 import Video from "../htmlCss.mp4";
 import Header from "../Header/Header";
 
-export default function AddCartCourse() {
+const ViewCourse =() => {
+
+    const [input, setInput]=useState({});
+    const id =useParams().id;
+    console.log(id);
+    const history = useNavigate();
+    useEffect(()=>{ 
+        const fetchHandler = async()=>{
+            await axios.get(`http://localhost:8090/Courses/Courses/${id}`)
+            .then((res)=> res.data )
+            .then((data)=>setInput(data.courses));
+        }
+        fetchHandler()
+        .then((data)=>setInput(data.courses));
+    },[id])
+
+
   return (
     <div>
          <Header/>
     <div className='create'>
         <div className='courseDetails'>
-            <h1>Course Title</h1>
-            <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                 Lorem ipsum may be used as a placeholder before final copy is available.</p>
+            <h1> {input.ctitle} </h1>
+            <p>{input.cdescription}</p>
 
-            <button className='enrollbtn'>Enroll Now $12.49(USD)</button>
+            <button className='enrollbtn'>Enroll Now {input.cprice}</button>
             
             <a  class="viewreview" href="#review">View Review..</a>
 
@@ -119,4 +135,5 @@ export default function AddCartCourse() {
 
     </div>
   )
-}
+};
+export default ViewCourse;

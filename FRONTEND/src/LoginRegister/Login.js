@@ -19,6 +19,8 @@ export default function Login() {
 
         axios.post(`http://localhost:8090/User/login`,loginUser).then((res)=>{
 
+            localStorage.setItem("id",res.data.id);
+
             if(res.data.status){
                 swal({
                     title: "Success!",
@@ -31,7 +33,7 @@ export default function Login() {
                 //   history("/");
 
                   setTimeout(()=>{
-                    window.location.replace("http://localhost:3000/homeLogged")
+                    window.location.replace(`http://localhost:3000/homeLogged`)
                   }, 2000)
 
             }else{

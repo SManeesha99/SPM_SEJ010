@@ -21,6 +21,7 @@ export default function Header() {
                 </li>
                 <span>0</span>
                 <li class="nav-item">
+
                 {/* <a class="nav-link" href="#"><div className='profilearea'></div></a> */}
                   <div class="dropdown">
                   <button class="btn btn-secondary  profilearea" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,6 +34,9 @@ export default function Header() {
                     <li><a class="dropdown-item" href="#">Sign Out</a></li>
                   </ul>
                   </div>
+
+                <a class="nav-link" href="/editProfile"><div className='profilearea'></div></a>
+
                 </li>
                 
             </ul>

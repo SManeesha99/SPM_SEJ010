@@ -4,7 +4,7 @@ import StudentProfile from './Student Profile/StudentProfile';
 import Register from './LoginRegister/Register';
 import Login from './LoginRegister/Login';
 import EditProfile from './Edit Profile/EditProfile';
-import AddCartCourse from './Add cart Course/AddCartCourse';
+import ViewCourse from './Add cart Course/ViewCourse';
 import AddCourse from './Instructor Profile/AddCourse';
 import CourseDetailsView from './Instructor Profile/CourseDetailsView';
 import UpdateCourseDetails from './Instructor Profile/UpdateCourseDetails';
@@ -50,9 +50,14 @@ function App() {
           <Route path='/EditCategory/:id' element={<EditCategory/>} />
           <Route path='/studentProfile' element={<StudentProfile/>} />
           <Route path='/viewProfiles' element={<ViewProfiles/>} />
+
           <Route path='/editProfile/:id' element={<EditProfile/>} />
           <Route path='/addCartCourse' element={<AddCartCourse/> } />
           <Route path='/Cart' element={<Cart/> } />
+
+          <Route path='/editProfile' element={<EditProfile/>} />
+          <Route path='/viewCourse/:id' element={<ViewCourse/> } />
+
           <Route path='/addCourse' element={<AddCourse/> }/>
           <Route path='/courseDetailsView/:id' element={<CourseDetailsView/>} />
           <Route path='/updateCourseDetails' element={<UpdateCourseDetails/>} />

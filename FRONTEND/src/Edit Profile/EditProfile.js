@@ -7,8 +7,10 @@ import swal from "sweetalert";
 
 const EditProfile =() => {
 
+
+
     const [input, setInput]=useState({});
-    const id =useParams().id;
+    const id =localStorage.getItem("id");
     console.log(id);
     const history = useNavigate();
     useEffect(()=>{ 

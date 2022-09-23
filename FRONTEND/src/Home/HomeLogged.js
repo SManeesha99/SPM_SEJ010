@@ -47,6 +47,9 @@ retrieveCourses(){
       {this.state.courses.map((courses, index) =>
 
         <div className="card homevideocontainer" key={index}>
+
+          <Link className="nav-link active" aria-current="page" to={`/viewCourse/${courses._id}`}>
+
           <div className="card-header">
           {courses.ctitle}
                     
@@ -59,6 +62,8 @@ retrieveCourses(){
             <video src="./Videos/tujhe.mp4" controls = "video/mp4"></video>
 
           </div>
+
+          </Link>
 
           <div className="card-footer">
               <div className='discri'>
