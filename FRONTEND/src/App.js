@@ -52,7 +52,7 @@ function App() {
           <Route path='/viewProfiles' element={<ViewProfiles/>} />
 
           <Route path='/editProfile/:id' element={<EditProfile/>} />
-          <Route path='/addCartCourse' element={<AddCartCourse/> } />
+          <Route path='/viewCourse' element={<ViewCourse/> } />
           <Route path='/Cart' element={<Cart/> } />
 
           <Route path='/editProfile' element={<EditProfile/>} />
