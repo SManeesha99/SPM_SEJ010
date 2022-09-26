@@ -71,7 +71,7 @@ export default function () {
                           <div class='row fullname'>
                               <div class="col-sm-6">
                                   <input
-                                  name='firstName'
+                                  name='firstname'
                                   onChange={(e) => (
                                       setFirstName(e.target.value)
                                        )} 
@@ -79,7 +79,7 @@ export default function () {
                               </div>
                               <div class="col-sm-6">
                                   <input
-                                  name='lastName'
+                                  name='lastname'
                                   onChange={(e) => (
                                       setLastName(e.target.value)
                                        )} 
