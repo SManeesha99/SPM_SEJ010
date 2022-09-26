@@ -36,4 +36,4 @@ This Application has three kinds of users called Admins, Students and Instructor
 6.	After the node modules getting downloaded, type ‘npm start’ and click enter.
 7.	Navigate to frontend folder -> cd Frontend
 8.	Type ‘npm install’ and click enter
-9.	After the node modules getting downloaded, type ‘npm start’ and click enter.
+9.	After the node modules getting downloaded, type ‘npm start’ and click enter.ggg
