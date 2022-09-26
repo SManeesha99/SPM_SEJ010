@@ -6,7 +6,7 @@ import './loginRegister.css';
 import { Link , useNavigate } from 'react-router-dom';
 
 
-export default function Login() {
+export default function AdminLogin() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
@@ -16,9 +16,10 @@ export default function Login() {
                 
     const login = ()  => {
 
-        const loginUser = {email, password};
+        const loginAdmin = {email, password};
+        
 
-        axios.post(`http://localhost:8090/admin/adminlogin`,loginUser).then((res)=>{
+        axios.post(`http://localhost:8090/admin/adminlogin`,loginAdmin).then((res)=>{
 
             localStorage.setItem("id",res.data.id);
 
@@ -67,7 +68,7 @@ export default function Login() {
                             </div>
                             <div className='name'>
                                 <label>Password</label>
-                                <input class="form-control" value={password} onChange={e => setPassword(e.target.value)} placeholder='Enter Your Password'></input>
+                                <input class="form-control" type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder='Enter Your Password'></input>
                             </div>
                         </div>
 

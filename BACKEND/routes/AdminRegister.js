@@ -55,6 +55,26 @@ router.post("/adminlogin", async (req, res) => {
 //---------------------------------------------
 
 
+//get one-----------------------------
+
+
+router.get("/get/:id",(req,res)=>{
+
+    let adminId = req.params.id;
+    
+    Admin.findById(adminId,(err,Admin)=>{
+        if(err){
+            return res.status(400).json({success:false, err});
+        }
+
+        return res.status(200).json({
+            success:true,
+            Admin
+        });
+    });
+});
+
+
 module.exports = router;
 
 
