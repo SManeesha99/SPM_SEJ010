@@ -1,14 +1,18 @@
 const router = require("express").Router();
-let Admin = require("../models/RegisterAdmin.models");
+let Admin = require("../models/AdminRegister");
+const jwt =require('jsonwebtoken');
+
 
 router.route("/add").post((req,res)=>{
 
-    const name = req.body.name;
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
     const email = req.body.email;
     const password = req.body.password;
 
     const newAdmin = new Admin({
-        name,
+        firstname,
+        lastname,
         email,
         password
     })
@@ -18,7 +22,38 @@ router.route("/add").post((req,res)=>{
     }).catch((err)=>{
         console.log(err)
     })
-})
+});
+
+//login----------------------------------------
+
+router.post("/adminlogin", async (req, res) => {
+   
+    const admin = await Admin.findOne({email:req.body.email, password:req.body.password});
+    if (admin){
+
+        
+    const tokendetails= {email:req.body.email};
+    const accessToken=jwt.sign(tokendetails,process.env.TOKEN_KEY,{expiresIn: '1d'});
+
+    const data = {
+        status:true,
+        email:admin.email,
+        id:admin._id,
+        accesstoken: accessToken,
+
+    };
+
+        res.send(data)
+    }else{
+        res.send({
+            status:false
+        })
+    }
+
+  });
+
+//---------------------------------------------
+
 
 module.exports = router;
 
