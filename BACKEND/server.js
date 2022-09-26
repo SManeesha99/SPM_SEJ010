@@ -63,7 +63,10 @@ const categoryRoutes = require('./routes/Category');
 app.use("/category", categoryRoutes);
 
 const AdminRoutes = require('./routes/AdminRegister');
-app.use("/admin", AdminRoutes);
+app.use("/Admin", AdminRoutes);
+
+const AdLoginRoutes = require('./routes/AdminLogin');
+app.use("/adminlogin", AdLoginRoutes)
 
 const LoginRoutes = require('./routes/Login');
 app.use("/login", LoginRoutes)
