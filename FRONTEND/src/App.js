@@ -24,6 +24,7 @@ import AdminLogin from './Admin/AdminLogin';
 import ViewAllOffers from './Offers/ViewAllOffers';
 import OfferInfo from './Offers/OfferDetails';
 import UpdateOffer from './Offers/UpdateOffer';
+import AddOffer from './Offers/AddOffer';
 
 import AdminProfile from './Admin/AdminProfile';
 
@@ -64,7 +65,8 @@ function App() {
           <Route path='/allCourseView' element={<AllCoursesView/>} />
           <Route path='/courseInfo/:id' element={<CourseInfo/>} />
           <Route path='/instructorReqReg' element={<Instructor_Req_Req/>} />
-          <Route path='/createOffer' element={<CreateOffer/>} />
+          <Route path='/createOffer/:id' element={<CreateOffer/>} />
+          <Route path='/addoffer' element={<AddOffer/>}/>
           <Route path='/createCategories' element={<CreateCategory/>} />
           <Route path='/registeradmin' element={<RegisterAdmin/>} />
           <Route path='/adminlogin' element={<AdminLogin/>} />
