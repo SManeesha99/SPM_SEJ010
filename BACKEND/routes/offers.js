@@ -3,6 +3,10 @@ let Offers = require("../models/offers");
 
 router.route("/add").post((req,res)=>{
 
+    const ctitle = req.body.ctitle;
+    const cduration = req.body.cduration;
+    const cprice = req.body.cprice;
+    const cdescription = req.body.cdescription;
     const tittle = req.body.tittle;
     const description = req.body.description;
     const discount = req.body.discount;
@@ -10,6 +14,10 @@ router.route("/add").post((req,res)=>{
 
     const newOffer = new Offers({
 
+        ctitle,
+        cduration,
+        cprice,
+        cdescription,
         tittle,
         description,
         discount,

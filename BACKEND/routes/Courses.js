@@ -22,6 +22,11 @@ router.route("/add").post((req,res)=>{
     const cduration = req.body.cduration;
     const cprice = req.body.cprice;
     const cdescription = req.body.cdescription;
+    
+    const tittle = req.body.tittle;
+    const description = req.body.description;
+    const discount = req.body.discount;
+    const closingDate = req.body.closingDate;
     /*const cvideo = req.body.cvideo;*/
 
     const newCourses_models = new Courses_models({
@@ -30,7 +35,11 @@ router.route("/add").post((req,res)=>{
         ctitle,
         cduration,
         cprice,
-        cdescription
+        cdescription,
+        tittle,
+        description,
+        discount,
+        closingDate
         // cvideo
     })
 
@@ -62,13 +71,17 @@ router.route("/").get((req,res)=>{
 
 router.route("/update/:id").put(async (req, res) =>{
     let courseId = req.params.id;
-    const {ctitle, cduration, cprice, cdescription} = req.body;
+    const {ctitle, cduration, cprice, cdescription, tittle, description,discount, closingDate} = req.body;
 
     const updateCourse ={
         ctitle,
         cduration,
         cprice,
-        cdescription
+        cdescription,
+        tittle,
+        description,
+        discount,
+        closingDate
     }
 
     const update = await Courses_models.findByIdAndUpdate(courseId, updateCourse)
