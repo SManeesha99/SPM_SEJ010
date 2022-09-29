@@ -134,3 +134,35 @@
     background-color: #0cf0b3;
 }
 
+.profArea{
+    width:100%;
+    height: auto;
+    padding: 20px 10%;
+    margin-top: 50px;
+}
+
+.prof{
+    width:100%;
+    height: 200px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+}
+
+.profLeft{
+    display:flex;
+    margin: auto;
+}
+
+.profRight{
+    display: flex;
+    justify-content: end;
+}
+
+.profRight  button{
+    height: 40px;
+    position: relative;
+    top: 60px;
+}
+
