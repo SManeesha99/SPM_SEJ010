@@ -1,0 +1,51 @@
+.navbar{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.rightheder{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchbtn{
+    outline: solid 1px #002B5B;
+}
+
+.searchbtn:hover{
+    background: #002B5B;
+    outline: none;
+    color: white;
+}
+
+.profilearea{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #002B5B;
+}
+
+
+.cart{
+    font-size: 30px;
+}
+.cart:hover{
+    color: #0652a9;
+}
+
+.rightheder ul li{
+    margin-right: 10px;
+}
+
+.rightheder span{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+    position: relative;
+    left: -22px;
+}
+

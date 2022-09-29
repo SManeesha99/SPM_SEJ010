@@ -1,41 +1,26 @@
-// const router = require('express').Router();
-// const {Admin} = require('../models/RegisterAdmin.models');
-// const joi = require('joi');
-// const bcrypt = require('bcrypt');
+const router = require("express").Router();
+const jwt =require('jsonwebtoken');
 
-// router.post("/",async(req,res)=>{
-//     try{
+router.route("/").post((req,res)=>{
 
-//         const{err} = validate(req.body);
-//         if(err)
-//         return res.status(400).send({message: err.details[0].message});
+    const email = req.body.email;
+    const password = req.body.password;
+    const status = true;
 
-//         const admin = await Admin.findOne({email: req.body.email});
+    const tokendetails= {email:email};
+    const accessToken=jwt.sign(tokendetails,process.env.TOKEN_KEY,{expiresIn: '1d'});
 
-//         if(!admin)
-//         return res.status(401).send({message: "Invalid Email or Password"});
+    const data = {
+        
+        email:email,
+        accesstoken: accessToken,
+        sts:status
 
-//         const validPassword = await bcrypt.compare(
-//           req.body.password, admin.password  
-//         );
-//         if(!validPassword)
-//         return res.status(401).send({message: "Invalid Email or Password"});
+    };
 
-//         const token = admin.generateAuthToken();
-//         res.status(200).send({data: token, message:"Logged in successfully"})
+     res.json(data)
 
-//     }catch(err){
-//         res.status(500).send({message: "Internal server error"})
 
-//     }
-// })
+    })
 
-// const validate = (data)=>{
-//     const schema =joi.object({
-//         email: joi.string().email().require().label("Email"),
-//         password: joi.string().require().label("Password")
-//     });
-//     return schema.validate(data);
-// }
-
-// module.exports = router;
+    module.exports = router;

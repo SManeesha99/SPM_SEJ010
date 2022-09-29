@@ -22,6 +22,7 @@ const ViewCourse =() => {
     },[id])
 
 
+
   return (
     <div>
          <Header/>
@@ -38,103 +39,145 @@ const ViewCourse =() => {
         </div>
         <div className='courseIntro'>
             <video width="100%" controls autostart  src={Video} type="video/mp4" />  
+
+ 
+    return (
+        <div>
+             <Header/>
+        <div className='create'>
+            <div className='courseDetails'>
+                <h1> {input.ctitle} </h1>
+                <p>{input.cdescription}</p>
+    
+                <button className='enrollbtn'>Enroll Now {input.cprice}</button>
+                
+                <a  class="viewreview" href="#review">View Review..</a>
+    
+            </div>
+            <div className='courseIntro'>
+                <video width="100%" controls autostart  src={Video} type="video/mp4" />  
+            </div>
+
         </div>
-    </div>
-
-    <section id="review">
-
-    <div className='recentReview'>
-
-        <h2><span>R</span>eview</h2>
-
-        <div className='reviewArea'>
-            <div class='item row'>
-                <div class='col-sm-2 stproimg'>
-
+    
+        <div class='profArea'>
+    
+            <div class='row prof'>
+    
+                <div class='col-sm-9 profLeft'>
+    
+                    <div className='profileimg'>
+    
+                    </div>
+                    <div className='nameNdate'>
+                        <h2>Lanka Karunathilake</h2>
+                        <p>BSc Special(Hons) in Information Technology</p>
+                    </div>
+    
                 </div>
-                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
-
-            </div>
-
-            <div class='item row'>
-                <div class='col-sm-2 stproimg'>
-
+                
+    
+                <div class='col-sm-3 profRight'>
+                     <button class='btn btn-primary'>View Profile</button>
                 </div>
-                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
-
-            </div>
-
-            <div class='item row'>
-                <div class='col-sm-2 stproimg'>
-
-                </div>
-                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
-
-            </div>
-
-            <div class='item row'>
-                <div class='col-sm-2 stproimg'>
-
-                </div>
-                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
-
-            </div>
-
-            <div class='item row'>
-                <div class='col-sm-2 stproimg'>
-
-                </div>
-                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
-
-            </div>
-
-            <div class='item row'>
-                <div class='col-sm-2 stproimg'>
-
-                </div>
-                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
-
-            </div>
-
-            <div class='item row'>
-                <div class='col-sm-2 stproimg'>
-
-                </div>
-                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
-
-            </div>
-
-            <div class='item row'>
-                <div class='col-sm-2 stproimg'>
-
-                </div>
-                <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                    Lorem ipsum may be used as a placeholder before final copy is available.</p>
-
+    
             </div>
         </div>
-        
-
-    </div>
-
-    </section>
-
-    </div>
-  )
+    
+        <section id="review">
+    
+        <div className='recentReview'>
+    
+            <h2><span>R</span>eview</h2>
+    
+            <div className='reviewArea'>
+                <div class='item row'>
+                    <div class='col-sm-2 stproimg'>
+    
+                    </div>
+                    <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                        Lorem ipsum may be used as a placeholder before final copy is available.</p>
+    
+                </div>
+    
+                <div class='item row'>
+                    <div class='col-sm-2 stproimg'>
+    
+                    </div>
+                    <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                        Lorem ipsum may be used as a placeholder before final copy is available.</p>
+    
+                </div>
+    
+                <div class='item row'>
+                    <div class='col-sm-2 stproimg'>
+    
+                    </div>
+                    <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                        Lorem ipsum may be used as a placeholder before final copy is available.</p>
+    
+                </div>
+    
+                <div class='item row'>
+                    <div class='col-sm-2 stproimg'>
+    
+                    </div>
+                    <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                        Lorem ipsum may be used as a placeholder before final copy is available.</p>
+    
+                </div>
+    
+                <div class='item row'>
+                    <div class='col-sm-2 stproimg'>
+    
+                    </div>
+                    <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                        Lorem ipsum may be used as a placeholder before final copy is available.</p>
+    
+                </div>
+    
+                <div class='item row'>
+                    <div class='col-sm-2 stproimg'>
+    
+                    </div>
+                    <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                        Lorem ipsum may be used as a placeholder before final copy is available.</p>
+    
+                </div>
+    
+                <div class='item row'>
+                    <div class='col-sm-2 stproimg'>
+    
+                    </div>
+                    <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                        Lorem ipsum may be used as a placeholder before final copy is available.</p>
+    
+                </div>
+    
+                <div class='item row'>
+                    <div class='col-sm-2 stproimg'>
+    
+                    </div>
+                    <p class="col-sm-10">In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+                        used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                        Lorem ipsum may be used as a placeholder before final copy is available.</p>
+    
+                </div>
+            </div>
+            
+    
+        </div>
+    
+        </section>
+    
+        </div>
+      )
 };
 export default ViewCourse;

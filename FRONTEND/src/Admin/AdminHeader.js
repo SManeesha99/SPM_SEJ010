@@ -1,7 +1,7 @@
 import React from 'react';
-import './header.css';
+import './AdminHeader.css';
 
-export default function Header() {
+export default function AdminHeader() {
   return (
     <div>
         <nav class="navbar navbar-expand-lg bg-light navbar fixed-top">
@@ -29,7 +29,7 @@ export default function Header() {
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/adminProfile">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="/allCourseView">All Courses</a></li>
                     <hr/>
                     <li><a class="dropdown-item" href="/" onClick={localStorage.clear}>Sign Out</a></li>
                   </ul>
