@@ -1,0 +1,26 @@
+.SParea{
+    padding: 80px 10%;
+}
+
+.SParea .profArea{
+    margin-top: 10px;
+}
+
+.date{
+    opacity: 50%;
+    margin-top: -15px;
+}
+
+.profRight p{
+    font-size: 25px;
+    position: relative;
+    top:30px;
+}
+
+.rightbtn button{
+    margin: 10px;
+}
+
+.viewmo{
+    width: 150px;
+}

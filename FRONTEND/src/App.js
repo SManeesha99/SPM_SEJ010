@@ -31,6 +31,11 @@ import AdminProfile from './Admin/AdminProfile';
 import ViewAllCategoies from './Admin/ViewAllCategoies';
 import EditCategory from './Admin/EditCategory';
 import Cart from './Cart/Cart';
+import Payment from './Payment/Payment';
+import StudentPayment from './Payment/StudentPayment';
+import InstructorPayment from './Payment/InstructorPayment';
+import CourseReqList from './Admin/CourseReqList';
+
 
 
 import { Routes,Route } from 'react-router-dom';
@@ -74,6 +79,11 @@ function App() {
           <Route path='/offerInfo/:id' element={<OfferInfo/>} />
           <Route path='/updateoffer/:id' element={<UpdateOffer/>} />
           <Route path='/adminProfile' element={<AdminProfile/>} />
+          <Route path='/payment' element={<Payment/>} />
+          <Route path='/studentPayment' element={<StudentPayment/>} />
+          <Route path='/instructorPayment' element={<InstructorPayment/>} />
+          <Route path='/courseReqList' element={<CourseReqList/>} />
+     
 
 
         </Route>
