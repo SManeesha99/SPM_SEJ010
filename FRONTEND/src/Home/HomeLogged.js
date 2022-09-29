@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom';
 import axios from "axios";
 import swal from "sweetalert";
 
-
 export default class HomeLogged extends Component {
 
 
@@ -17,6 +16,7 @@ export default class HomeLogged extends Component {
         courses:[]
     };
 }
+
 
 componentDidMount(){
   this.retrieveCourses();
@@ -62,15 +62,28 @@ retrieveCourses(){
             <video src="./Videos/tujhe.mp4" controls = "video/mp4"></video>
 
           </div>
+          
 
           </Link>
 
           <div className="card-footer">
+             <div className='profileArea'>
+
+                <div className='pro'>
+
+                </div>
+                <div className='nameN'>
+                  <h2>instructor name</h2>
+                  <p>Upload Date</p>
+                  
+                </div>
+
+            </div>
               <div className='discri'>
 
               {courses.cdescription}
 
-              </div>
+              </div> 
               
               <br />
 

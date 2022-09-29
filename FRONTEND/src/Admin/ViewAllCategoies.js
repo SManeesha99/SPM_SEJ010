@@ -53,6 +53,7 @@ class ViewAllCategoies extends React.Component{
         <div className='categoryArea'>
 
             <h1 className='title'>All Categories</h1>
+            
             <div className='categoryContainer'>
                 
             {this.state.category.map((category, index) =>

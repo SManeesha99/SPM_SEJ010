@@ -30,6 +30,7 @@ import AdminProfile from './Admin/AdminProfile';
 import ViewAllCategoies from './Admin/ViewAllCategoies';
 import EditCategory from './Admin/EditCategory';
 import Cart from './Cart/Cart';
+import TopcourseRequest from './Admin/TopcourseRequest';
 
 
 import { Routes,Route } from 'react-router-dom';
@@ -72,6 +73,7 @@ function App() {
           <Route path='/offerInfo/:id' element={<OfferInfo/>} />
           <Route path='/updateoffer/:id' element={<UpdateOffer/>} />
           <Route path='/adminProfile' element={<AdminProfile/>} />
+          <Route path='/TopcourseRequest' element={<TopcourseRequest/>} />
 
 
         </Route>

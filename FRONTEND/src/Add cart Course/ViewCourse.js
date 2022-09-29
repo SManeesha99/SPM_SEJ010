@@ -31,6 +31,7 @@ const ViewCourse =() => {
             <p>{input.cdescription}</p>
 
             <button className='enrollbtn'>Enroll Now {input.cprice}</button>
+            <button className='enrollbtn rTCourse'>Request Top Course</button>
             
             <a  class="viewreview" href="#review">View Review..</a>
 
