@@ -33,7 +33,7 @@ import EditCategory from './Admin/EditCategory';
 import Cart from './Cart/Cart';
 
 import TopcourseRequest from './Admin/TopcourseRequest';
-=======
+
 import Payment from './Payment/Payment';
 import StudentPayment from './Payment/StudentPayment';
 import InstructorPayment from './Payment/InstructorPayment';
@@ -87,8 +87,6 @@ function App() {
           <Route path='/payment/:id' element={<Payment/>} />
 
           <Route path='/TopcourseRequest' element={<TopcourseRequest/>} />
-
-          <Route path='/payment' element={<Payment/>} />
 
           <Route path='/studentPayment' element={<StudentPayment/>} />
           <Route path='/instructorPayment' element={<InstructorPayment/>} />

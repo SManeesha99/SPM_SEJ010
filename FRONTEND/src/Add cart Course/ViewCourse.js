@@ -24,23 +24,7 @@ const ViewCourse =() => {
 
 
 
-  return (
-    <div>
-         <Header/>
-    <div className='create'>
-        <div className='courseDetails'>
-            <h1> {input.ctitle} </h1>
-            <p>{input.cdescription}</p>
-
-            <button className='enrollbtn'>Enroll Now {input.cprice}</button>
-            <button className='enrollbtn rTCourse'>Request Top Course</button>
-            
-            <a  class="viewreview" href="#review">View Review..</a>
-
-        </div>
-        <div className='courseIntro'>
-            <video width="100%" controls autostart  src={Video} type="video/mp4" />  
-
+  
  
     return (
         <div>
@@ -51,7 +35,7 @@ const ViewCourse =() => {
                 <p>{input.cdescription}</p>
     
                 <button className='enrollbtn'><Link to={`/payment/${input._id}`} style={{textDecoration:'none', color:'white'}}>Enroll Now {input.cprice}</Link></button>
-                
+                <button className='enrollbtn rTCourse'>Request Top Course</button>
                 <a  class="viewreview" href="#review">View Review..</a>
     
             </div>
