@@ -28,7 +28,7 @@ export default function Header() {
                     
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/adminProfile">Profile</a></li>
+                    <li><a class="dropdown-item" href="/editProfile">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <hr/>
                     <li><a class="dropdown-item" href="/" onClick={localStorage.clear}>Sign Out</a></li>
