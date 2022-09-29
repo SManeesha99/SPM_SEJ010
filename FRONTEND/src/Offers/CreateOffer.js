@@ -48,7 +48,7 @@ const CreateOffer =() => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        sendRequest().then(()=>history("/allCourseView"));
+        sendRequest().then(()=>history("/alloffer"));
     };
 
     const handleChange =(e)=>{
@@ -156,7 +156,7 @@ const CreateOffer =() => {
                 <div className='namee'>
 
                 <div className='cUpdate'>
-                <button class='btn btn-primary' onClick={handleSubmit}>Edit Course</button>
+                <button class='btn btn-primary' onClick={handleSubmit}>Add Offer</button>
                 </div>
 
                 
