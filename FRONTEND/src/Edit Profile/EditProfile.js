@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate} from "react-router-dom";
 import './editProfile.css';
 import Header from '../Header/Header';
 import swal from "sweetalert";
+import Swal from "sweetalert2";
 
 const EditProfile =() => {
-
-
 
     const [input, setInput]=useState({});
     const id =localStorage.getItem("id");
@@ -49,7 +48,7 @@ const EditProfile =() => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        sendRequest().then(()=>history("/viewProfiles"));
+        sendRequest().then(()=>history("/editProfile"));
     };
 
     const handleChange =(e)=>{
@@ -60,6 +59,35 @@ const EditProfile =() => {
         }))
     }
     console.log(input);
+    const navigate = useNavigate();
+
+    function onDelete (id) {
+        axios.delete(`http://localhost:8090/User/delete/${id}`).then((res)=>{
+            Swal.fire({
+                title: 'Are you sure ?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    'Deleted!',
+                    'Your Profile has been deleted.',
+                    navigate('/')
+            
+                  )
+                }
+              })
+           
+            
+            this.useEffect();
+
+           
+        });
+    };
 
   return (
     <div>
@@ -167,6 +195,7 @@ const EditProfile =() => {
 
             <div class="mt-4 pt-2">
                 <center><button class="btn btn-primary btn-lg" onClick={handleSubmit} >Edit Profile</button></center>
+                <center><button class="btn btn-danger btn-lg" onClick={()=>onDelete(input._id)} >Delete</button></center>
             </div>
 
 

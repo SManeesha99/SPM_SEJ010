@@ -84,9 +84,12 @@ function App() {
           <Route path='/updateoffer/:id' element={<UpdateOffer/>} />
           <Route path='/adminProfile' element={<AdminProfile/>} />
 
+          <Route path='/payment/:id' element={<Payment/>} />
+
           <Route path='/TopcourseRequest' element={<TopcourseRequest/>} />
 
           <Route path='/payment' element={<Payment/>} />
+
           <Route path='/studentPayment' element={<StudentPayment/>} />
           <Route path='/instructorPayment' element={<InstructorPayment/>} />
           <Route path='/courseReqList' element={<CourseReqList/>} />

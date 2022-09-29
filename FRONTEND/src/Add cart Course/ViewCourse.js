@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import {Link} from 'react-router-dom';
 import './ViewCourse.css';
 import Video from "../htmlCss.mp4";
 import Header from "../Header/Header";
@@ -49,7 +50,7 @@ const ViewCourse =() => {
                 <h1> {input.ctitle} </h1>
                 <p>{input.cdescription}</p>
     
-                <button className='enrollbtn'>Enroll Now {input.cprice}</button>
+                <button className='enrollbtn'><Link to={`/payment/${input._id}`} style={{textDecoration:'none', color:'white'}}>Enroll Now {input.cprice}</Link></button>
                 
                 <a  class="viewreview" href="#review">View Review..</a>
     
