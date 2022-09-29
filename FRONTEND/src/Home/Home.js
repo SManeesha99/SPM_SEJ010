@@ -63,6 +63,18 @@ retrieveCourses(){
           </Link>
 
           <div className="card-footer">
+              <div className='profileArea'>
+
+                <div className='pro'>
+
+                </div>
+                <div className='nameN'>
+                  <h2>instructor name</h2>
+                  <p>Upload Date</p>
+                  
+                </div>
+
+              </div>
               <div className='discri'>
 
               {courses.cdescription}

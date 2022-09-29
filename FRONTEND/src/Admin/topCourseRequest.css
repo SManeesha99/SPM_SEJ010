@@ -1,0 +1,54 @@
+.TopcourseRequestArea{
+    padding: 80px 10%;
+}
+
+.TopcourseRequestItem{
+    width: 100%;
+    height: 180px;
+    margin-top: 15px;
+    background-color: rgb(254, 255, 255);
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.TopcourseRequestArea h1{
+    text-align: center;
+    margin: 20px;
+    font-weight: 600;
+}
+.TopcourseRequestleft{
+    background-color: rgb(194, 194, 194);
+    border-radius: 10px  0 0 10px;
+}
+
+.TopcourseRequestright{
+    padding:20px;
+    font-size: 13px;
+    display: flex;
+}
+
+.TopcourseRequestrightL{
+    display: block;
+    width: 85%;
+}
+.TopcourseRequestrightR {
+    width: 15%;
+}
+
+.TopcourseRequestright h2{
+    font-size: 23px;
+}
+
+.TopcourseRequestrightR button{
+    width: 120px;
+    height: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.TopcourseRequestrightR button:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}

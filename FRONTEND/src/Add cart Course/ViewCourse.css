@@ -47,6 +47,10 @@
     margin: 10px;
 }
 
+.rTCourse{
+    background-color: rgb(222, 176, 232) !important;
+}
+
 .courseDetails button:hover{
     background-color: #04584d;
     color: white;
