@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 
 const PaymentSchema = new mongoose.Schema(
     {
-      CourseId:{type: String, requried: true, trim: true},
-      CourseTitle: {type: String, requried: true, trim: true},
-      CoursePrice:{type: String, requried: true,trim: true},
-      PName: {type: String, requried: true, trim: true},
-      PCardNum:{type: String, requried: true,trim: true},
-      PExpiryDate: {type: String,required: false,},
-      CVC: {type: String,required: false,}
+      courseId:{type: String, requried: true, trim: true},
+      courseTitle: {type: String, requried: true, trim: true},
+      coursePrice:{type: String, requried: true,trim: true},
+      pname: {type: String, requried: true, trim: true},
+      pcardNum:{type: String, requried: true,trim: true},
+      pexpiryDate: {type: Date,required: false,},
+      cvc: {type: String,required: false,}
      
     }
  
