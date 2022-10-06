@@ -1,6 +1,7 @@
 const router = require("express").Router();
 // const multer = require("multer");
 let Courses_models = require("../models/Courses_models");
+// let Offers = require("../models/offers");
 
 // const storage = multer.diskStorage({
 //     destination: (req, file, callback) => {
