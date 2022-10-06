@@ -144,7 +144,7 @@ filterContent(courses, searchTerm){
 
                <div className='btnarea'>
         
-               <button class="btn btn-primary btn-sm cn" > <Link to={`/courseDetailsView/${courses._id}`} style={{textDecoration:'none', color:'white'}}>View More</Link></button>
+               <button class="btn btn-primary btn-sm cn" > <Link to={`/offerInfo/${courses._id}`} style={{textDecoration:'none', color:'white'}}>View More</Link></button>
                <button class="btn btn-success btn-sm cn"> <Link to={`/updateoffer/${courses._id}`} style={{textDecoration:'none', color:'white'}}>Update Offer </Link></button>
                <button type="button" class="btn btn-danger btn-sm cn" onClick={() => this.onDelete(courses._id)}>Remove</button>
                </div>
