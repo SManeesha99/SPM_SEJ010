@@ -30,6 +30,7 @@ export default function AdminHeader() {
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/adminProfile">Profile</a></li>
                     <li><a class="dropdown-item" href="/allCourseView">All Courses</a></li>
+                    <li><a class="dropdown-item" href="/alloffer">All Offer</a></li>
                     <hr/>
                     <li><a class="dropdown-item" href="/" onClick={localStorage.clear}>Sign Out</a></li>
                   </ul>
