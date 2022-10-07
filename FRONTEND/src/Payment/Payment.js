@@ -63,7 +63,10 @@ const Payment =() => {
   else {
   
     axios.post('http://localhost:8090/Payment/add',newForm).then(()=>{
-  
+      setCourseId('');
+      setCourseTitle('');
+      setCprice('');
+    
       swal({
         title: "Success!",
         text: "Payment Added Successfully",
