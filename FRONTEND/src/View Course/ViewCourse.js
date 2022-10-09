@@ -6,7 +6,6 @@ import './ViewCourse.css';
 import Video from "../htmlCss.mp4";
 import Header from "../Header/Header";
 import swal from "sweetalert";
-import {Link} from 'react-router-dom';
 
 const ViewCourse =() => {
 

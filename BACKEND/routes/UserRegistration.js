@@ -134,6 +134,9 @@ router.post("/login", async (req, res) => {
 
   });
 
+
+
+
 //---------------------------------------------
 
 // router.route("/delete/:id").delete(async(req,res)=>{
@@ -147,5 +150,26 @@ router.post("/login", async (req, res) => {
 //     })
     
 // })
+
+
+
+
+router.get('/filterInstrutors',(req,res)=>{
+    UserRegstration.find({field:'Instructor'}).then((instructors)=>{
+        res.json(instructors)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
+
+router.get('/filterStudents',(req,res)=>{
+    UserRegstration.find({field:'Student'}).then((students)=>{
+        res.json(students)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
 
 module.exports = router;

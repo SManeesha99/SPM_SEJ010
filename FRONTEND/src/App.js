@@ -38,6 +38,8 @@ import Payment from './Payment/Payment';
 import StudentPayment from './Payment/StudentPayment';
 import InstructorPayment from './Payment/InstructorPayment';
 import CourseReqList from './Admin/CourseReqList';
+import SearchUsersIns from './Admin/SearchUsersIns';
+import SearchUsersSt from './Admin/SearchUsersSt';
 
 
 
@@ -91,7 +93,8 @@ function App() {
           <Route path='/studentPayment' element={<StudentPayment/>} />
           <Route path='/instructorPayment' element={<InstructorPayment/>} />
           <Route path='/courseReqList' element={<CourseReqList/>} />
-     
+          <Route path='/searchUsers/instructors' element={<SearchUsersIns/>} />
+          <Route path='/searchUsers/students' element={<SearchUsersSt/>} />
 
 
 
