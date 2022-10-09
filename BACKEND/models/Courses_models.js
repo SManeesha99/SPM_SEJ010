@@ -5,13 +5,20 @@ const mongoose = require('mongoose');
 const CoursesSchema = new mongoose.Schema(
     {
       // iusername:{type: String, requried: true},
+      
       ctitle: {type: String, requried: true},
       cduration: {type: String, requried: true},
       cprice: {type: String, requried: true},
       cdescription: {type: String, requried: true},
+
       isTopCourseRequest: {type:Boolean},
-      isTopCourseRequestApprove: {type:Boolean}
+      isTopCourseRequestApprove: {type:Boolean},
+
       // cvideo: {type: String}
+      tittle: {type: String, requried: true},
+      description: {type: String, requried: true},
+      discount: {type: String, requried: true},
+      closingDate: {type: String, requried: true}
     }
 
   );
