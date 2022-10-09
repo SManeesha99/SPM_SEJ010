@@ -37,10 +37,14 @@ router.route("/add").post((req,res)=>{
         cduration,
         cprice,
         cdescription,
+        createAt:Date.now(),
+        isTopCourseRequest :false,
+        isTopCourseRequestApprove :false,
         tittle,
         description,
         discount,
         closingDate
+
         // cvideo
     })
 
@@ -132,5 +136,105 @@ router.get("/Courses/:id",(req,res)=>{
 });
 
 //--------------------------------------
+
+
+
+router.route("/updateTopCourse/:id").put(async(req,res)=>{
+    let courseId = req.params.id;
+     try {
+        let courseId = req.params.id;
+        let TopcourseRequest = await Courses_models.findOneAndUpdate({_id: courseId }, {
+            isTopCourseRequest:true
+        },
+            {
+                upsert: true,
+            }
+        )
+        return res.status(200).json({
+            success: true,
+            message: "Top Course Request Success",
+            result: TopcourseRequest
+        });
+
+        
+     } catch (error) {
+         return res.json({
+              success:false,
+              message:"Error"
+         })
+     }
+      
+});
+
+router.get('/topCourseRequest',(req,res)=>{
+    Courses_models.find({isTopCourseRequest:true}).then((TopcourseRequest)=>{
+        res.json(TopcourseRequest)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
+
+
+router.route("/updateTopCourseApprove/:id").put(async(req,res)=>{
+    let courseId = req.params.id;
+     try {
+        let courseId = req.params.id;
+        let TopCourseApprove = await Courses_models.findOneAndUpdate({_id: courseId }, {
+            isTopCourseRequestApprove:true
+        },
+            {
+                upsert: true,
+            }
+        )
+        return res.status(200).json({
+            success: true,
+            message: "Top Course Request Approve Success",
+            result: TopCourseApprove
+        });
+
+        
+     } catch (error) {
+         return res.json({
+              success:false,
+              message:"Error"
+         })
+     }
+      
+});
+
+
+router.route("/updateTopCourseReject/:id").put(async(req,res)=>{
+    let courseId = req.params.id;
+     try {
+        let courseId = req.params.id;
+        let TopCourseReject = await Courses_models.findOneAndUpdate({_id: courseId }, {
+            isTopCourseRequest:false
+        },
+            {
+                upsert: true,
+            }
+        )
+        return res.status(200).json({
+            success: true,
+            message: "Top Course Request Rejected",
+            result: TopCourseReject
+        });
+
+        
+     } catch (error) {
+         return res.json({
+              success:false,
+              message:"Error"
+         })
+     }
+      
+})
+
+
+
+
+
+
 
 module.exports = router;
