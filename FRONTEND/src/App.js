@@ -4,7 +4,7 @@ import StudentProfile from './Student Profile/StudentProfile';
 import Register from './LoginRegister/Register';
 import Login from './LoginRegister/Login';
 import EditProfile from './Edit Profile/EditProfile';
-import ViewCourse from './Add cart Course/ViewCourse';
+import ViewCourse from './View Course/ViewCourse';
 import AddCourse from './Instructor Profile/AddCourse';
 import CourseDetailsView from './Instructor Profile/CourseDetailsView';
 import UpdateCourseDetails from './Instructor Profile/UpdateCourseDetails';
