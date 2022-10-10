@@ -27,6 +27,24 @@ class SearchUsersSt extends React.Component{
         console.log(this.state.students)
       }
     })
+  };
+
+
+  handleTextSearch =(e)=>{
+    const searchTerm = e.currentTarget.value;
+    axios.get("http://localhost:8090/User/filterStudents").then(res => {
+        if(res.data){ 
+            this.filterContent(res.data , searchTerm)
+        }
+    });
+  }; 
+  
+  filterContent(courses, searchTerm){
+    const result = courses.filter(
+        (students) => 
+        students.firstName.toLowerCase().includes(searchTerm)
+    );
+    this.setState({ students: result });
   }
 
 render(){
@@ -35,6 +53,12 @@ render(){
     <div>
         <Header/>
         <BHeader/>
+
+        <div className='searchbar '>
+          <form class="d-flex searchbaritem" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search Students" onChange={this.handleTextSearch} aria-label="Search"/>
+          </form>
+        </div>
 
         <div className='searchinsArea'>
 

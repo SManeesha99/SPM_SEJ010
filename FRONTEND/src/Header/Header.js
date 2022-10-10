@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import {NavLink} from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -14,8 +15,7 @@ export default function Header() {
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                 <button class="btn searchbtn" type="submit">Search</button>
             </form>
-            <button type='button' class="nav-link tpcourse" href="#">Top Course</button>
-            
+            <button className='tpCoursebtn'><NavLink class="nav-link" to={"/TopCourse"}>Top Course</NavLink></button>
             <div class="collapse navbar-collapse rightheder" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">

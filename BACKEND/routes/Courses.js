@@ -37,7 +37,7 @@ router.route("/add").post((req,res)=>{
         cduration,
         cprice,
         cdescription,
-        createAt:Date.now(),
+        uploadAt:Date.now(),
         isTopCourseRequest :false,
         isTopCourseRequestApprove :false,
         tittle,
@@ -201,6 +201,16 @@ router.route("/updateTopCourseApprove/:id").put(async(req,res)=>{
          })
      }
       
+});
+
+
+router.get('/TopCourse',(req,res)=>{
+    Courses_models.find({isTopCourseRequestApprove:true}).then((Topcourses)=>{
+        res.json(Topcourses)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
 });
 
 
