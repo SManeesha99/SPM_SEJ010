@@ -163,6 +163,10 @@ router.get('/filterInstrutors',(req,res)=>{
     })
 });
 
+
+
+
+
 router.get('/filterStudents',(req,res)=>{
     UserRegstration.find({field:'Student'}).then((students)=>{
         res.json(students)

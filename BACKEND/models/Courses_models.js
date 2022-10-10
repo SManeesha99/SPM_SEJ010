@@ -10,6 +10,7 @@ const CoursesSchema = new mongoose.Schema(
       cduration: {type: String, requried: true},
       cprice: {type: String, requried: true},
       cdescription: {type: String, requried: true},
+      uploadAt:Date,
 
       isTopCourseRequest: {type:Boolean},
       isTopCourseRequestApprove: {type:Boolean},

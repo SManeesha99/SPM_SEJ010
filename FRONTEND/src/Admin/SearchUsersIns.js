@@ -29,12 +29,39 @@ class SearchUsersIns extends React.Component{
     })
   }
 
+
+
+  handleTextSearch =(e)=>{
+    const searchTerm = e.currentTarget.value;
+    axios.get("http://localhost:8090/User/filterInstrutors").then(res => {
+        if(res.data){ 
+            this.filterContent(res.data , searchTerm)
+        }
+    });
+  }; 
+  
+  filterContent(courses, searchTerm){
+    const result = courses.filter(
+        (instructors) => 
+        instructors.firstName.toLowerCase().includes(searchTerm)
+    );
+    this.setState({ instructors: result });
+  }
+
+
 render(){
 
   return (
     <div>
         <Header/>
         <BHeader/>
+
+        <div className='searchbar '>
+          <form class="d-flex searchbaritem" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search Instructors" onChange={this.handleTextSearch} aria-label="Search"/>
+          </form>
+        </div>
+        
 
         <div className='searchinsArea'>
 
@@ -51,7 +78,7 @@ render(){
             <div class='col-sm-10 rightsI row'>
 
               <div class='col-sm-8'>
-                <h2>{instructors.firstName} {instructors.lastName}</h2>
+                <h2>{`${instructors.firstName} ${instructors.lastName}`} </h2>
                 <p>How many videos</p>
 
               </div>

@@ -40,6 +40,7 @@ import InstructorPayment from './Payment/InstructorPayment';
 import CourseReqList from './Admin/CourseReqList';
 import SearchUsersIns from './Admin/SearchUsersIns';
 import SearchUsersSt from './Admin/SearchUsersSt';
+import TopCourse from './TopCourse/TopCourse';
 
 
 
@@ -95,7 +96,7 @@ function App() {
           <Route path='/courseReqList' element={<CourseReqList/>} />
           <Route path='/searchUsers/instructors' element={<SearchUsersIns/>} />
           <Route path='/searchUsers/students' element={<SearchUsersSt/>} />
-
+          <Route path='/TopCourse' element={<TopCourse/>} />
 
 
         </Route>
