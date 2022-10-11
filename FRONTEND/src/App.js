@@ -1,8 +1,7 @@
 import './App.css';
 import CreateReview from './Create Review/CreateReview';
 import StudentProfile from './Student Profile/StudentProfile';
-import Register from './LoginRegister/Register';
-import Login from './LoginRegister/Login';
+
 import EditProfile from './Edit Profile/EditProfile';
 import ViewCourse from './View Course/ViewCourse';
 import AddCourse from './Instructor Profile/AddCourse';
@@ -41,7 +40,12 @@ import CourseReqList from './Admin/CourseReqList';
 import SearchUsersIns from './Admin/SearchUsersIns';
 import SearchUsersSt from './Admin/SearchUsersSt';
 import TopCourse from './TopCourse/TopCourse';
-
+import SelectRegister from './Header/SelectRegister';
+import SelectLogin from './Header/SelectLogin';
+import RegisterInstructor from './LoginRegister/RegisterInstructor';
+import LoginInstructor from './LoginRegister/LoginInstructor';
+import RegisterStudent from './LoginRegister/RegisterStudent';
+import LoginStudent from './LoginRegister/LoginStudent';
 
 
 import { Routes,Route } from 'react-router-dom';
@@ -55,8 +59,6 @@ function App() {
         <Route>
           <Route path='/' element={<Home/>} />
           <Route path='/homeLogged' element={<HomeLogged/>} />
-          <Route path='/register' element={<Register/>} />
-          <Route path='/login' element={<Login/>} />
           <Route path='/createReview' element={<CreateReview/>} />
           <Route path='/ViewAllCategoies' element={<ViewAllCategoies/>} />
           <Route path='/EditCategory/:id' element={<EditCategory/>} />
@@ -97,6 +99,13 @@ function App() {
           <Route path='/searchUsers/instructors' element={<SearchUsersIns/>} />
           <Route path='/searchUsers/students' element={<SearchUsersSt/>} />
           <Route path='/TopCourse' element={<TopCourse/>} />
+
+          <Route path='/register' element={<SelectRegister/>} />
+          <Route path='/login' element={<SelectLogin/>} />
+          <Route path='/registerStudent' element={<RegisterStudent/>} />
+          <Route path='/loginStudent' element={<LoginStudent/>} />
+          <Route path='/registerInstructor' element={<RegisterInstructor/>} />
+          <Route path='/loginInstructor' element={<LoginInstructor/>} />
 
         </Route>
       </Routes>

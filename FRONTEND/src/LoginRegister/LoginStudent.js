@@ -5,7 +5,8 @@ import NotRegHeader from '../Header/notRegHeader';
 import './loginRegister.css';
 import { Link , useNavigate } from 'react-router-dom';
 
-export default function Login() {
+export default function LoginStudent() {
+ 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
