@@ -42,8 +42,9 @@ import SearchUsersIns from './Admin/SearchUsersIns';
 import SearchUsersSt from './Admin/SearchUsersSt';
 import TopCourse from './TopCourse/TopCourse';
 
-
-
+// import Test from './Test/TestRegister';
+import TestProfile from './Test/TestProfile';
+import Request from './Instructor Reg Req/Request';
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -94,9 +95,16 @@ function App() {
           <Route path='/studentPayment' element={<StudentPayment/>} />
           <Route path='/instructorPayment' element={<InstructorPayment/>} />
           <Route path='/courseReqList' element={<CourseReqList/>} />
+
+     
+          {/* <Route path='/TestRegister' element={<Test/>} /> */}
+          <Route path='/TestProfile/:id' element={<TestProfile/>} />
+          <Route path='Request' element={<Request/>} />
+
           <Route path='/searchUsers/instructors' element={<SearchUsersIns/>} />
           <Route path='/searchUsers/students' element={<SearchUsersSt/>} />
           <Route path='/TopCourse' element={<TopCourse/>} />
+
 
 
         </Route>
