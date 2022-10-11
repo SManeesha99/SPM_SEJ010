@@ -94,16 +94,9 @@ function App() {
           <Route path='/instructorPayment' element={<InstructorPayment/>} />
           <Route path='/courseReqList' element={<CourseReqList/>} />
 
-     
-          
-          <Route path='/TestProfile/:id' element={<TestProfile/>} />
-          <Route path='Request' element={<Request/>} />
-
           <Route path='/searchUsers/instructors' element={<SearchUsersIns/>} />
           <Route path='/searchUsers/students' element={<SearchUsersSt/>} />
           <Route path='/TopCourse' element={<TopCourse/>} />
-
-
 
         </Route>
       </Routes>
