@@ -19,6 +19,9 @@ let Courses_models = require("../models/Courses_models");
 router.route("/add").post((req,res)=>{
 
     // const iusername = req.body.iusername;
+    const InstructorId = req.body.InstructorId;
+    const InstructorfName = req.body.InstructorfName;
+    const InstructorlName = req.body.InstructorlName;
     const ctitle = req.body.ctitle;
     const cduration = req.body.cduration;
     const cprice = req.body.cprice;
@@ -33,6 +36,9 @@ router.route("/add").post((req,res)=>{
     const newCourses_models = new Courses_models({
 
         // iusername,
+        InstructorId,
+        InstructorfName,
+        InstructorlName,
         ctitle,
         cduration,
         cprice,
