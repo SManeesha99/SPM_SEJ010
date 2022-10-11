@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-import {NavLink} from 'react-router-dom';
+import {NavLink,Link} from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -19,7 +19,7 @@ export default function Header() {
             <div class="collapse navbar-collapse rightheder" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></a>
+                <Link class="nav-link active" aria-current="page" to={"/Cart"}><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></Link>
                 </li>
                 <span>0</span>
                 <li class="nav-item">

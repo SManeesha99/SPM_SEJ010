@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import './home.css';
 import Header from '../Header/Header';
 import { useState ,useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {Link,useLocation} from 'react-router-dom';
 import axios from "axios";
 import swal from "sweetalert";
 
 export default class HomeLogged extends Component {
-
 
   constructor(props) {
     super (props);
@@ -34,7 +33,15 @@ retrieveCourses(){
       }
   });
 
-}
+};
+
+
+onSubmitCart = (id) =>{
+  axios.put(`http://localhost:8090/Courses/cart/${id}`).then((res)=>{
+    alert("Course carted Successfully");
+    this.retrieveCourses();
+});
+};
 
   render() {
     return (
@@ -43,7 +50,7 @@ retrieveCourses(){
 
         
       <div className='HomeArea'>
-
+{/* <h1>{this.uid}</h1> */}
       {this.state.courses.map((courses, index) =>
 
         <div className="card homevideocontainer" key={index}>
@@ -88,7 +95,7 @@ retrieveCourses(){
               <br />
 
               <div>
-              <button className='addcrtbtn'>Add to Cart {courses.cprice}</button>
+              <button className='addcrtbtn' onClick={()=> this.onSubmitCart(courses._id)}>Add to Cart {courses.cprice}</button>
               </div>
               
           </div>

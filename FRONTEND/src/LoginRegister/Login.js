@@ -9,7 +9,7 @@ export default function Login() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
-    // const history = useNavigate();
+    const navigate = useNavigate();
 
 
                 
@@ -30,11 +30,16 @@ export default function Login() {
                     button: false,
                   });
 
-                //   history("/");
+               navigate("/homeLogged",{
+                state:{
+                    id:res.data._id
+                }
+               }
+               )
 
-                  setTimeout(()=>{
-                    window.location.replace(`http://localhost:3000/homeLogged`)
-                  }, 2000)
+                //   setTimeout(()=>{
+                //     window.location.replace(`http://localhost:3000/homeLogged`)
+                //   }, 2000)
 
             }else{
                 swal({
