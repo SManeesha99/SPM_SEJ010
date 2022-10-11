@@ -31,7 +31,7 @@ export default function LoginStudent() {
                     button: false,
                   });
 
-               navigate("/homeLogged",{
+               navigate("/homeLoggedS",{
                 state:{
                     id:res.data._id
                 }

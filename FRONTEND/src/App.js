@@ -3,6 +3,7 @@ import CreateReview from './Create Review/CreateReview';
 import StudentProfile from './Student Profile/StudentProfile';
 
 import EditProfile from './Edit Profile/EditProfile';
+import EditProfileS from './Edit Profile/EditProfileS';
 import ViewCourse from './View Course/ViewCourse';
 import AddCourse from './Instructor Profile/AddCourse';
 import CourseDetailsView from './Instructor Profile/CourseDetailsView';
@@ -12,6 +13,7 @@ import CourseInfo from './Instructor Profile/CourseInfo';
 import AllCoursesView from './Instructor Profile/AllCoursesView';
 import Home from './Home/Home';
 import HomeLogged from './Home/HomeLogged';
+import HomeLoggedS from './Home/HomeLoggedS';
 import CreateOffer from './Offers/CreateOffer';
 import Instructor_Req_Req from './Instructor Reg Req/InstructorRegReq';
 import CreateCategory from './Admin/CreateCategory';
@@ -59,6 +61,7 @@ function App() {
         <Route>
           <Route path='/' element={<Home/>} />
           <Route path='/homeLogged' element={<HomeLogged/>} />
+          <Route path='/homeLoggedS' element={<HomeLoggedS/>} />
           <Route path='/createReview' element={<CreateReview/>} />
           <Route path='/ViewAllCategoies' element={<ViewAllCategoies/>} />
           <Route path='/EditCategory/:id' element={<EditCategory/>} />
@@ -70,6 +73,7 @@ function App() {
           <Route path='/Cart' element={<Cart/> } />
 
           <Route path='/editProfile' element={<EditProfile/>} />
+          <Route path='/editProfileS' element={<EditProfileS/>} />
           <Route path='/viewCourse/:id' element={<ViewCourse/> } />
 
           <Route path='/addCourse' element={<AddCourse/> }/>

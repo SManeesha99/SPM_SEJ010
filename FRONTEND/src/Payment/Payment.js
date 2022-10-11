@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import {Link} from 'react-router-dom';
-import Header from '../Header/Header';
+import HeaderS from '../Header/HeaderS';
 import './payment.css';
 
 
@@ -83,7 +83,7 @@ const Payment =() => {
     
   return (
     <div>
-       <Header/>
+       <HeaderS/>
      <div class='payArea'>
         <h1>Pay Now</h1>
         <form class="row g-3">
