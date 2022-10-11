@@ -147,6 +147,20 @@ filterContent(courses, searchTerm){
           </div>
 
           <div className="card-footer">
+
+               <div className='profileArea'>
+
+              <div className='pro'>
+
+              </div>
+              <div className='nameN'>
+                <h2>{courses.InstructorfName} {courses.InstructorlName}</h2>
+                <p>{courses.uploadAt}</p>
+                
+              </div>
+
+              </div>
+
               <div className='discri'>
 
               {courses.cdescription}
