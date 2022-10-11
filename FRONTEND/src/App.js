@@ -97,7 +97,7 @@ function App() {
           <Route path='/courseReqList' element={<CourseReqList/>} />
 
      
-          {/* <Route path='/TestRegister' element={<Test/>} /> */}
+          
           <Route path='/TestProfile/:id' element={<TestProfile/>} />
           <Route path='Request' element={<Request/>} />
 
