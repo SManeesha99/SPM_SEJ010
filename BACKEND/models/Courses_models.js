@@ -5,6 +5,10 @@ const mongoose = require('mongoose');
 const CoursesSchema = new mongoose.Schema(
     {
       // iusername:{type: String, requried: true},
+
+      InstructorId: {type: String, requried: true},
+      InstructorfName: {type: String, requried: true},
+      InstructorlName: {type: String, requried: true},
       
       ctitle: {type: String, requried: true},
       cduration: {type: String, requried: true},

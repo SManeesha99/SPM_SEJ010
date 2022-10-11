@@ -73,7 +73,7 @@ retrieveCourses(){
 
                 </div>
                 <div className='nameN'>
-                  <h2>instructor name</h2>
+                  <h2>{courses.InstructorfName} {courses.InstructorlName}</h2>
                   <p>{courses.uploadAt}</p>
                   
                 </div>
