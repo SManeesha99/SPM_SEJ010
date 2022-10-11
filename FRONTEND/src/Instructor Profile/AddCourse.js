@@ -1,12 +1,15 @@
 import React from 'react';
 import './addCourse.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import axios from "axios";
 import swal from "sweetalert";
 import Header from '../Header/Header';
 
 export default function AddCourse() {
+  
+  const [input, setInput]=useState({});
+  const id =localStorage.getItem("id");
 
   const [fireRedirect, setFireRedirect] = useState(false);
 
@@ -15,13 +18,26 @@ export default function AddCourse() {
   const [cprice, setCprice] = useState("");
   const [cdescription, setCdescription] = useState("");
 
-  function sendData(e){
+  useEffect(()=>{ 
+    const fetchHandler = async()=>{
+        await axios.get(`http://localhost:8090/User/get/${id}`)
+        .then((res)=> res.data )
+        .then((data)=>setInput(data.User));
+    }
+    fetchHandler()
+    .then((data)=>setInput(data.User));
+},[id])
+
+const sendData = async (InstructorId, InstructorfName, InstructorlName)=>{
     const newForm={
 
-    ctitle,
-    cduration,
-    cprice,
-    cdescription
+    InstructorId: InstructorId,
+    InstructorfName: InstructorfName,
+    InstructorlName: InstructorlName,
+    ctitle: ctitle,
+    cduration: cduration,
+    cprice: cprice,
+    cdescription: cdescription
 
   }
 
@@ -75,13 +91,19 @@ else {
                         <input class="form-control" placeholder='Enter Username' type="text"></input>
                     </div> */}
 
+                     <input value={input._id}  class="form-control" placeholder='Rs 0000.00' type="text" hidden></input>
+
+                     <input value={input.firstName}  class="form-control" placeholder='Rs 0000.00' type="text" hidden></input>
+
+                     <input value={input.lastName}  class="form-control" placeholder='Rs 0000.00' type="text" hidden></input>
+
                     <div className='namee'>
                         <label>Course Title</label>
                         <input
                           onChange={(e) => (
                             setCtitle(e.target.value)
                              )} 
-                        class="form-control" placeholder='Enter Course Title' type="text"></input>
+                        class="form-control" value={input.ctitle} placeholder='Enter Course Title' type="text"></input>
                     </div>
 
                     <div className='namee'>
@@ -90,7 +112,7 @@ else {
                          onChange={(e) => (
                             setCduration(e.target.value)
                              )} 
-                        class="form-control" placeholder='Enter Course Duration' type="text"></input>
+                        class="form-control" value={input.cduration} placeholder='Enter Course Duration' type="text"></input>
                     </div>
 
                     <div className='namee'>
@@ -99,7 +121,7 @@ else {
                           onChange={(e) => (
                             setCprice(e.target.value)
                              )} 
-                         class="form-control" placeholder='Rs 0000.00' type="text"></input>
+                         class="form-control" value={input.cprice} placeholder='Rs 0000.00' type="text"></input>
                     </div>
 
                     <div className='namee'>
@@ -108,7 +130,7 @@ else {
                         onChange={(e) => (
                             setCdescription(e.target.value)
                              )} 
-                         class="form-control" id="" name="" required placeholder="Enter Description" type="text"></textarea>
+                         class="form-control" id="" name="" value={input.cdescription} required placeholder="Enter Description" type="text"></textarea>
                     </div>
                     
                     <div className='namee'>
@@ -123,7 +145,7 @@ else {
 
                 </div>
 
-                <button class='btn btn-primary btnadd' type= "submit" onClick={sendData}><Link to ="/allCourseView" style={{textDecoration:'none', color:'white'}}>Add Course</Link></button>
+                <button class='btn btn-primary btnadd' type= "submit" onClick={() => sendData(input._id, input.firstName, input.lastName, input.ctitle, input.cduration, input.cprice, input.cdescription)}><Link to ="/allCourseView" style={{textDecoration:'none', color:'white'}}>Add Course</Link></button>
 
         </div>
  

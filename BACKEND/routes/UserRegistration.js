@@ -1,7 +1,7 @@
 const router = require('express').Router();
 let UserRegstration = require('../models/UserRegstration.models');
-const jwt =require('jsonwebtoken');
-
+const jwt = require('jsonwebtoken');
+// import {getInstructor} from '../controllers/testController.js';
 
 // register User----------------------------
 
@@ -154,6 +154,7 @@ router.post("/login", async (req, res) => {
 
 
 
+
 router.get('/filterInstrutors',(req,res)=>{
     UserRegstration.find({field:'Instructor'}).then((instructors)=>{
         res.json(instructors)
@@ -175,5 +176,6 @@ router.get('/filterStudents',(req,res)=>{
         console.log(err);
     })
 });
+
 
 module.exports = router;

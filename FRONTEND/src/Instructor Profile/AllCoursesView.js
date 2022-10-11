@@ -5,7 +5,7 @@ import axios from "axios";
 import swal from "sweetalert";
 import './allCoursesView.css';
 import Header from '../Header/Header';
-
+import {NavLink} from 'react-router-dom';
 
 
 class AllCoursesView extends React.Component{
@@ -86,16 +86,37 @@ filterContent(courses, searchTerm){
                 <input class="form-control me-2" type="search" placeholder="Search" name="searchTerm" onChange={this.handleTextSearch} aria-label="Search"></input>
                 <button class="btn searchbtn" type="submit">Search</button>
             </form>
+            <button className='tpCoursebtn'><NavLink class="nav-link" to={"/TopCourse"}>Top Course</NavLink></button>
             <div class="collapse navbar-collapse rightheder" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></a>
                 </li>
+                <span>0</span>
                 <li class="nav-item">
-                <a class="nav-link" href="#"><div className='profilearea'></div></a>
+
+                {/* <a class="nav-link" href="#"><div className='profilearea'></div></a> */}
+                  <div class="dropdown">
+                  <button class="btn btn-secondary  profilearea" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    
+                  </button>
+                  <ul class="dropdown-menu">
+
+                    <li><a class="dropdown-item" href="/homeLogged">Home</a></li>
+                    <li><a class="dropdown-item" href="/editProfile">Profile</a></li>
+                    <li><a class="dropdown-item" href="/addCourse">Add Course</a></li>
+                    <li><a class="dropdown-item" href="/allCourseView">All Courses</a></li>
+                    <hr/>
+                    <li><a class="dropdown-item" href="/" onClick={localStorage.clear}>Sign Out</a></li>
+                  </ul>
+                  </div>
+
                 </li>
                 
             </ul>
+
+              
+            
             
             </div>
         </div>

@@ -50,11 +50,14 @@ app.use("/Courses",CourseRoutes);
 const UserRoutes = require('./routes/UserRegistration');
 app.use("/User",UserRoutes);
 
+const TestRoutes = require('./routes/Test');
+app.use("/Test",TestRoutes);
+
 const PaymentsRoutes = require('./routes/Payments');
 app.use("/Payment",PaymentsRoutes);
 
-// const StudentRoutes = require('./routes/StudentRegistration');
-// app.use("/Student",StudentRoutes);
+const StudentRoutes = require('./routes/Student');
+app.use("/Student",StudentRoutes);
 
 
 
