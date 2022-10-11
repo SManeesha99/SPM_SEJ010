@@ -14,7 +14,7 @@ export default function RegisterInstructor() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
-  const [field, setField] = useState("");
+  const [field] = useState("Instructor");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -30,7 +30,7 @@ export default function RegisterInstructor() {
 
   }
 
-  if( firstName==='' && lastName === '' && mobileNumber === '' && field === '' && email === '' && password === '') {
+  if( firstName==='' && lastName === '' && mobileNumber === '' && email === '' && password === '') {
     swal("All Fields are empty");
 }else if(firstName === ''){
     swal("firstName Field is empty")
@@ -38,8 +38,6 @@ export default function RegisterInstructor() {
     swal("lastName Field is empty")
 }else if(mobileNumber === ''){
     swal("mobileNumber Field is empty")
-}else if(field === ''){
-    swal("field Field is empty")
 }else if(email === ''){
     swal("email Field is empty")
 }else if(password === ''){
@@ -107,7 +105,7 @@ else{
 
                     <div className='name'>
                         <input
-                        name='mobileNumber'
+                        name='field'
                         value="Instructor" readOnly
                          class="form-control" ></input>
                     </div>

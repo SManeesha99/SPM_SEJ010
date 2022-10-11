@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import './ViewCourse.css';
 import Video from "../htmlCss.mp4";
-import Header from "../Header/Header";
+import HeaderS from "../Header/HeaderS";
 import swal from "sweetalert";
 
 const ViewCourse =() => {
@@ -46,7 +46,7 @@ const ViewCourse =() => {
  
     return (
         <div>
-             <Header/>
+             <HeaderS/>
         <div className='create'>
             <div className='courseDetails'>
                 <h1> {input.ctitle} </h1>
