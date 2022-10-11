@@ -1,7 +1,7 @@
 const router = require('express').Router();
 let UserRegstration = require('../models/UserRegstration.models');
-const jwt =require('jsonwebtoken');
-
+const jwt = require('jsonwebtoken');
+// import {getInstructor} from '../controllers/testController.js';
 
 // register User----------------------------
 
@@ -134,6 +134,9 @@ router.post("/login", async (req, res) => {
 
   });
 
+
+
+
 //---------------------------------------------
 
 // router.route("/delete/:id").delete(async(req,res)=>{
@@ -147,5 +150,9 @@ router.post("/login", async (req, res) => {
 //     })
     
 // })
+
+// router.get('/getinstructor', getInstructor);
+
+
 
 module.exports = router;

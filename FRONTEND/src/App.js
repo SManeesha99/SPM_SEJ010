@@ -39,8 +39,9 @@ import StudentPayment from './Payment/StudentPayment';
 import InstructorPayment from './Payment/InstructorPayment';
 import CourseReqList from './Admin/CourseReqList';
 
-
-
+// import Test from './Test/TestRegister';
+import TestProfile from './Test/TestProfile';
+import Request from './Instructor Reg Req/Request';
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -92,7 +93,9 @@ function App() {
           <Route path='/instructorPayment' element={<InstructorPayment/>} />
           <Route path='/courseReqList' element={<CourseReqList/>} />
      
-
+          {/* <Route path='/TestRegister' element={<Test/>} /> */}
+          <Route path='/TestProfile/:id' element={<TestProfile/>} />
+          <Route path='Request' element={<Request/>} />
 
 
         </Route>

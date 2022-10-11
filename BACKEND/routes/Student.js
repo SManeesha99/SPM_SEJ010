@@ -1,3 +1,42 @@
+const router = require('express').Router();
+let Student = require('../models/StudentProfile.model');
+const jwt =require('jsonwebtoken');
+
+
+// register User----------------------------
+
+router.route("/add").post((req,res)=>{
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const mobileNumber = req.body.mobileNumber;
+    const field = req.body.field;
+    const email = req.body.email;
+    const password = req.body.password;
+    
+
+    const newtest = new Student({
+        firstName,
+        lastName,
+        mobileNumber,
+        field,
+        email,
+        password
+        // userRoleStatus,
+        // accountStatus,
+        
+    })
+
+    newtest.save().then(()=>{
+        res.json("New User Added")
+    }).catch((err)=>{
+        console.log(err);
+    })
+})
+
+
+
+
+
 // const router = require("express").Router();
 
 // let StudentProfile = require("../models/StudentProfile.model");
@@ -88,4 +127,4 @@
 
 
 
-// module.exports = router;
+module.exports = router;
