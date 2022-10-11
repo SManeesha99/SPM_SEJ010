@@ -14,6 +14,7 @@ export default function notRegHeaderWithSearch() {
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                 <button class="btn searchbtn" type="submit">Search</button>
             </form>
+            
             <div class="collapse navbar-collapse rightheder" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">

@@ -4,7 +4,7 @@ import StudentProfile from './Student Profile/StudentProfile';
 import Register from './LoginRegister/Register';
 import Login from './LoginRegister/Login';
 import EditProfile from './Edit Profile/EditProfile';
-import ViewCourse from './Add cart Course/ViewCourse';
+import ViewCourse from './View Course/ViewCourse';
 import AddCourse from './Instructor Profile/AddCourse';
 import CourseDetailsView from './Instructor Profile/CourseDetailsView';
 import UpdateCourseDetails from './Instructor Profile/UpdateCourseDetails';
@@ -38,6 +38,9 @@ import Payment from './Payment/Payment';
 import StudentPayment from './Payment/StudentPayment';
 import InstructorPayment from './Payment/InstructorPayment';
 import CourseReqList from './Admin/CourseReqList';
+import SearchUsersIns from './Admin/SearchUsersIns';
+import SearchUsersSt from './Admin/SearchUsersSt';
+import TopCourse from './TopCourse/TopCourse';
 
 // import Test from './Test/TestRegister';
 import TestProfile from './Test/TestProfile';
@@ -92,10 +95,16 @@ function App() {
           <Route path='/studentPayment' element={<StudentPayment/>} />
           <Route path='/instructorPayment' element={<InstructorPayment/>} />
           <Route path='/courseReqList' element={<CourseReqList/>} />
+
      
           {/* <Route path='/TestRegister' element={<Test/>} /> */}
           <Route path='/TestProfile/:id' element={<TestProfile/>} />
           <Route path='Request' element={<Request/>} />
+
+          <Route path='/searchUsers/instructors' element={<SearchUsersIns/>} />
+          <Route path='/searchUsers/students' element={<SearchUsersSt/>} />
+          <Route path='/TopCourse' element={<TopCourse/>} />
+
 
 
         </Route>

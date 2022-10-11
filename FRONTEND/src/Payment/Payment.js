@@ -26,27 +26,27 @@ const Payment =() => {
 
     const [fireRedirect, setFireRedirect] = useState(false);
 
-    const [courseId, setCourseId] = useState("");
-    const [courseTitle, setCourseTitle] = useState("");
-    const [coursePrice, setCprice] = useState("");
+    // const [courseId, setCourseId] = useState("");
+    // const [courseTitle, setCourseTitle] = useState("");
+    // const [coursePrice, setCprice] = useState("");
     const [pname, setPname] = useState("");
     const [pcardNum, setPcardNum] = useState("");
     const [pexpiryDate, setPexpiryDate] = useState("");
     const [cvc, setCvc] = useState("");
   
-    function sendData(e){
+    const sendData = async (courseId, courseTitle, coursePrice)=>{
       const newForm={
   
-      courseId,
-      courseTitle,
-      coursePrice,
-      pname,
-      pcardNum,
-      pexpiryDate,
-      cvc
-
+      courseId: courseId,
+      courseTitle: courseTitle,
+      coursePrice: coursePrice,
+      pname: pname,
+      pcardNum: pcardNum,
+      pexpiryDate: pexpiryDate,
+      cvc: cvc
   
     }
+    console.log(newForm)
   
     if( pname==='' && pcardNum === '' && pexpiryDate === '' && cvc === '') {
       swal("All Fields are empty");
@@ -62,8 +62,8 @@ const Payment =() => {
   
   else {
   
-    axios.post('http://localhost:8090/Payment/add',newForm).then(()=>{
-  
+    await axios.post('http://localhost:8090/Payment/add',newForm).then(()=>{
+    
       swal({
         title: "Success!",
         text: "Payment Added Successfully",
@@ -89,41 +89,41 @@ const Payment =() => {
         <form class="row g-3">
 
         <div class="col-12">
-            <label for="inputAddress" class="form-label">Course ID</label>
-            <input type="text" class="form-control"  onChange={(e) => (setCourseId(e.target.value))} value={input._id} id="inputAddress" />
+            {/* <label for="inputAddress" class="form-label">Course ID</label> */}
+            <input type="text" class="form-control"  value={input._id} id="inputAddress" hidden />
         </div>    
        
         <div class="col-12">
             <label for="inputAddress" class="form-label">Course Title</label>
-            <input type="text" class="form-control" onChange={(e) => (setCourseTitle(e.target.value))} value={input.ctitle} id="inputAddress" />
+            <input type="text" class="form-control"  value={input.ctitle} id="inputAddress" />
         </div>    
 
         <div class="col-12">
             <label for="inputAddress" class="form-label">Total Price</label>
-            <input type="text" class="form-control" onChange={(e) => (setCprice(e.target.value))} value={input.cprice} id="inputAddress" />
+            <input type="text" class="form-control"  value={input.cprice} id="inputAddress" />
         </div>
 
         <div class="col-12">
             <label for="inputAddress" class="form-label">Name</label>
-            <input type="text" class="form-control" onChange={(e) => (setPname(e.target.value))}  id="inputAddress" placeholder="Enter Name"/>
+            <input type="text" class="form-control" onChange={(e) => (setPname(e.target.value))} value={input.pname} id="inputAddress" placeholder="Enter Name"/>
         </div>    
 
         <div class="col-12">
             <label for="inputAddress2" class="form-label">Card Number</label>
-            <input type="text" class="form-control" onChange={(e) => (setPcardNum(e.target.value))} id="inputAddress2" placeholder="Card Number"/>
+            <input type="text" class="form-control" onChange={(e) => (setPcardNum(e.target.value))} value={input.pcardNum} id="inputAddress2" placeholder="Card Number"/>
         </div>
         <div class="col-md-6">
             <label for="inputCity" class="form-label">Expiry Date</label>
-            <input type="text" class="form-control" onChange={(e) => (setPexpiryDate(e.target.value))} id="inputCity" placeholder="DD/MM/YY"/>
+            <input type="Date" class="form-control" onChange={(e) => (setPexpiryDate(e.target.value))} value={input.pexpiryDate} id="inputCity" placeholder="DD/MM/YY"/>
         </div>
       
         <div class="col-md-6">
             <label for="inputZip" class="form-label">CVC</label>
-            <input type="text" class="form-control" onChange={(e) => (setCvc(e.target.value))} id="inputZip" placeholder="CVC"/>
+            <input type="text" class="form-control" onChange={(e) => (setCvc(e.target.value))} value={input.cvc} id="inputZip" placeholder="CVC"/>
         </div>
        
         <div class="col-12">
-            <center><button type="submit" class="btn btn-primary" onClick={sendData}><Link to ="/homeLogged
+            <center><button type="submit" class="btn btn-primary" onClick={() => sendData(input._id, input.ctitle, input.cprice, input.pname, input.pcardNum, input.pexpiryDate, input.cvc)}><Link to ="/homeLogged
                 
                 
                 " style={{textDecoration:'none', color:'white'}}>Pay Now</Link></button></center>

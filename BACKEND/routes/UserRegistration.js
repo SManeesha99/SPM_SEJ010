@@ -151,8 +151,31 @@ router.post("/login", async (req, res) => {
     
 // })
 
-// router.get('/getinstructor', getInstructor);
 
+
+
+
+router.get('/filterInstrutors',(req,res)=>{
+    UserRegstration.find({field:'Instructor'}).then((instructors)=>{
+        res.json(instructors)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
+
+
+
+
+
+router.get('/filterStudents',(req,res)=>{
+    UserRegstration.find({field:'Student'}).then((students)=>{
+        res.json(students)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
 
 
 module.exports = router;

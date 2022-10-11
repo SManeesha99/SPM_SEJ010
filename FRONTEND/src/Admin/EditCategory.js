@@ -35,7 +35,7 @@ const EditCategory =() => {
         swal({
             title: "Success!",
             text: "Category Update Successfully",
-             timer: 2000,
+            timer: 2000,
             button: false,
           });  
     })

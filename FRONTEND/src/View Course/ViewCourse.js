@@ -5,12 +5,15 @@ import {Link} from 'react-router-dom';
 import './ViewCourse.css';
 import Video from "../htmlCss.mp4";
 import Header from "../Header/Header";
+import swal from "sweetalert";
 
 const ViewCourse =() => {
 
+
+
     const [input, setInput]=useState({});
     const id =useParams().id;
-    console.log(id);
+    console.log("fffffffff",id);
     const history = useNavigate();
     useEffect(()=>{ 
         const fetchHandler = async()=>{
@@ -21,9 +24,24 @@ const ViewCourse =() => {
         fetchHandler()
         .then((data)=>setInput(data.courses));
     },[id])
+    
+    const [TopcourseRequest,setTopcourseRequest] = useState([]);
+    
 
+    function onSubmit (id) {
+        
+        console.log("dddddd",id)
 
-
+        axios.put(`http://localhost:8090/Courses/updateTopCourse/${id}`).then((res)=>{
+    
+        alert("Top Course Request Successfully");
+    
+        this.useEffect();
+    
+        });
+    
+      };
+    
   
  
     return (
@@ -35,7 +53,7 @@ const ViewCourse =() => {
                 <p>{input.cdescription}</p>
     
                 <button className='enrollbtn'><Link to={`/payment/${input._id}`} style={{textDecoration:'none', color:'white'}}>Enroll Now {input.cprice}</Link></button>
-                <button className='enrollbtn rTCourse'>Request Top Course</button>
+                <button type="button" className='enrollbtn rTCourse' onClick={()=>onSubmit(id)}>Request Top Course</button>
                 <a  class="viewreview" href="#review">View Review..</a>
     
             </div>
@@ -156,8 +174,6 @@ const ViewCourse =() => {
     
                 </div>
             </div>
-            
-    
         </div>
     
         </section>

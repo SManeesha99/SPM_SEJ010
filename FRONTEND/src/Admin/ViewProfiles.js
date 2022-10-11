@@ -7,7 +7,7 @@ import "./viewProfiles.css";
 import Header from "../Header/Header";
 
 
-    class ViewProfiles extends React.Component{
+class ViewProfiles extends React.Component{
         constructor(props){
             super(props);
 

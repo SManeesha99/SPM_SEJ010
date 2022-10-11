@@ -1,3 +1,4 @@
+const { boolean } = require('joi');
 const mongoose = require('mongoose');
 // const Schema = mongoose.Schema;
 
@@ -9,6 +10,11 @@ const CoursesSchema = new mongoose.Schema(
       cduration: {type: String, requried: true},
       cprice: {type: String, requried: true},
       cdescription: {type: String, requried: true},
+      uploadAt:Date,
+
+      isTopCourseRequest: {type:Boolean},
+      isTopCourseRequestApprove: {type:Boolean},
+
       // cvideo: {type: String}
       tittle: {type: String, requried: true},
       description: {type: String, requried: true},
