@@ -46,6 +46,7 @@ router.route("/add").post((req,res)=>{
         uploadAt:Date.now(),
         isTopCourseRequest :false,
         isTopCourseRequestApprove :false,
+        isCart:false,
         tittle,
         description,
         discount,
@@ -173,7 +174,7 @@ router.route("/updateTopCourse/:id").put(async(req,res)=>{
 });
 
 router.get('/topCourseRequest',(req,res)=>{
-    Courses_models.find({isTopCourseRequest:true}).then((TopcourseRequest)=>{
+    Courses_models.find({isTopCourseRequest:true} ).then((TopcourseRequest)=>{
         res.json(TopcourseRequest)
 
     }).catch((err)=>{
@@ -211,7 +212,7 @@ router.route("/updateTopCourseApprove/:id").put(async(req,res)=>{
 
 
 router.get('/TopCourse',(req,res)=>{
-    Courses_models.find({isTopCourseRequestApprove:true}).then((Topcourses)=>{
+    Courses_models.find({isTopCourseRequestApprove:true} ).then((Topcourses)=>{
         res.json(Topcourses)
 
     }).catch((err)=>{
@@ -245,7 +246,46 @@ router.route("/updateTopCourseReject/:id").put(async(req,res)=>{
          })
      }
       
-})
+});
+
+
+router.route("/cart/:id").put(async(req,res)=>{
+    let courseId = req.params.id;
+     try {
+        let courseId = req.params.id;
+        let CourseCart = await Courses_models.findOneAndUpdate({_id: courseId }, {
+            isCart:true
+        },
+            {
+                upsert: true,
+            }
+        )
+        return res.status(200).json({
+            success: true,
+            message: "Course Carted",
+            result: CourseCart
+        });
+
+        
+     } catch (error) {
+         return res.json({
+              success:false,
+              message:"Error"
+         })
+     }
+      
+});
+
+
+router.get('/cart',(req,res)=>{
+    Courses_models.find({isCart:true}).then((TopcourseRequest)=>{
+        res.json(TopcourseRequest)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
+
 
 
 

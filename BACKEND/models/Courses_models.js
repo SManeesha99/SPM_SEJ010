@@ -18,6 +18,7 @@ const CoursesSchema = new mongoose.Schema(
 
       isTopCourseRequest: {type:Boolean},
       isTopCourseRequestApprove: {type:Boolean},
+      isCart: {type:Boolean},
 
       // cvideo: {type: String}
       tittle: {type: String, requried: true},
