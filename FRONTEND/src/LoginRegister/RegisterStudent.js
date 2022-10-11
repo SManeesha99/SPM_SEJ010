@@ -6,8 +6,9 @@ import axios from "axios";
 import swal from "sweetalert";
 import {Link} from 'react-router-dom';
 
-export default function () {
-
+export default function RegisterStudent() {
+  
+    
     
   const [fireRedirect, setFireRedirect] = useState(false);
 
@@ -105,18 +106,11 @@ else{
                          class="form-control" placeholder='Mobile Number'></input>
                     </div>
 
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Select who are you ? (Instrutor or Student)</label>
-                        <select
-                        name='field'
-                        onChange={(e) => (
-                            setField(e.target.value)
-                             )}
-                         class="form-control selectstNin" id="exampleFormControlSelect1">
-                            <option >Please Select</option>
-                        <option value="Instructor">Instructor</option>
-                        <option value="Student">Student</option>
-                        </select>
+                    <div className='name'>
+                        <input
+                        name='mobileNumber'
+                        value="Student" readOnly
+                         class="form-control"></input>
                     </div>
 
                     <div className='name'>
@@ -203,3 +197,4 @@ else{
     </div>
   )
 }
+
