@@ -34,7 +34,7 @@ export default function HeaderS() {
                   <ul class="dropdown-menu drpdwn">
 
                     <li><a class="dropdown-item" href="/homeLoggedS">Home</a></li>
-                    <li><a class="dropdown-item" href="/editProfileS">Profile</a></li>
+                    <li><a class="dropdown-item" href="/studentProfile">Profile</a></li>
                     <li><a class="dropdown-item" href="">My Courses</a></li>
                     <hr/>
                     <li><a class="dropdown-item" href="/" onClick={localStorage.clear}>Sign Out</a></li>
