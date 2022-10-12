@@ -10,6 +10,8 @@ import {NavLink} from 'react-router-dom';
 
 class AllCoursesView extends React.Component{
 
+  id =localStorage.getItem("id");
+
   constructor(props) {
     super (props);
 
@@ -24,7 +26,7 @@ componentDidMount(){
 
 retrieveCourses(){
         
-  axios.get("http://localhost:8090/Courses").then(res =>{
+  axios.get(`http://localhost:8090/Courses/owncourse/${localStorage.getItem("id")}`).then(res =>{
       if(res.data){
           this.setState({
               courses:res.data
@@ -105,7 +107,7 @@ filterContent(courses, searchTerm){
                     <li><a class="dropdown-item" href="/homeLogged">Home</a></li>
                     <li><a class="dropdown-item" href="/editProfile">Profile</a></li>
                     <li><a class="dropdown-item" href="/addCourse">Add Course</a></li>
-                    <li><a class="dropdown-item" href="/allCourseView">All Courses</a></li>
+                    <li><a class="dropdown-item" href="/allCourseView">My Courses</a></li>
                     <hr/>
                     <li><a class="dropdown-item" href="/" onClick={localStorage.clear}>Sign Out</a></li>
                   </ul>
@@ -125,7 +127,7 @@ filterContent(courses, searchTerm){
 
       <div className='allcoursesviewArea'>
 
-      <h2><span>A</span>ll <span>C</span>ourses</h2>
+      <h2><span>M</span>y <span>C</span>ourses</h2>
 
       
           <div className='allcoursesview'>

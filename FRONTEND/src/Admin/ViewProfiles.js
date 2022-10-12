@@ -73,8 +73,8 @@ class ViewProfiles extends React.Component{
 
                 <div class='right'>
              
-                    <button class='btn btn-primary'><Link to={`/editProfile/${userprof._id}`} style={{textDecoration:'none', color:'white'}}>View Profile</Link></button>
-                    <button class='btn btn-danger' type='submit' onClick={()=>this.onDelete(userprof._id)}>Delete</button>
+                    <button class='btn btn-primary'><Link to={`/UserProfile/${userprof._id}`} style={{textDecoration:'none', color:'white'}}>View Profile</Link></button>
+                    <button class='btn btn-danger' type='submit' onClick={()=>this.onDelete(userprof._id)}>Remove</button>
                 </div>
           
             </div>

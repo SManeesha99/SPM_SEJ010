@@ -29,6 +29,7 @@ export default function AdminHeader() {
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/adminProfile">Profile</a></li>
+                    <li><a class="dropdown-item" href="/searchUsers/instructors">User Profiles</a></li>
                     <li><a class="dropdown-item" href="/allCourseView">All Courses</a></li>
                     <li><a class="dropdown-item" href="/alloffer">All Offer</a></li>
                     <hr/>

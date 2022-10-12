@@ -34,7 +34,7 @@ export default function Header() {
                     <li><a class="dropdown-item" href="/homeLogged">Home</a></li>
                     <li><a class="dropdown-item" href="/editProfile">Profile</a></li>
                     <li><a class="dropdown-item" href="/addCourse">Add Course</a></li>
-                    <li><a class="dropdown-item" href="/allCourseView">All Courses</a></li>
+                    <li><a class="dropdown-item" href="/allCourseView">My Courses</a></li>
                     <hr/>
                     <li><a class="dropdown-item" href="/" onClick={localStorage.clear}>Sign Out</a></li>
                   </ul>
