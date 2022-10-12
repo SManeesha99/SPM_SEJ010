@@ -49,6 +49,7 @@ import RegisterInstructor from './LoginRegister/RegisterInstructor';
 import LoginInstructor from './LoginRegister/LoginInstructor';
 import RegisterStudent from './LoginRegister/RegisterStudent';
 import LoginStudent from './LoginRegister/LoginStudent';
+import InstructorProfile from './Instructor Profile/InstructorProfile';
 
 
 import { Routes,Route } from 'react-router-dom';
@@ -67,6 +68,7 @@ function App() {
           <Route path='/ViewAllCategoies' element={<ViewAllCategoies/>} />
           <Route path='/EditCategory/:id' element={<EditCategory/>} />
           <Route path='/studentProfile' element={<StudentProfile/>} />
+          <Route path='/instructorProfile' element={<InstructorProfile/>} />
           <Route path='/viewProfiles' element={<ViewProfiles/>} />
 
           <Route path='/UserProfile/:id' element={<UserProfile/>} />
