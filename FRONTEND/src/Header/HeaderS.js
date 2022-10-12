@@ -31,7 +31,7 @@ export default function HeaderS() {
                   <button class="btn btn-secondary  profilearea" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu drpdwn">
 
                     <li><a class="dropdown-item" href="/homeLoggedS">Home</a></li>
                     <li><a class="dropdown-item" href="/editProfileS">Profile</a></li>

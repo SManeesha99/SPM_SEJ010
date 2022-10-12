@@ -25,6 +25,7 @@
 
 .proItem .rightsI p{
     opacity: 50%;
+    z-index: 1;
 }
 
 .proItem .rightsI button{
@@ -46,6 +47,7 @@
     top: 115px;
     position: fixed;
     background: rgb(238, 238, 238) !important;
+    z-index: 3;
 }
 
 .searchbaritem{

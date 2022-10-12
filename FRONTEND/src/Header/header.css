@@ -59,6 +59,7 @@
     background: rgb(238, 238, 238) !important;
     position: fixed;
     padding:20px;
+    z-index: 4;
 }
 
 .Bheader a{
@@ -220,4 +221,9 @@
 	
 	background: #fff;
 	color: #1d2c48;
+}
+
+
+.drpdwn{
+    z-index: 5 ;
 }
