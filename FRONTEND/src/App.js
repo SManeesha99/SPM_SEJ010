@@ -4,6 +4,7 @@ import StudentProfile from './Student Profile/StudentProfile';
 
 import EditProfile from './Edit Profile/EditProfile';
 import EditProfileS from './Edit Profile/EditProfileS';
+import UserProfile from './Edit Profile/UserProfile';
 import ViewCourse from './View Course/ViewCourse';
 import AddCourse from './Instructor Profile/AddCourse';
 import CourseDetailsView from './Instructor Profile/CourseDetailsView';
@@ -68,7 +69,7 @@ function App() {
           <Route path='/studentProfile' element={<StudentProfile/>} />
           <Route path='/viewProfiles' element={<ViewProfiles/>} />
 
-          <Route path='/editProfile/:id' element={<EditProfile/>} />
+          <Route path='/UserProfile/:id' element={<UserProfile/>} />
           <Route path='/viewCourse' element={<ViewCourse/> } />
           <Route path='/Cart' element={<Cart/> } />
 

@@ -77,6 +77,20 @@ router.route("/").get((req,res)=>{
 
 })
 
+//get owncourse--------------------------
+
+router.route("/owncourse/:id").get((req,res)=>{
+
+    const id = req.params.id;
+
+    Courses_models.find({InstructorId:id}).then((Courses)=>{
+        res.json(Courses)
+    }).catch((err)=>{
+        console.log(err)
+    })
+
+})
+
 //-------------------------------------
 
 //update course details----------------
@@ -285,6 +299,15 @@ router.get('/cart',(req,res)=>{
         console.log(err);
     })
 });
+
+// router.get('/OwnCourses',(req,res)=>{
+//     UserRegstration.find({InstructorId:localStorage.getItem("id")}).then((Courses)=>{
+//         res.json(Courses)
+
+//     }).catch((err)=>{
+//         console.log(err);
+//     })
+// });
 
 
 

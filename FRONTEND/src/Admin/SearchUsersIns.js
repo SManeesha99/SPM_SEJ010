@@ -1,5 +1,6 @@
 import React from 'react';
 import './searchUsers.css';
+import {Link} from 'react-router-dom';
 import Header from '../Header/Header';
 import BHeader from '../Header/BHeader';
 import axios from 'axios';
@@ -83,7 +84,7 @@ render(){
 
               </div>
               <div class='col-sm-4'>
-                <button type='button' class='btn btn-primary'>View Profile</button>
+                <button type='button' class='btn btn-primary'><Link to={`/UserProfile/${instructors._id}`} style={{textDecoration:'none', color:'white'}}>View Profile</Link></button>
               </div>
               
             </div>
