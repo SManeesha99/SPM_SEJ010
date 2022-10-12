@@ -1,104 +1,58 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-} */
-
-body{ 
-    min-height: 100vh;
-    align-content: center;
-}
-
-.boxx{
-    display: inline-grid;
-    gap: 33px;
-    background-color: rgb(238, 250, 255);
-    padding: 50px;
-    margin: 100px;
-    box-shadow: black;
-    top: 10px;
-    border-radius: 10px;
-}
-
-.req_list{
-    display: flex;
-    gap: 6px;
-}
-
-.req_list .user_instructor{
-    position: relative;
-    background: rgba(1, 7, 69, 0.988);
-    color: #fff;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    padding: 10px;
-    gap: 10px;
-}
-
-.req_list .user_instructor .imgBx{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 6px;
-    
-}
-
-.req_list .user_instructor .imgBx img {
-    position:absolute;
-    top: 0;
-    left: 0;
+.categoryArea{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-
+    height: auto;
+    padding: 90px 10% 50px 10%;
 }
 
-.req_list .user_instructor .details{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.req_list .user_instructor .details h3{
-    font-weight: 600;
-    line-height: 1.1em;
-
-}
-
-.req_list .user_instructor .details p{
-    font-weight: 500;
-    font-size: 1.5em;
-    color: rgb(169, 169, 169);
-}
-
-.boxx h1{
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 600;
-}
-
-.boxx h1 span{
-    font-size: 50px;
-    color: #256D85;
-}
-
-/* .navigation{
-    position: relative; */
-    /* display: grid; */
-    /* background: rgb(224, 224, 231);
+.categorydiv{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.29);
+    margin: 10px;
     border-radius: 10px;
-    cursor: pointer;
-    z-index: 1;
+}
+.title{
+    text-align: center;
+    margin: 20px;
+}
 
-} */
+
+.categoryContainer{
+    width: 100%;
+    height: auto;
+    padding: 40px;
+}
+
+.left {
+    height: auto;
+    display: block;
+    font-size: 20px;
+}
 
 
 
+.left p{
+    margin: 0px !important;
+    font-weight: 100;
+    font-size: 14px;
+    opacity: 50%;
+}
 
+.right{
+    display: flex;
+    justify-content: end;
+    height: auto;
+}
+
+.right a{
+    margin: 21px 10px;
+}
+
+.right button{
+    width: 150px;
+    margin: 21px 10px;
+}
 
