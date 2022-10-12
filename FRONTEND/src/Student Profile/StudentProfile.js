@@ -23,7 +23,7 @@ export default function StudentProfile() {
         <Header/>
         <div className='StudentProfileArea'>
             <div class="row">
-                <div class="col-sm-8 left">
+                <div class="col-sm-8 lefts">
                     <div className='profileimg'>
 
                     </div>
@@ -33,7 +33,7 @@ export default function StudentProfile() {
                     </div>
                 
                 </div>
-                <div class="col-sm-4 right">
+                <div class="col-sm-4 rights">
                     <button className='editprofile'><Link className="nav-link active" aria-current="page" to="/editProfile">Edit Profile</Link></button>
                     <button className='dltprofile'>Delete Profile</button>
                     

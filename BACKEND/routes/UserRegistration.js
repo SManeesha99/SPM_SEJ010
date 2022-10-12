@@ -20,7 +20,8 @@ router.route("/add").post((req,res)=>{
         mobileNumber,
         field,
         email,
-        password
+        password,
+        registerAt:Date.now(),
         // userRoleStatus,
         // accountStatus,
         
