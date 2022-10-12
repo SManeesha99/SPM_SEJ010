@@ -164,7 +164,39 @@ class Instructor_Req_Req extends Component{
         return(
             <div>
                 <Header/>
-                <body>
+
+                <div className='categoryArea'>
+
+            <h1 className='title'>Instructor Requests</h1>
+            
+            <div className='categoryContainer'>
+                
+            {this.state.test.map((test, index)=>
+
+                <div class="row categorydiv">
+                    <div class="col left">
+                        <h4>{test.firstName} {test.lastName}</h4>
+                        <p></p>
+                    </div>
+
+                    <div class="col right">
+                        <a href='#' class="btn btn-primary">View More..</a>
+                        <a href='#' class="btn btn-success" onClick={()=> this.Change(test.firstName, test.lastName, test.mobileNumber, test.field, test.email, test.password, test._id)}> Approve</a>
+                        <button class="btn btn-danger" type='button'>Reject</button>
+                    </div>
+
+
+                </div>
+
+            )}
+
+                
+            </div>
+
+        </div>
+
+
+                {/* <body>
                     <center>
                     <div className='boxx'>
                 
@@ -196,7 +228,9 @@ class Instructor_Req_Req extends Component{
                     </center>
                     
                     
-                </body>
+                </body> */}
+
+
                
             </div>
         

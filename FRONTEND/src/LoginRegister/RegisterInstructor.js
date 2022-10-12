@@ -45,7 +45,7 @@ export default function RegisterInstructor() {
 }
 else{
 
-  axios.post('http://localhost:8090/User/add',newForm).then(()=>{
+  axios.post('http://localhost:8090/Test/add',newForm).then(()=>{
 
     swal({
       title: "Success!",
