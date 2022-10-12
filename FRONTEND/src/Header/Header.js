@@ -1,8 +1,10 @@
 import React from 'react';
 import './header.css';
 import {NavLink,Link} from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Header() {
+
   return (
     <div>
         <nav class="navbar navbar-expand-lg bg-light navbar fixed-top">
@@ -32,7 +34,7 @@ export default function Header() {
                   <ul class="dropdown-menu">
 
                     <li><a class="dropdown-item" href="/homeLogged">Home</a></li>
-                    <li><a class="dropdown-item" href="/editProfile">Profile</a></li>
+                    <li><a class="dropdown-item" href="/instructorProfile">Profile</a></li>
                     <li><a class="dropdown-item" href="/addCourse">Add Course</a></li>
                     <li><a class="dropdown-item" href="/allCourseView">My Courses</a></li>
                     <hr/>
