@@ -73,7 +73,7 @@ const ViewCourse =() => {
     
                     </div>
                     <div className='nameNdate'>
-                        <h2>Lanka Karunathilake</h2>
+                        <h2>{input.InstructorfName} {input.InstructorlName}</h2>
                         <p>BSc Special(Hons) in Information Technology</p>
                     </div>
     
