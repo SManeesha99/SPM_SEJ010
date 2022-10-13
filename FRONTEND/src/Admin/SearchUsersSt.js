@@ -1,7 +1,7 @@
 import React from 'react';
 import './searchUsers.css';
 import {Link} from 'react-router-dom';
-import Header from '../Header/Header';
+import Header from "../Admin/AdminHeader";
 import BHeader from '../Header/BHeader';
 import axios from 'axios';
 
