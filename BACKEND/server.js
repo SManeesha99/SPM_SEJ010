@@ -77,6 +77,9 @@ app.use("/adminlogin", AdLoginRoutes)
 const LoginRoutes = require('./routes/Login');
 app.use("/login", LoginRoutes)
 
+const OfferRequestRoutes = require('./routes/OfferRequest');
+app.use("/offerRequest", OfferRequestRoutes)
+
 
 app.listen(PORT,()=>{
     console.log(`Server is up and running on port ${PORT}`);
