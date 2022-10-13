@@ -26,7 +26,8 @@ export default function RegisterInstructor() {
         mobileNumber,
         field,
         email,
-        password
+        password,
+        state:"pending"
 
   }
 

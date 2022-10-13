@@ -50,6 +50,7 @@ import LoginInstructor from './LoginRegister/LoginInstructor';
 import RegisterStudent from './LoginRegister/RegisterStudent';
 import LoginStudent from './LoginRegister/LoginStudent';
 import InstructorProfile from './Instructor Profile/InstructorProfile';
+import Requests from './Requests Pages/Request';
 
 
 import { Routes,Route } from 'react-router-dom';
@@ -113,6 +114,8 @@ function App() {
           <Route path='/loginStudent' element={<LoginStudent/>} />
           <Route path='/registerInstructor' element={<RegisterInstructor/>} />
           <Route path='/loginInstructor' element={<LoginInstructor/>} />
+          <Route path='/request' element={<Requests/>} />
+
 
         </Route>
       </Routes>

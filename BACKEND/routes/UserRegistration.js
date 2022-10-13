@@ -12,6 +12,7 @@ router.route("/add").post((req,res)=>{
     const field = req.body.field;
     const email = req.body.email;
     const password = req.body.password;
+    const status = req.body.status;
     
 
     const newuser = new UserRegstration({
@@ -21,6 +22,7 @@ router.route("/add").post((req,res)=>{
         field,
         email,
         password,
+        status,
         registerAt:Date.now(),
         // userRoleStatus,
         // accountStatus,
@@ -87,7 +89,7 @@ router.get("/get/:id",(req,res)=>{
 
 router.route("/update/:id").put(async(req,res)=>{
     let userId = req.params.id;
-    const{firstName,lastName,mobileNumber,field,email,password}=req.body;
+    const{firstName,lastName,mobileNumber,field,email,password,status}=req.body;
 
     const updateUser={
         firstName,
@@ -95,14 +97,15 @@ router.route("/update/:id").put(async(req,res)=>{
         mobileNumber,
         field,
         email,
-        password
+        password,
+        status
         
     }
     const update = await UserRegstration.findByIdAndUpdate(userId,updateUser).then(()=>{
-        res.status(200).send({status: "User Details Updated"})
+        res.status(200).send({alert: "User Details Updated"})
     }).catch((err)=>{
         console.log(err);
-        res.status(500).send({status:"Error with updating data",error:err.message})
+        res.status(500).send({alert:"Error with updating data",error:err.message})
     })
  
 })

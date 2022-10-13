@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import Header from "../Header/Header";
+import Header from "../Admin/AdminHeader";
 import './InstructorRegReq.css';
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -34,10 +34,11 @@ class Instructor_Req_Req extends Component{
               console.log(this.state.test);
           }
       });
+      
     
     }
     
-    Change = async(firstName, lastName, mobileNumber, field, email, password, id)=>{
+    Change = async(firstName, lastName, mobileNumber, field, email, password, status,  id)=>{
 
         const data ={
                     firstName: firstName,
@@ -45,25 +46,34 @@ class Instructor_Req_Req extends Component{
                     mobileNumber: mobileNumber,
                     field: field,
                     email: email,
-                    password: password 
+                    password: password,
+                    status: 'active',
         
                 }
 
             console.log(data)
             
             await axios.post("http://localhost:8090/User/add",data).then((res)=>{
-                swal({
-                                title: "Success!",
-                                text: "New Notice Updated Successfully",
-                                icon: 'success',
-                                timer: 2000,
-                                button: false,
-                              });
+                axios.put(`http://localhost:8090/Test/updateStatus/${id}`)
+            .then((res)=>{              
+                
+                    swal({
+                        title: "Success!",
+                        text: "Request Approved",
+                        icon: 'success',
+                        timer: 2000,
+                        button: false,
+                      });
+
+                })
             })
+            
+                
 
 
     }
 
+    
     // onSubmit = (e) =>{
     //     e.preventDefault();
 
@@ -181,7 +191,7 @@ class Instructor_Req_Req extends Component{
 
                     <div class="col right">
                         <a href='#' class="btn btn-primary">View More..</a>
-                        <a href='#' class="btn btn-success" onClick={()=> this.Change(test.firstName, test.lastName, test.mobileNumber, test.field, test.email, test.password, test._id)}> Approve</a>
+                        <a href='#' class="btn btn-success" onClick={()=> this.Change(test.firstName, test.lastName, test.mobileNumber, test.field, test.email, test.password, test.status, test._id)}> Approve</a>
                         <button class="btn btn-danger" type='button'>Reject</button>
                     </div>
 
