@@ -24,7 +24,9 @@ const CoursesSchema = new mongoose.Schema(
       tittle: {type: String, requried: true},
       description: {type: String, requried: true},
       discount: {type: String, requried: true},
-      closingDate: {type: String, requried: true}
+      closingDate: {type: String, requried: true},
+      status:{type: String}
+      
     }
 
   );
