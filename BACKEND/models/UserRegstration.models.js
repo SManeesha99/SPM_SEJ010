@@ -9,6 +9,8 @@ const UserSchema = new mongoose.Schema(
       field: {type: String, requried: true, trim: true},
       email:{type: String, requried: true,trim: true},
       password: {type: String,required: false,},
+      status: {type: String},
+
       registerAt:Date,
       // userRoleStatus:{type: String, requried: true,trim: true},
       // accountStatus:{type: String, requried: true,trim: true},

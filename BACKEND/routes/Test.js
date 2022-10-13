@@ -25,6 +25,7 @@ router.route("/add").post((req,res)=>{
     const field = req.body.field;
     const email = req.body.email;
     const password = req.body.password;
+    const status = req.body.status;
     
 
     const newtest = new Test({
@@ -33,7 +34,8 @@ router.route("/add").post((req,res)=>{
         mobileNumber,
         field,
         email,
-        password
+        password,
+        status:"pending"
         // userRoleStatus,
         // accountStatus,
         
@@ -49,11 +51,73 @@ router.route("/add").post((req,res)=>{
 //---------------------------------------------------
 
 
-router.route("/").get((req,res)=>{
-    Test.find().then((Test)=>{
+// router.route("/").get((req,res)=>{
+//     Test.find().then((Test)=>{
+//         res.json(Test)
+//     }).catch((err)=>{
+//         console.log(err);
+//     })
+// })
+
+router.get('/',(req,res)=>{
+    Test.find({status:'pending'}).then((Test)=>{
         res.json(Test)
+
     }).catch((err)=>{
         console.log(err);
+    })
+});
+
+// router.put('/updateStatus/:id',(req,res)=>{
+    
+//     Test.findOneAndUpdate({id:req.body.id, status: "active"}).then((Test)=>{
+//         console.log(Test)
+
+//     }).catch((err)=>{
+//         console.log(err);
+//     })
+// })
+
+// router.route("/updateStatus/:id").put(
+//     async (req, res) => {
+//         try {
+//             console.log(req.body.id);
+//             const test = await Test.findOneAndUpdate(
+//                 {
+//                     _id: req.body.id
+//                 },
+//                 {
+//                     status: "Active"
+//                 },
+//                 {
+//                     new:true
+//                 }
+//                 );
+    
+//             if (test) {
+//                 res.send({
+//                     details: test 
+//                 });
+//             }
+    
+//         } catch (error) {
+//             console.log(error.messaga)
+//         }
+//     }
+// )
+
+router.route("/updateStatus/:id").put(async(req,res)=>{
+    let testId = req.params.id;
+    const{status}=req.body;
+
+    const updatestatus={
+        status: 'active'
+    }
+    const update = await Test.findByIdAndUpdate(testId,updatestatus).then(()=>{
+        res.json("active")
+    }).catch((err)=>{
+        console.log(err);
+        res.json("pending")
     })
 })
 

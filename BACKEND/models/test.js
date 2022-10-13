@@ -8,7 +8,8 @@ const TestSchema = new mongoose.Schema(
       mobileNumber:{type: Number, requried: true,trim: true},
       field: {type: String, requried: true, trim: true},
       email:{type: String, requried: true,trim: true},
-      password: {type: String,required: false,}
+      password: {type: String,required: false,},
+      status: {type: String}
       // userRoleStatus:{type: String, requried: true,trim: true},
       // accountStatus:{type: String, requried: true,trim: true},
     }
