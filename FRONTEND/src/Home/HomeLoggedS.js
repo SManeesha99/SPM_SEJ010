@@ -9,11 +9,14 @@ import swal from "sweetalert";
 
 export default class HomeLoggedS extends Component {
 
+  studentId =localStorage.getItem("id");
+
   constructor(props) {
     super (props);
 
     this.state={
-        courses:[]
+        courses:[],
+
     };
 }
 
@@ -37,16 +40,30 @@ retrieveCourses(){
 };
 
 
-onSubmitCart = (id) =>{
-  axios.put(`http://localhost:8090/Courses/cart/${id}`).then((res)=>{
-    alert("Course carted Successfully");
-    this.retrieveCourses();
-});
+onSubmitCart = async (id, orderId) =>{
+  await axios.get(`http://localhost:8090/Courses/Courses/${id}`)
+            .then((res, studentId)=> {
+              console.log(res.data.courses)
+              let newItem = res.data.courses;
+              newItem.courseId = res.data.courses._id;
+              newItem.studentId = localStorage.getItem("id");
+              newItem.OrderId = orderId;
+              newItem.OrderedDate = new Date();
+              newItem.isPayed = false;
+              axios.post('http://localhost:8090/Cart/addCart', newItem).then((res)=>{
+                console.log(res)
+                alert(res.data);
+              });
+            } )
+  // axios.post(`http://localhost:8090/Courses/addCart`).then((res)=>{
+  //   alert("Course carted Successfully");
+  //   this.retrieveCourses();
+// });
 };
 
 handleTextSearch =(e)=>{
     const searchTerm = e.currentTarget.value;
-    axios.get("http://localhost:8090/Courses").then(res => {
+    axios.get("http://localhost:8090/Courses/").then(res => {
         if(res.data){ 
             this.filterContent(res.data , searchTerm)
         }
@@ -62,6 +79,8 @@ handleTextSearch =(e)=>{
   }
 
   render() {
+
+    const orderId = new Date().getTime();
     return (
       <div>
             <div>
@@ -158,7 +177,7 @@ handleTextSearch =(e)=>{
               <br />
 
               <div>
-              <button className='addcrtbtn' onClick={()=> this.onSubmitCart(courses._id)}>Add to Cart {courses.cprice}</button>
+              <button className='addcrtbtn' onClick={()=> this.onSubmitCart(courses._id, orderId)}>Add to Cart {courses.cprice}</button>
               </div>
               
           </div>

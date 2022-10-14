@@ -42,6 +42,8 @@ app.use("/makeReview",makeReviewRoutes);
 const CourseRoutes = require('./routes/Courses');
 app.use("/Courses",CourseRoutes);
 
+const CourseCartRoutes = require('./routes/Cart');
+app.use("/Cart",CourseCartRoutes);
 
 
 // app.use('/admin', require('./routes/AdminRegister'));
