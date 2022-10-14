@@ -2,7 +2,7 @@ import React from 'react';
 import './header.css';
 import {NavLink,Link} from 'react-router-dom';
 
-export default function HeaderS() {
+export default function HeaderS(props) {
 
     
   return (
@@ -23,7 +23,7 @@ export default function HeaderS() {
                 <li class="nav-item">
                 <Link class="nav-link active" aria-current="page" to={"/Cart"}><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></Link>
                 </li>
-                <span>0</span>
+                <span>{props.count}</span>
                 <li class="nav-item">
 
                 {/* <a class="nav-link" href="#"><div className='profilearea'></div></a> */}

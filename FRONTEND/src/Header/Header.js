@@ -21,10 +21,6 @@ export default function Header() {
             <div class="collapse navbar-collapse rightheder" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to={"/Cart"}><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></Link>
-                </li>
-                <span>0</span>
-                <li class="nav-item">
 
                 {/* <a class="nav-link" href="#"><div className='profilearea'></div></a> */}
                   <div class="dropdown">
