@@ -61,8 +61,8 @@ app.use("/Student",StudentRoutes);
 
 
 
-const offerRoutes = require('./routes/offers');
-app.use("/offer", offerRoutes);
+// const offerRoutes = require('./routes/offers');
+// app.use("/offer", offerRoutes);
 
 
 const categoryRoutes = require('./routes/Category');
