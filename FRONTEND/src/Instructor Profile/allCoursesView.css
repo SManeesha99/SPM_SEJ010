@@ -41,6 +41,10 @@ video{
     margin: 10px;
 }
 
+.nameN h2{
+    text-align: left;
+}
+
 .discri{
     text-align: left;
     width: auto;

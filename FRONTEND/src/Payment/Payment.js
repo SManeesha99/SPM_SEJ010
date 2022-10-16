@@ -34,16 +34,25 @@ const Payment =() => {
     const [pexpiryDate, setPexpiryDate] = useState("");
     const [cvc, setCvc] = useState("");
   
-    const sendData = async (courseId, courseTitle, coursePrice)=>{
+    const sendData = async (courseId, courseTitle, coursePrice, InstructorId, InstructorfName, InstructorlName, cdescription, uploadAt)=>{
       const newForm={
   
       courseId: courseId,
       courseTitle: courseTitle,
       coursePrice: coursePrice,
+      InstructorId: InstructorId,
+      InstructorfName: InstructorfName,
+      InstructorlName: InstructorlName,
+      cdescription: cdescription,
+      uploadAt: uploadAt,
       pname: pname,
       pcardNum: pcardNum,
       pexpiryDate: pexpiryDate,
-      cvc: cvc
+      cvc: cvc,
+      studentId: localStorage.getItem("id"),
+      date: new Date().toISOString()
+
+
   
     }
     console.log(newForm)
@@ -87,11 +96,6 @@ const Payment =() => {
      <div class='payArea'>
         <h1>Pay Now</h1>
         <form class="row g-3">
-
-        <div class="col-12">
-            {/* <label for="inputAddress" class="form-label">Course ID</label> */}
-            <input type="text" class="form-control"  value={input._id} id="inputAddress" hidden />
-        </div>    
        
         <div class="col-12">
             <label for="inputAddress" class="form-label">Course Title</label>
@@ -123,10 +127,8 @@ const Payment =() => {
         </div>
        
         <div class="col-12">
-            <center><button type="submit" class="btn btn-primary" onClick={() => sendData(input._id, input.ctitle, input.cprice, input.pname, input.pcardNum, input.pexpiryDate, input.cvc)}><Link to ="/homeLogged
-                
-                
-                " style={{textDecoration:'none', color:'white'}}>Pay Now</Link></button></center>
+            <center><button type="submit" class="btn btn-primary" onClick={() => sendData(input._id, input.ctitle, input.cprice, input.InstructorId, input.InstructorfName, 
+            input.InstructorlName, input.cdescription, input.uploadAt, input.pname, input.pcardNum, input.pexpiryDate, input.cvc )}><Link to ="/Smycourses" style={{textDecoration:'none', color:'white'}}>Pay Now</Link></button></center>
             
         </div>
         </form>

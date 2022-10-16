@@ -1,6 +1,6 @@
 // import React from 'react';
 import axios from "axios";
-import Header from "../Header/Header";
+import HeaderS from "../Header/HeaderS";
 import "./studentprofile.css";
 import swal from "sweetalert";
 import Swal from "sweetalert2";
@@ -69,7 +69,7 @@ export default function StudentProfile() {
 
   return (
     <div>
-        <Header/>
+        <HeaderS/>
         <div className='StudentProfileArea'>
             <div class="row">
                 <div class="col-sm-8 lefts">
