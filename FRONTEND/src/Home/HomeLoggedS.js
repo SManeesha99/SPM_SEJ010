@@ -112,7 +112,7 @@ handleTextSearch =(e)=>{
 
                     <li><a class="dropdown-item" href="/homeLoggedS">Home</a></li>
                     <li><a class="dropdown-item" href="/studentProfile">Profile</a></li>
-                    <li><a class="dropdown-item" href="">My Courses</a></li>
+                    <li><a class="dropdown-item" href="/Smycourses">My Courses</a></li>
                     <hr/>
                     <li><a class="dropdown-item" href="/" onClick={localStorage.clear}>Sign Out</a></li>
                   </ul>
