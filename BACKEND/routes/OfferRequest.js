@@ -36,4 +36,29 @@ router.route("/add").post((req,res)=>{
 
 })
 
+
+router.get('/',(req,res)=>{
+    OfferRequest.find({status:'unavailable'}).then((OfferRequest)=>{
+        res.json(OfferRequest)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
+
+router.route("/updateStatus/:id").put(async(req,res)=>{
+    let requestId = req.params.id;
+    const{status}=req.body;
+
+    const updatestatus={
+        status: 'active'
+    }
+    const update = await OfferRequest.findByIdAndUpdate(requestId,updatestatus).then(()=>{
+        res.json("active")
+    }).catch((err)=>{
+        console.log(err);
+        res.json("unavailable")
+    })
+})
+
 module.exports = router;
