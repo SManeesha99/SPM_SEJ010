@@ -186,6 +186,7 @@ class Instructor_Req_Req extends Component{
                 <div class="row categorydiv">
                     <div class="col left">
                         <h4>{test.firstName} {test.lastName}</h4>
+                        <p>{test.field}</p>
                         <p></p>
                     </div>
 
