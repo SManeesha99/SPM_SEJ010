@@ -9,7 +9,8 @@ export default class Cart extends Component {
     super (props);
 
     this.state={
-      cart:[]
+      cart:[],
+      
     };
 }
 

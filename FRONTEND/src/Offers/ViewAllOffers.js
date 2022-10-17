@@ -104,7 +104,7 @@ filterContent(courses, searchTerm){
 
       <div className='allcoursesviewArea'>
 
-      <h2><span>A</span>ll <span>C</span>ourses</h2>
+      <h2><span>A</span>ll <span>O</span>ffers</h2>
 
       
           <div className='allcoursesview'>

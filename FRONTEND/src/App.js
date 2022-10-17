@@ -52,8 +52,12 @@ import LoginStudent from './LoginRegister/LoginStudent';
 import InstructorProfile from './Instructor Profile/InstructorProfile';
 import Requests from './Requests Pages/Request';
 import Smycourses from './My Courses/Smycourses';
+import InstructorPay from './Payment/InstructorPay';
 
 import Adminhome from './AdminDashboard/Adminhome';
+import OfferRequest from './Offers/OfferRequest';
+
+import ApproveCourses from './Admin/ApproveCourses';
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -65,62 +69,75 @@ function App() {
     
       <Routes>
         <Route>
+
           <Route path='/' element={<Home/>} />
+          <Route path='/register' element={<SelectRegister/>} />
+          <Route path='/login' element={<SelectLogin/>} />
+
+
+          <Route path='/registerInstructor' element={<RegisterInstructor/>} />
+          <Route path='/loginInstructor' element={<LoginInstructor/>} />
           <Route path='/homeLogged' element={<HomeLogged/>} />
-          <Route path='/homeLoggedS' element={<HomeLoggedS/>} />
-          <Route path='/createReview' element={<CreateReview/>} />
-          <Route path='/ViewAllCategoies' element={<ViewAllCategoies/>} />
-          <Route path='/EditCategory/:id' element={<EditCategory/>} />
-          <Route path='/studentProfile' element={<StudentProfile/>} />
-          <Route path='/instructorProfile' element={<InstructorProfile/>} />
-          <Route path='/viewProfiles' element={<ViewProfiles/>} />
-
-          <Route path='/UserProfile/:id' element={<UserProfile/>} />
-          <Route path='/viewCourse' element={<ViewCourse/> } />
-          <Route path='/Cart' element={<Cart/> } />
-
-          <Route path='/editProfile' element={<EditProfile/>} />
-          <Route path='/editProfileS' element={<EditProfileS/>} />
-          <Route path='/viewCourse/:id' element={<ViewCourse/> } />
-
           <Route path='/addCourse' element={<AddCourse/> }/>
           <Route path='/courseDetailsView/:id' element={<CourseDetailsView/>} />
           <Route path='/updateCourseDetails' element={<UpdateCourseDetails/>} />
           <Route path='/allCourseView' element={<AllCoursesView/>} />
-          <Route path='/courseInfo/:id' element={<CourseInfo/>} />
-          <Route path='/instructorReqReg' element={<Instructor_Req_Req/>} />
+          <Route path='/instructorProfile' element={<InstructorProfile/>} />
+          <Route path='/editProfile' element={<EditProfile/>} />
           <Route path='/createOffer/:id' element={<CreateOffer/>} />
           <Route path='/addoffer' element={<AddOffer/>}/>
+          <Route path='/instructorPayment' element={<InstructorPayment/>} />
+          <Route path='/InstructorPay' element={<InstructorPay/>} />
+          
+
+          <Route path='/registerStudent' element={<RegisterStudent/>} />
+          <Route path='/loginStudent' element={<LoginStudent/>} />
+          <Route path='/homeLoggedS' element={<HomeLoggedS/>} />
+          <Route path='/viewCourse' element={<ViewCourse/> } />
+          <Route path='/viewCourse/:id' element={<ViewCourse/> } />
+          <Route path='/Cart' element={<Cart/> } />
+          <Route path='/createReview' element={<CreateReview/>} />
+          <Route path='/ViewAllCategoies' element={<ViewAllCategoies/>} />
+          <Route path='/editProfileS' element={<EditProfileS/>} />
+          <Route path='/studentProfile' element={<StudentProfile/>} />
+          <Route path='/payment/:id' element={<Payment/>} />
+          <Route path='/studentPayment' element={<StudentPayment/>} />
+          <Route path='/Smycourses' element={<Smycourses/>} />
+
+
+          <Route path='/adminlogin' element={<AdminLogin/>} />
+          <Route path='/Adminhome' element={<Adminhome/>} />
+          <Route path='/viewProfiles' element={<ViewProfiles/>} />
+          <Route path='/adminProfile' element={<AdminProfile/>} />
+          <Route path='/UserProfile/:id' element={<UserProfile/>} />
+          <Route path='/request' element={<Requests/>} />
+          <Route path='/ApproveCourses' element={<ApproveCourses/>} />
+          <Route path='/OfferRequest' element={<OfferRequest/>} />
+
+          
+          <Route path='/courseInfo/:id' element={<CourseInfo/>} />
+          <Route path='/instructorReqReg' element={<Instructor_Req_Req/>} />
+          
           <Route path='/createCategories' element={<CreateCategory/>} />
           <Route path='/registeradmin' element={<RegisterAdmin/>} />
-          <Route path='/adminlogin' element={<AdminLogin/>} />
+          
           <Route path='/alloffer' element={<ViewAllOffers/>} />
           <Route path='/offerInfo/:id' element={<OfferInfo/>} />
+          
           <Route path='/updateoffer/:id' element={<UpdateOffer/>} />
-          <Route path='/adminProfile' element={<AdminProfile/>} />
-
-          <Route path='/payment/:id' element={<Payment/>} />
+          
+          <Route path='/EditCategory/:id' element={<EditCategory/>} />
 
           <Route path='/TopcourseRequest' element={<TopcourseRequest/>} />
-
-          <Route path='/studentPayment' element={<StudentPayment/>} />
-          <Route path='/instructorPayment' element={<InstructorPayment/>} />
           <Route path='/courseReqList' element={<CourseReqList/>} />
 
           <Route path='/searchUsers/instructors' element={<SearchUsersIns/>} />
           <Route path='/searchUsers/students' element={<SearchUsersSt/>} />
           <Route path='/TopCourse' element={<TopCourse/>} />
 
-          <Route path='/register' element={<SelectRegister/>} />
-          <Route path='/login' element={<SelectLogin/>} />
-          <Route path='/registerStudent' element={<RegisterStudent/>} />
-          <Route path='/loginStudent' element={<LoginStudent/>} />
-          <Route path='/registerInstructor' element={<RegisterInstructor/>} />
-          <Route path='/loginInstructor' element={<LoginInstructor/>} />
-          <Route path='/request' element={<Requests/>} />
-          <Route path='/Smycourses' element={<Smycourses/>} />
-
-          <Route path='/Adminhome' element={<Adminhome/>} />
+          
+          
+          
 
 
         </Route>

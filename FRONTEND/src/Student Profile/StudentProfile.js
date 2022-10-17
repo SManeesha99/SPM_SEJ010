@@ -24,6 +24,7 @@ import { FreeMode, Pagination } from "swiper";
 export default function StudentProfile() {
 
   const [input, setInput]=useState({});
+  const [courses, setCourses] = useState([]);
   const id =localStorage.getItem("id");
   console.log(id);
   const history = useNavigate();
@@ -35,6 +36,12 @@ export default function StudentProfile() {
       }
       fetchHandler()
       .then((data)=>setInput(data.User));
+      axios.get("http://localhost:8090/Payment/viewCourse/" + localStorage.getItem("id")).then(res =>{
+      if(res.data){
+          
+          setCourses(res.data)
+      }
+      });
   },[id])
 
   const navigate = useNavigate();
@@ -104,12 +111,65 @@ export default function StudentProfile() {
         modules={[FreeMode, Pagination]}
         className="mySwiper swipperArea"
       >
-        <SwiperSlide className="SwiperSlide">Slide 1</SwiperSlide>
-        <SwiperSlide className="SwiperSlide">Slide 2</SwiperSlide>
-        <SwiperSlide className="SwiperSlide">Slide 3</SwiperSlide>
-        <SwiperSlide className="SwiperSlide">Slide 4</SwiperSlide>
-        <SwiperSlide className="SwiperSlide">Slide 5</SwiperSlide>
-        <SwiperSlide className="SwiperSlide">Slide 6</SwiperSlide>
+        {courses.map((scourse, index) =>
+        <SwiperSlide className="SwiperSlide">
+
+
+
+        <div className="card homevideocontainer" key={index}>
+
+            <Link className="nav-link active" aria-current="page" to={`/viewCourse/${scourse._id}`}>
+
+            <div className="card-header">
+            {scourse.courseTitle}
+                      
+            </div>
+
+            <div className="card-body">
+              
+              {/* <img src="./images/dddd.jpg" alt="" /> */}
+
+              <video src="./Videos/tujhe.mp4" controls = "video/mp4"></video>
+
+            </div>
+
+
+            </Link>
+
+            <div className="card-footer">
+              <div className='profileArea'>
+
+                  <div className='pro'>
+
+                  </div>
+                  <div className='nameN'>
+                    <h2>{scourse.InstructorfName} {scourse.InstructorlName}</h2>
+                    <p>{scourse.uploadAt}</p>
+                    
+                  </div>
+
+              </div>
+                <div className='discri'>
+
+                {scourse.cdescription}
+
+                </div> 
+                
+                <br />
+
+                <div>
+                <button className='btn btn-danger' onClick={()=>this.onDelete(scourse._id)}>Remove</button>
+                </div>
+                
+            </div>
+
+
+            </div>
+
+
+
+        </SwiperSlide>
+        )}
       </Swiper>
     </>
 

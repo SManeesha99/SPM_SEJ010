@@ -50,7 +50,9 @@ router.route("/add").post((req,res)=>{
         tittle,
         description,
         discount,
-        closingDate
+        closingDate,
+        offerHasApproved: null,
+        hasApproved : false
 
         // cvideo
     })
@@ -83,7 +85,7 @@ router.route("/owncourse/:id").get((req,res)=>{
 
     const id = req.params.id;
 
-    Courses_models.find({InstructorId:id}).then((Courses)=>{
+    Courses_models.find({InstructorId:id, hasApproved: true}).then((Courses)=>{
         res.json(Courses)
     }).catch((err)=>{
         console.log(err)
@@ -97,7 +99,7 @@ router.route("/owncourse/:id").get((req,res)=>{
 
 router.route("/update/:id").put(async (req, res) =>{
     let courseId = req.params.id;
-    const {ctitle, cduration, cprice, cdescription, tittle, description,discount, closingDate} = req.body;
+    const {ctitle, cduration, cprice, cdescription, tittle, description,discount, closingDate, offerHasApproved} = req.body;
 
     const updateCourse ={
         ctitle,
@@ -107,7 +109,8 @@ router.route("/update/:id").put(async (req, res) =>{
         tittle,
         description,
         discount,
-        closingDate
+        closingDate,
+        offerHasApproved
     }
 
     const update = await Courses_models.findByIdAndUpdate(courseId, updateCourse)
@@ -308,6 +311,115 @@ router.get('/cart',(req,res)=>{
 //         console.log(err);
 //     })
 // });
+
+router.route("/approveCourse/:id").get(async(req,res)=>{
+    let courseId = req.params.id;
+     try {
+        let courseId = req.params.id;
+        let TopcourseRequest = await Courses_models.findOneAndUpdate({_id: courseId }, {
+            hasApproved:true
+        },
+            {
+                upsert: true,
+            }
+        )
+        return res.status(200).json({
+            success: true,
+            message: "Course approved successfully",
+            result: TopcourseRequest
+        });
+
+        
+     } catch (error) {
+         return res.json({
+              success:false,
+              message:"Error"
+         })
+     }
+      
+});
+
+router.get('/toApproveCourses/',(req,res)=>{
+    Courses_models.find({hasApproved:false}).then((TopcourseRequest)=>{
+        res.json(TopcourseRequest)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
+
+router.route("/approvedCourses").get((req,res)=>{
+
+    Courses_models.find({hasApproved: true}).then((Courses)=>{
+        res.json(Courses)
+    }).catch((err)=>{
+        console.log(err)
+    })
+
+})
+
+router.get('/toApproveOffers/',(req,res)=>{
+    Courses_models.find({offerHasApproved:false}).then((TopcourseRequest)=>{
+        res.json(TopcourseRequest)
+
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
+
+router.route("/approveOffer/:id").get(async(req,res)=>{
+    let courseId = req.params.id;
+     try {
+        let courseId = req.params.id;
+        let TopcourseRequest = await Courses_models.findOneAndUpdate({_id: courseId }, {
+            offerHasApproved:true
+        },
+            {
+                upsert: true,
+            }
+        )
+        return res.status(200).json({
+            success: true,
+            message: "Course Offer approved successfully",
+            result: TopcourseRequest
+        });
+
+        
+     } catch (error) {
+         return res.json({
+              success:false,
+              message:"Error"
+         })
+     }
+      
+});
+
+router.route("/deleteOffer/:id").get(async(req,res)=>{
+    let courseId = req.params.id;
+     try {
+        let courseId = req.params.id;
+        let TopcourseRequest = await Courses_models.findOneAndUpdate({_id: courseId }, {
+            offerHasApproved:null
+        },
+            {
+                upsert: true,
+            }
+        )
+        return res.status(200).json({
+            success: true,
+            message: "Course Offer deleted successfully",
+            result: TopcourseRequest
+        });
+
+        
+     } catch (error) {
+         return res.json({
+              success:false,
+              message:"Error"
+         })
+     }
+      
+});
 
 
 

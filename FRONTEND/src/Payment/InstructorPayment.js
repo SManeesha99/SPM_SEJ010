@@ -1,13 +1,29 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from '../Header/Header';
 import './studentPayment.css';
+import axios from 'axios'
 
 export default function InstructorPayment() {
+
+    const [input, setInput] = useState([])
+
+    useEffect(()=>{ 
+        const fetchHandler = async()=>{
+            await axios.get('http://localhost:8090/InstructorPayment/')
+            .then((res)=> setInput(res.data) )
+            // .then((data)=>setInput(data));
+            // console.log(res)
+        }
+        fetchHandler()
+    },[])
+
   return (
     <div>
         <Header/>
         <div class='SParea'>
             <h1>Payment History</h1>
+
+            {input.map((userprof, index)=>
             <div class='profArea'>
             
                 <div class='row prof'>
@@ -18,20 +34,21 @@ export default function InstructorPayment() {
 
                         </div>
                         <div className='nameNdate'>
-                            <h2>Maneesha Fernando</h2>
-                            <p>C++ Fundamental</p>
-                            <p class='date'>Payment Date: 2022/09/26</p>
+                            <h2>{userprof.InstructorfName + " " + userprof.InstructorlName}</h2>
+                            <p>{userprof.courseTitle}</p>
+                            <p class='date'>Payment Date: {userprof.date.substring(0,10)}</p>
                         </div>
 
                     </div>
                     
 
                     <div class='col-sm-3 profRight'>
-                        <p>$20.10</p>
+                        <p>Rs {userprof.paymentPrice}.00</p>
                     </div>
 
                 </div>
             </div>
+            )}
         </div>
     </div>
   )
