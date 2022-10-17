@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import {useState,useEffect} from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Dsahboard from '../AdminDashboard/Dsahboard';
 
 
 class TopcourseRequest extends React.Component{
@@ -55,8 +56,10 @@ render(){
   return (
       <div>
         <Header/>
+        <Dsahboard/>
 
         <div className='TopcourseRequestArea'>
+        
 
             <h1>Top Course Requests</h1>
 

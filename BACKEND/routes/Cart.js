@@ -119,4 +119,18 @@ router.route("/checkCourse/:studentId/:courseId").get( async (req,res)=>{
     
 })
 
+
+router.route("/delete/:id").delete(async (req, res) => {
+    let cartId = req.params.id;
+
+    await Cart_models.findByIdAndDelete(cartId)
+    .then(() => {
+        res.status(200).send({status: "Course Removed"});
+    }).catch((err) => {
+        console.log(err.message);
+        res.status(500).send({status: "Error withe delete User", error: err.message});
+    })
+})
+
+
 module.exports = router;

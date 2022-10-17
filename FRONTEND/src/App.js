@@ -53,8 +53,10 @@ import InstructorProfile from './Instructor Profile/InstructorProfile';
 import Requests from './Requests Pages/Request';
 import Smycourses from './My Courses/Smycourses';
 
+import Adminhome from './AdminDashboard/Adminhome';
 
 import { Routes,Route } from 'react-router-dom';
+
 
 
 
@@ -117,6 +119,8 @@ function App() {
           <Route path='/loginInstructor' element={<LoginInstructor/>} />
           <Route path='/request' element={<Requests/>} />
           <Route path='/Smycourses' element={<Smycourses/>} />
+
+          <Route path='/Adminhome' element={<Adminhome/>} />
 
 
         </Route>

@@ -39,6 +39,12 @@ cart(){
 
 }
 
+onDelete=(id)=>{
+  axios.delete(`http://localhost:8090/Cart/delete/${id}`).then((res)=>{
+      this.retrieveUserProf(); 
+  });
+};
+
 
   render() {
     return (
@@ -63,7 +69,7 @@ cart(){
                     </div>
 
                     <div className='cartitemrightR'>
-                        <button type='button'>
+                        <button type='button' onClick={()=>this.onDelete(cart._id)}>
                         Remove
                         </button>
                     </div>
