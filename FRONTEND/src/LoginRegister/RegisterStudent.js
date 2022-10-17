@@ -142,10 +142,8 @@ else{
 
                 </div>
 
-                <button class='btn btn-primary' onClick={sendData}><Link to ="/login
-                
-                
-                " style={{textDecoration:'none', color:'white'}}>Register</Link></button>
+                <button class='btn btn-primary' onClick={sendData}><Link to ="/login" 
+                style={{textDecoration:'none', color:'white'}}>Register</Link></button>
 
                 <hr/>
                 <p className='bottm'>Already have an account? <Link className="nav-link active" aria-current="page" to="/login">Login</Link></p>
