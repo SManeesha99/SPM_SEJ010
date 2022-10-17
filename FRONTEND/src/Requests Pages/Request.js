@@ -1,12 +1,15 @@
 import React from 'react';
 import '../Header/header.css';
+import AdminHeader from '../Admin/AdminHeader';
+import Dsahboard from '../AdminDashboard/Dsahboard';
 import {NavLink,Link} from 'react-router-dom';
 import NotRegHeaderWithSearch from '../Admin/AdminHeader';
 
 export default function Requests() {
   return (
     <div>
-        <NotRegHeaderWithSearch/> 
+        <AdminHeader/>
+        <Dsahboard/>
         <div className="section-container">
             <div className="sec-card">
               <div className="card-box">
@@ -20,7 +23,7 @@ export default function Requests() {
               <div className="card-box">
                 <div className="card-content">
                   <h3>Course Request</h3>
-                  <Link aria-current="page" to={"#"}>View Request</Link>
+                  <Link aria-current="page" to={"/ApproveCourses"}>View Request</Link>
                 </div>
               </div>
             </div>
@@ -36,7 +39,7 @@ export default function Requests() {
               <div className="card-box">
                 <div className="card-content">
                   <h3>Offer Request</h3>
-                  <Link aria-current="page" to={"/loginStudent"}>View Request</Link>
+                  <Link aria-current="page" to={"/OfferRequest"}>View Request</Link>
                 </div>
               </div>
             </div>

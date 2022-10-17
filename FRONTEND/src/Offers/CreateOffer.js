@@ -7,6 +7,11 @@ import Header from '../Header/Header';
 
 const CreateOffer =() => {
     const [input, setInput]=useState({});
+    const [offertitle, setOffertitle] = useState("");
+    const [offerDes, setOfferDes] = useState("");
+    const [discount, setdiscount] = useState("");
+    const [closingDate, setClosingDate] = useState("");
+
     const id =useParams().id;
     console.log(id);
     const history = useNavigate();
@@ -25,17 +30,18 @@ const CreateOffer =() => {
 
         await axios.put(`http://localhost:8090/Courses/update/${id}` , {
 
-            tittle:String(input.tittle),
-            description:String(input.description),
-            discount:String(input.discount),
-            closingDate:String(input.closingDate)
+            offerHasApproved: false,
+            tittle:offertitle,
+            description:offerDes,
+            discount:discount,
+            closingDate:closingDate
             
 
         }).then(()=>{
 
             swal({
                 title: "Success!",
-                text: "Course Updated Successfully",
+                text: "Your Offer Under Review",
                 icon: 'success',
                 timer: 2000,
                 button: false,
@@ -48,7 +54,7 @@ const CreateOffer =() => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        sendRequest().then(()=>history("/alloffer"));
+        sendRequest().then(()=>history("/allCourseView"));
     };
 
     const handleChange =(e)=>{
@@ -107,9 +113,9 @@ const CreateOffer =() => {
                     <label>Offer Tittle</label>
                         <input class="form-control"
                         name='tittle' 
-                        value={input.tittle}
+                        value={offertitle}
                         placeholder='Eneter here'
-                        onChange={handleChange}
+                        onChange={(e)=>setOffertitle(e.target.value)}
                         required></input>
                     </div>
 
@@ -117,9 +123,9 @@ const CreateOffer =() => {
                     <label>Offer Discription</label>
                         <input class="form-control"
                         name='description' 
-                        value={input.description}
+                        value={offerDes}
                         placeholder='Eneter here'
-                        onChange={handleChange}
+                        onChange={(e)=>setOfferDes(e.target.value)}
                         required></input>
                     </div>
 
@@ -128,8 +134,8 @@ const CreateOffer =() => {
                         <input type='number' 
                         name='discount'
                         placeholder='Eneter here'
-                        value={input.discount}
-                        onChange={handleChange}
+                        value={discount}
+                        onChange={(e)=>setdiscount(e.target.value)}
                         required></input>
                     </div>
 
@@ -137,8 +143,8 @@ const CreateOffer =() => {
                     <label>Closing date</label>
                         <input class="form-control"
                         name='closingDate'
-                        value={input.closingDate}
-                        onChange={handleChange}
+                        value={closingDate}
+                        onChange={(e)=>setClosingDate(e.target.value)}
                         type='date'
                         ></input>
                     </div>

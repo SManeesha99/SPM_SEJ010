@@ -27,13 +27,23 @@ componentDidMount(){
 
 retrieveCourses(){
         
-  axios.get("http://localhost:8090/Courses").then(res =>{
+  axios.get("http://localhost:8090/Courses/approvedCourses").then(res =>{
       if(res.data){
           this.setState({
-              courses:res.data
+              courses:res.data,
           });
 
           console.log(this.state.courses)
+      }
+  });
+
+  axios.get("http://localhost:8090/Cart/viewCart/" + localStorage.getItem("id")).then(res =>{
+      if(res.data){
+          this.setState({
+            count: res.data.length
+          });
+
+          console.log(this.state.cart)
       }
   });
 
@@ -100,7 +110,7 @@ handleTextSearch =(e)=>{
                 <li class="nav-item">
                 <Link class="nav-link active" aria-current="page" to={"/Cart"}><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></Link>
                 </li>
-                <span>0</span>
+                <span>{this.state.count}</span>
                 <li class="nav-item">
 
                 {/* <a class="nav-link" href="#"><div className='profilearea'></div></a> */}

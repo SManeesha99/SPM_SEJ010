@@ -35,7 +35,7 @@ export default function AdminLogin() {
                 //   history("/");
 
                   setTimeout(()=>{
-                    window.location.replace(`http://localhost:3000/adminProfile`)
+                    window.location.replace(`http://localhost:3000/request`)
                   }, 2000)
 
             }else{

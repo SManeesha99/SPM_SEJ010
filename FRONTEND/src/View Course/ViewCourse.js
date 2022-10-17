@@ -51,6 +51,22 @@ const ViewCourse =() => {
             <div className='courseDetails'>
                 <h1> {input.ctitle} </h1>
                 <p>{input.cdescription}</p>
+                {input.offerHasApproved ? 
+                <div>
+                    <div>
+                        Offer Title: {input.tittle}
+                    </div>
+                    <div>
+                        Offer Description: {input.description}
+                    </div>
+                    <div>
+                        Offer Discount: {input.discount}
+                    </div>
+                    <div>
+                        Offer Closing Date: {input.closingDate}
+                    </div>
+                </div>
+                : "" }
     
                 <button className='enrollbtn'><Link to={`/payment/${input._id}`} style={{textDecoration:'none', color:'white'}}>Enroll Now {input.cprice}</Link></button>
                 <button type="button" className='enrollbtn rTCourse' onClick={()=>onSubmit(id)}>Request Top Course</button>

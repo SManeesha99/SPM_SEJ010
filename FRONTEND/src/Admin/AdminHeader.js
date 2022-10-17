@@ -16,10 +16,7 @@ export default function AdminHeader() {
             </form>
             <div class="collapse navbar-collapse rightheder" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></a>
-                </li>
-                <span>0</span>
+                
                 <li class="nav-item">
 
                 {/* <a class="nav-link" href="#"><div className='profilearea'></div></a> */}
@@ -28,8 +25,8 @@ export default function AdminHeader() {
                     
                   </button>
                   <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/request">Home</a></li>
                     <li><a class="dropdown-item" href="/adminProfile">Profile</a></li>
-                    <li><a class="dropdown-item" href="/request">Requests</a></li>
                     <li><a class="dropdown-item" href="/studentPayment">Student Payments</a></li>
                     <li><a class="dropdown-item" href="/searchUsers/instructors">User Profiles</a></li>
                     <li><a class="dropdown-item" href="/allCourseView">All Courses</a></li>

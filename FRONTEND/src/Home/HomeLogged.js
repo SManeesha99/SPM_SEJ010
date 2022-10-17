@@ -23,11 +23,13 @@ componentDidMount(){
 
 retrieveCourses(){
         
-  axios.get("http://localhost:8090/Courses").then(res =>{
+  axios.get("http://localhost:8090/Courses/approvedCourses").then(res =>{
       if(res.data){
           this.setState({
-              courses:res.data
+              courses:res.data,
+              count: res.data.length
           });
+
 
           console.log(this.state.courses)
       }

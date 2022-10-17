@@ -25,6 +25,8 @@ const CoursesSchema = new mongoose.Schema(
       description: {type: String, requried: true},
       discount: {type: String, requried: true},
       closingDate: {type: String, requried: true},
+      offerHasApproved: {type: Boolean, requried: false},
+      hasApproved: {type: Boolean, requried: true},
       status:{type: String}
       
     }

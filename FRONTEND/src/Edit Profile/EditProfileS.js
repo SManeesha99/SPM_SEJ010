@@ -195,7 +195,6 @@ const EditProfileS =() => {
 
             <div class="mt-4 pt-2">
                 <center><button class="btn btn-primary btn-lg" onClick={handleSubmit} >Edit Profile</button></center>
-                <center><button class="btn btn-danger btn-lg" onClick={()=>onDelete(input._id)} >Delete</button></center>
             </div>
 
 

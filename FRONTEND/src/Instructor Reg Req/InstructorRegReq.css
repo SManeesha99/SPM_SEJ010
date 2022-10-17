@@ -1,7 +1,7 @@
 .categoryArea{
     width: 100%;
     height: auto;
-    padding: 80px 5% 80px 25%;
+    padding: 80px 5% 80px 25% !important;
 }
 
 .categorydiv{

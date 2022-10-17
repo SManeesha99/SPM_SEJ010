@@ -8,10 +8,12 @@ export default function Dsahboard() {
 
         <div class="sidebar">
             <ul>
-                <li><NavLink class="nav-link" to={"/Adminhome"}>Home</NavLink></li>
+                <li><NavLink class="nav-link" to={"/request"}>Home</NavLink></li>
                 <li><NavLink class="nav-link" to={"/TopcourseRequest"}>Top Course</NavLink></li>
-                <li><NavLink class="nav-link" to={"/instructorReqReg"}>Top Course</NavLink></li>
-                <li><NavLink class="nav-link" to={"gf"}>Top Course</NavLink></li>
+                <li><NavLink class="nav-link" to={"/ApproveCourses"}>New Course Requests</NavLink></li>
+                <li><NavLink class="nav-link" to={"/OfferRequest"}>New Offer Requests</NavLink></li>
+                <li><NavLink class="nav-link" to={"/studentPayment"}>Student Payments</NavLink></li>
+                <li><NavLink class="nav-link" to={"/instructorPayment"}>Instructor Payments</NavLink></li>
             </ul>
 
         </div>

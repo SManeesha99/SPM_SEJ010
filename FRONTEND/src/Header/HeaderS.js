@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './header.css';
 import {NavLink,Link} from 'react-router-dom';
+import axios from 'axios'
 
 export default function HeaderS(props) {
+
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    axios.get("http://localhost:8090/Cart/viewCart/" + localStorage.getItem("id")).then(res =>{
+      if(res.data){
+          
+          setCount(res.data.length)
+      }
+  });
+  })
 
     
   return (
@@ -23,7 +35,7 @@ export default function HeaderS(props) {
                 <li class="nav-item">
                 <Link class="nav-link active" aria-current="page" to={"/Cart"}><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></Link>
                 </li>
-                <span>{props.count}</span>
+                <span>{count}</span>
                 <li class="nav-item">
 
                 {/* <a class="nav-link" href="#"><div className='profilearea'></div></a> */}

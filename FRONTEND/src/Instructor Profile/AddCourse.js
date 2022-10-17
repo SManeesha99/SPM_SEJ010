@@ -1,7 +1,7 @@
 import React from 'react';
 import './addCourse.css';
 import { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import axios from "axios";
 import swal from "sweetalert";
 import Header from '../Header/Header';
@@ -12,6 +12,7 @@ export default function AddCourse() {
   const id =localStorage.getItem("id");
 
   const [fireRedirect, setFireRedirect] = useState(false);
+  const navigate = useNavigate();
 
   const [ctitle, setCtitle] = useState("");
   const [cduration, setCduration] = useState("");
@@ -55,20 +56,22 @@ const sendData = async (InstructorId, InstructorfName, InstructorlName)=>{
 
 else {
 
-  axios.post('http://localhost:8090/Courses/add',newForm).then(()=>{
+//   axios.post('http://localhost:8090/Courses/add',newForm).then(()=>{
 
-    swal({
-      title: "Success!",
-      text: "New Course Added Successfully",
-      icon: 'success',
-      timer: 2000,
-      button: false,
-    });
+//     swal({
+//       title: "Success!",
+//       text: "New Course Added Successfully",
+//       icon: 'success',
+//       timer: 2000,
+//       button: false,
+//     });
 
-    // setFireRedirect(true);                                  
-}).catch((e)=>{
-  alert(e);
-})
+//     // setFireRedirect(true);                                  
+// }).catch((e)=>{
+//   alert(e);
+// })
+
+navigate('/InstructorPay',{state:newForm})
 
 }
 
@@ -145,7 +148,7 @@ else {
 
                 </div>
 
-                <button class='btn btn-primary btnadd' type= "submit" onClick={() => sendData(input._id, input.firstName, input.lastName, input.ctitle, input.cduration, input.cprice, input.cdescription)}><Link to ="/allCourseView" style={{textDecoration:'none', color:'white'}}>Add Course</Link></button>
+                <button class='btn btn-primary btnadd' type= "submit" onClick={() => sendData(input._id, input.firstName, input.lastName, input.ctitle, input.cduration, input.cprice, input.cdescription)}>Add Course</button>
 
         </div>
  

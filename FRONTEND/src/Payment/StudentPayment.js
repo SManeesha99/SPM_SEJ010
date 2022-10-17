@@ -2,6 +2,8 @@ import React from 'react';
 import Header from "../Admin/AdminHeader";
 import axios from "axios";
 import './studentPayment.css';
+import Dsahboard from '../AdminDashboard/Dsahboard';
+
 
 class StudentPayment extends React.Component{
 
@@ -34,6 +36,7 @@ retrievePaymentH(){
   return (
     <div>
        <Header/>
+       <Dsahboard/>
         <div class='SParea'>
             <h1>Payment History</h1>
 
