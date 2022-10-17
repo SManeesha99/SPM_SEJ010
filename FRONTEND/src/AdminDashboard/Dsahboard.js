@@ -10,7 +10,7 @@ export default function Dsahboard() {
             <ul>
                 <li><NavLink class="nav-link" to={"/Adminhome"}>Home</NavLink></li>
                 <li><NavLink class="nav-link" to={"/TopcourseRequest"}>Top Course</NavLink></li>
-                <li><NavLink class="nav-link" to={"fg"}>Top Course</NavLink></li>
+                <li><NavLink class="nav-link" to={"/instructorReqReg"}>Top Course</NavLink></li>
                 <li><NavLink class="nav-link" to={"gf"}>Top Course</NavLink></li>
             </ul>
 

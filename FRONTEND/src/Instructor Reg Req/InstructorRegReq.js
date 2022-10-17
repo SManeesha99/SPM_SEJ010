@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import Header from "../Admin/AdminHeader";
 import './InstructorRegReq.css';
 import axios from "axios";
+import Dsahboard from '../AdminDashboard/Dsahboard';
 import { toast } from "react-toastify";
 import swal from "sweetalert";
 import {Helmet} from "react-helmet";
@@ -174,6 +175,7 @@ class Instructor_Req_Req extends Component{
         return(
             <div>
                 <Header/>
+                <Dsahboard/>
 
                 <div className='categoryArea'>
 
