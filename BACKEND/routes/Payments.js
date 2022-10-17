@@ -79,5 +79,19 @@ router.route("/delete/:id").delete(async (req, res) => {
 
 
 
+//get all-----------------------------------------------
+
+router.route("/").get((req,res)=>{
+    Payment_model.find().then((Payment)=>{
+        res.json(Payment)
+    }).catch((err)=>{
+        console.log(err);
+    })
+})
+
+//-----------------------------------------------------
+
+
+
 module.exports = router;
 
