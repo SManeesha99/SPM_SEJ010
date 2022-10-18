@@ -58,7 +58,12 @@ import Adminhome from './AdminDashboard/Adminhome';
 import OfferRequest from './Offers/OfferRequest';
 
 import ApproveCourses from './Admin/ApproveCourses';
+
 import ViewCouseins from './View Course/ViewCouseins';
+
+import InsPaymentReport from './Payment/InsPaymentReport';
+import StudentPaymentReport from './Payment/StudentPaymentReport';
+
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -136,6 +141,8 @@ function App() {
           <Route path='/searchUsers/instructors' element={<SearchUsersIns/>} />
           <Route path='/searchUsers/students' element={<SearchUsersSt/>} />
           <Route path='/TopCourse' element={<TopCourse/>} />
+          <Route path='/insreport' element={<InsPaymentReport/>} />
+          <Route path='/stureport' element={<StudentPaymentReport/>} />
 
           
           
