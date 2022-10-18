@@ -93,7 +93,7 @@ handleTextSearch =(e)=>{
 
         <div className="card homevideocontainer" key={index}>
 
-          <Link className="nav-link active" aria-current="page" to={`/viewCourse/${scourse._id}`}>
+          <Link className="nav-link active" aria-current="page" to={`/viewCourse/${scourse.courseId}`}>
 
           <div className="card-header">
           {scourse.courseTitle}

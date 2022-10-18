@@ -16,6 +16,18 @@
     text-align: left;
 }
 
+.makeReviewArea{
+    padding: 0 10%;
+}
+
+.makeReviewArea button{
+    margin: 10px;
+}
+
+.makeReviewArea label{
+    font-size: 20px;
+}
+
 
 
 .courseDetails{

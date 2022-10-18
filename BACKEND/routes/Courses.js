@@ -422,10 +422,4 @@ router.route("/deleteOffer/:id").get(async(req,res)=>{
 });
 
 
-
-
-
-
-
-
 module.exports = router;

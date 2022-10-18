@@ -149,7 +149,7 @@ ondeleteOffer(id) {
        
         <div className="card allcoursescontainer" key={index}>
 
-        <Link className="nav-link active" aria-current="page" to={`/viewCourse/${courses._id}`}>
+        <Link className="nav-link active" aria-current="page" to={`/viewCourseins/${courses._id}`}>
 
           <div className="card-header">
           {courses.ctitle}

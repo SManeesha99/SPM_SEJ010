@@ -8,6 +8,7 @@ import {Helmet} from "react-helmet";
 // import './script.js'; 
 import { Link } from 'react-router-dom';
 import profile from '../Instructor Reg Req/Profile.png';
+import Dsahboard from '../AdminDashboard/Dsahboard';
 
 class OfferRequest extends Component{
 
@@ -60,6 +61,7 @@ class OfferRequest extends Component{
         return(
             <div>
                 <Header/>
+                <Dsahboard/>
 
                 <div className='categoryArea'>
 

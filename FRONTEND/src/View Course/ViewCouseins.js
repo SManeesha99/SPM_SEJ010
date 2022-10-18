@@ -7,7 +7,8 @@ import Video from "../htmlCss.mp4";
 import HeaderS from "../Header/HeaderS";
 import swal from "sweetalert";
 
-const ViewCourse =() => {
+const ViewCouseins =() => {
+
 
 
     const [input, setInput]=useState({});
@@ -40,47 +41,6 @@ const ViewCourse =() => {
         });
     
       };
-
-      const [review, setReview] = useState("");
-  
-    const sendData = async (SludentfName, StudentlName, InstructorId, InstructorfName, InstructorlName, courseId, ctitle, reviewAt)=>{
-      const newForm={
-  
-        SludentfName: SludentfName,
-        StudentlName: StudentlName,
-        InstructorId: InstructorId,
-        InstructorfName: InstructorfName,
-        InstructorlName: InstructorlName,
-        courseId: courseId,
-        ctitle: ctitle,
-        reviewAt: reviewAt,
-        review: review,
-      studentId: localStorage.getItem("id"),
-      
-
-
-  
-    }
-    console.log(newForm)
-
-  
-    await axios.post('http://localhost:8090/Review/makeReview',newForm).then(()=>{
-    
-      swal({
-        title: "Success!",
-        text: "Payment Added Successfully",
-        icon: 'success',
-        timer: 2000,
-        button: false,
-      });
-  
-      // setFireRedirect(true);                                  
-  }).catch((e)=>{
-    alert(e);
-  })
-  
-  
-    }
     
   
  
@@ -109,7 +69,7 @@ const ViewCourse =() => {
                 : "" }
     
                 <button className='enrollbtn'><Link to={`/payment/${input._id}`} style={{textDecoration:'none', color:'white'}}>Enroll Now {input.cprice}</Link></button>
-                {/* <button type="button" className='enrollbtn rTCourse' onClick={()=>onSubmit(id)}>Request Top Course</button> */}
+                <button type="button" className='enrollbtn rTCourse' onClick={()=>onSubmit(id)}>Request Top Course</button>
                 <a  class="viewreview" href="#review">View Review..</a>
     
             </div>
@@ -142,21 +102,6 @@ const ViewCourse =() => {
     
             </div>
         </div>
-
-
-        <div className="makeReviewArea">
-
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Make Review</label>
-            <textarea 
-            class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Make Review..."  onChange={(e) => (setReview(e.target.value))} value={input.review}></textarea>
-            <button  type="button" class="btn btn-primary" onClick={() => sendData(input.SludentfName, input.StudentlName, input.InstructorId, input.InstructorId, input.InstructorfName, 
-            input.InstructorlName, input.cdescription, input.uploadAt, input.pname, input.pcardNum, input.pexpiryDate, input.cvc )}>Send</button>
-        </div>
-
-        </div>
-
-
     
         <section id="review">
     
@@ -252,4 +197,4 @@ const ViewCourse =() => {
         </div>
       )
 };
-export default ViewCourse;
+export default ViewCouseins;

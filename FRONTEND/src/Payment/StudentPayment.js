@@ -39,6 +39,8 @@ retrievePaymentH(){
        <Header/>
        <Dsahboard/>
         <div class='SParea'>
+
+            <h1>Student Payment History</h1>
             <h1>Payment History</h1>
             <button  class="btn  btn-primary" style={{ textDecoration:'none' }}><Link to={"/stureport"}>Generate Report</Link></button>
 

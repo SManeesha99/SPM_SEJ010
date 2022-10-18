@@ -123,25 +123,25 @@
 
 
 
-.section-container{
+.section-containeradmin{
     width: 100%;
     height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	padding: 40px 0;
+	padding: 80px 5% 80px 25% !important;
 }
-.section-container .sec-card{
+.section-containeradmin .sec-card{
     position: relative;
-    width: 390px;
-    height: 320px;
+    width: 350px;
+    height: 280px;
 	color: #fff;
 	box-shadow: inset 5px 5px 5px rgb(0 0 0 / 5%), inset -5px -5px 5px rgb(255 255 255 / 50%), 5px 5px 5px rgb(0 0 0 / 5%), -5px -5px 5px rgb(255 255 255 / 50%);
 	border-radius: 15px;
 	margin: 30px;
 }
-.section-container .sec-card .card-box{
+.section-containeradmin .sec-card .card-box{
 	position: absolute;
 	top: 20px;
 	left: 20px;
@@ -154,7 +154,7 @@
 	align-items: center;
     
 }
-.section-container .sec-card:hover .card-box{
+.section-containeradmin .sec-card:hover .card-box{
 	transform: translateY(-50px);
 	 box-shadow: 0 10px 40px rgb(0 0 0 / 20%);
 	 background: linear-gradient( 130deg
@@ -167,13 +167,13 @@
     transition: 0.4s;
 
 }
-.section-container .sec-card .card-box .card-content{
+.section-containeradmin .sec-card .card-box .card-content{
 	padding: 20px;
 	text-align: center;
 	font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif!important;
 
 }
-.section-container .sec-card .card-box .card-content h3{
+.section-containeradmin .sec-card .card-box .card-content h3{
 	font-size: 1.8em;
 	color: rgb(0, 0, 0);
 
@@ -182,7 +182,7 @@
 	font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif!important;
 
 }
-.section-container .sec-card .card-box .card-content p{
+.section-containeradmin .sec-card .card-box .card-content p{
 	font-size: 1em;
 	font-weight: 300;
 	color: rgb(0, 0, 0);
@@ -192,11 +192,11 @@
 		font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif!important;
 
 }
-.section-container .sec-card:hover .card-box .card-content p,
-.section-container .sec-card:hover .card-box .card-content h3{
+.section-containeradmin .sec-card:hover .card-box .card-content p,
+.section-containeradmin .sec-card:hover .card-box .card-content h3{
 	color: #fff;
 }
-.section-container .sec-card .card-box .card-content a{
+.section-containeradmin .sec-card .card-box .card-content a{
 	position: relative;
     display: inline-block;
     padding: 15px 20px;
@@ -217,7 +217,7 @@
     font-weight: 700!important;
     text-transform: uppercase!important;
 }
-.section-container .sec-card:hover .card-box .card-content a{
+.section-containeradmin .sec-card:hover .card-box .card-content a{
 	
 	background: #fff;
 	color: #1d2c48;

@@ -64,6 +64,8 @@ app.use("/InstructorPayment",IndtructorPaymentsRoutes);
 const StudentRoutes = require('./routes/Student');
 app.use("/Student",StudentRoutes);
 
+const ReviewRoutes = require('./routes/makeReview');
+app.use("/Review",ReviewRoutes);
 
 
 // const offerRoutes = require('./routes/offers');
