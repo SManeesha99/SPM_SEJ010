@@ -72,7 +72,7 @@ export default function LoginStudent() {
                             </div>
                             <div className='name'>
                                 <label>Password</label>
-                                <input class="form-control" value={password} onChange={e => setPassword(e.target.value)} placeholder='Enter Your Password'></input>
+                                <input class="form-control" type={password} value={password} onChange={e => setPassword(e.target.value)} placeholder='Enter Your Password'></input>
                             </div>
                         </div>
 

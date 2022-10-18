@@ -60,6 +60,8 @@ import OfferRequest from './Offers/OfferRequest';
 import ApproveCourses from './Admin/ApproveCourses';
 import InsPaymentReport from './Payment/InsPaymentReport';
 import StudentPaymentReport from './Payment/StudentPaymentReport';
+import ViewAllCourses from './View Course/ViewAllCourse';
+import InstructorReport from './Admin/Instructor report';
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -138,6 +140,10 @@ function App() {
           <Route path='/TopCourse' element={<TopCourse/>} />
           <Route path='/insreport' element={<InsPaymentReport/>} />
           <Route path='/stureport' element={<StudentPaymentReport/>} />
+          <Route path='/all' element={<ViewAllCourses/>} />
+          <Route path='/instructorReport' element={<InstructorReport/>} />
+
+          
 
           
           
