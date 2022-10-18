@@ -7,6 +7,7 @@ import swal from "sweetalert";
 import '../Instructor Profile/allCoursesView.css';
 import Header from '../Header/Header';
 import {NavLink} from 'react-router-dom';
+import Dsahboard from '../AdminDashboard/Dsahboard';
 
 
 class ApproveCourses extends React.Component{
@@ -94,6 +95,7 @@ filterContent(courses, searchTerm){
       
       <div>
         <AdminHeader/>
+        <Dsahboard/>
 
       <div className='allcoursesviewArea'>
 

@@ -58,6 +58,7 @@ import Adminhome from './AdminDashboard/Adminhome';
 import OfferRequest from './Offers/OfferRequest';
 
 import ApproveCourses from './Admin/ApproveCourses';
+import ViewCouseins from './View Course/ViewCouseins';
 
 import { Routes,Route } from 'react-router-dom';
 
@@ -95,6 +96,7 @@ function App() {
           <Route path='/homeLoggedS' element={<HomeLoggedS/>} />
           <Route path='/viewCourse' element={<ViewCourse/> } />
           <Route path='/viewCourse/:id' element={<ViewCourse/> } />
+          <Route path='/viewCourseins/:id' element={<ViewCouseins/> } />
           <Route path='/Cart' element={<Cart/> } />
           <Route path='/createReview' element={<CreateReview/>} />
           <Route path='/ViewAllCategoies' element={<ViewAllCategoies/>} />

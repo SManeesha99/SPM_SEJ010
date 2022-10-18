@@ -38,7 +38,7 @@ retrievePaymentH(){
        <Header/>
        <Dsahboard/>
         <div class='SParea'>
-            <h1>Payment History</h1>
+            <h1>Student Payment History</h1>
 
             {this.state.paymentH.map((paymentH, index)=>
 

@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Header from '../Header/Header';
 import './studentPayment.css';
-import axios from 'axios'
+import axios from 'axios';
+import Dsahboard from '../AdminDashboard/Dsahboard';
 
 export default function InstructorPayment() {
 
@@ -20,8 +21,9 @@ export default function InstructorPayment() {
   return (
     <div>
         <Header/>
+        <Dsahboard/>
         <div class='SParea'>
-            <h1>Payment History</h1>
+            <h1>Instructor Payment History</h1>
 
             {input.map((userprof, index)=>
             <div class='profArea'>

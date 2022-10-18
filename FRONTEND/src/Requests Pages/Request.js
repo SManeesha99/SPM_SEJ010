@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Header/header.css';
+import './request.css';
 import AdminHeader from '../Admin/AdminHeader';
 import Dsahboard from '../AdminDashboard/Dsahboard';
 import {NavLink,Link} from 'react-router-dom';
@@ -10,7 +10,7 @@ export default function Requests() {
     <div>
         <AdminHeader/>
         <Dsahboard/>
-        <div className="section-container">
+        <div className="section-containeradmin">
             <div className="sec-card">
               <div className="card-box">
                 <div className="card-content">
