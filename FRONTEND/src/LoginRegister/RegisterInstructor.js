@@ -50,9 +50,6 @@ export default function RegisterInstructor() {
 }else if(password === ''){
     swal("password Field is empty")
 }
-else if (!validateEmail(email)) {
-    swal("Enter a valid email");
-}
 else{
 
   axios.post('http://localhost:8090/Test/add',newForm).then(()=>{
@@ -133,6 +130,7 @@ else{
                         <input
                         name='password'
                         type={password}
+                        
                         onChange={(e) => (
                             setPassword(e.target.value)
                              )}

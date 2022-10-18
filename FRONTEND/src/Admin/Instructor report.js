@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import axios from "axios";
 import '../Payment/InsPaymentReport.css';
 
-export default class StudentPaymentReport extends Component {
+export default class InstructorReport extends Component {
 
     constructor(props) {
-        super (props);
-
+        super(props);
+    
         this.state={
-            paymentH:[]
+          instructors:[]
         };
-    }
+      }
 
 
     componentDidMount(){
@@ -20,13 +20,13 @@ export default class StudentPaymentReport extends Component {
 
     retrieveNotice(){
         
-        axios.get("http://localhost:8090/Payment/").then(res =>{
+        axios.get("http://localhost:8090/User/filterInstrutors").then(res =>{
             if(res.data){
                 this.setState({
-                    paymentH:res.data
+                    instructors:res.data
                 });
 
-                console.log(this.state.paymentH)
+                console.log(this.state.instructors)
             }
         });
 
@@ -47,23 +47,23 @@ export default class StudentPaymentReport extends Component {
 
             <div className="container" class="p-3 mb-2 bg-secondary text-white">
 
-                <h1><center><strong>Student Payment</strong></center></h1>
+                <h1><center><strong>Instructors</strong></center></h1>
                 <table class="tableNoticeReport">
                     <thead>
                         <tr class="text-danger">
                         <th scope="col">No</th>
                         <th scope="col">Name</th>
-                    <th scope="col">Course</th>
-                    <th scope="col">Date</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Feild</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {this.state.paymentH.map((paymentH,index)=>(
+                    {this.state.instructors.map((instructors,index)=>(
                             <tr>
                                 <td scope="row">{index + 1}</td>
-                                <td>{paymentH.pname}</td>
-                                <td>{paymentH.courseTitle}</td>
-                                <td>{paymentH.date}</td>
+                                <td>{instructors.firstName + " " + instructors.lastName}</td>
+                                <td>{instructors.email}</td>
+                                <td>{instructors.feild}</td>
 
 
                             </tr>

@@ -117,7 +117,9 @@ else{
                         onChange={(e) => (
                             setEmail(e.target.value)
                              )}
-                         class="form-control" placeholder='Email'></input>
+                             
+                         class="form-control"
+                          placeholder='Email'></input>
                     </div>
                     <div className='name'>
                         <input

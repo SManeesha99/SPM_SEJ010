@@ -57,6 +57,8 @@ render(){
         <Header/>
         <BHeader/>
 
+        
+
         <div className='searchbar '>
           <form class="d-flex searchbaritem" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search Instructors" onChange={this.handleTextSearch} aria-label="Search"/>
@@ -65,6 +67,7 @@ render(){
         
 
         <div className='searchinsArea'>
+        <button className='btn btn-primary'><Link to={"/instructorReport"}>Report Generate</Link></button>
 
         {this.state.instructors.map((instructors, index) =>
 
