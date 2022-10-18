@@ -6,6 +6,7 @@ import { useState ,useEffect} from 'react';
 import {Link,useLocation} from 'react-router-dom';
 import axios from "axios";
 import swal from "sweetalert";
+import './viewallcourrse.css';
 
 export default class ViewAllCourses extends Component {
 
@@ -51,11 +52,13 @@ onSubmitCart = (id) =>{
       <div>
         <Header/> 
         <Dsahboard/>
+<div className='payarea'>
+        <h1>All Course</h1>
+            <button  class="btn btn-primary greport" ><Link to={"/stureport"}>Generate Report</Link></button>
 
         
       <div className='HomeArea'>
-      <h1>Payment History</h1>
-            <button  class="btn-report" style={{ textDecoration:'none' }}><Link to={"/stureport"}>Generate Report</Link></button>
+      
 
 {/* <h1>{this.uid}</h1> */}
       {this.state.courses.map((courses, index) =>
@@ -112,6 +115,7 @@ onSubmitCart = (id) =>{
 
       )}
 
+        </div>
         </div>
 
       </div>

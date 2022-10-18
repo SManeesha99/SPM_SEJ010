@@ -30,7 +30,7 @@ export default function InstructorPayment() {
             <h1>Instructor Payment History</h1>
 
             <h1>Payment History</h1>
-            <button  class="btn  btn-primary" style={{textDecoration:'none', color:'white', marginBottom: 25}}><Link to={"/insreport"}>Generate Report</Link></button>
+            <button  class="btn  btn-primary greport" style={{textDecoration:'none', color:'white', marginBottom: 25}}><Link to={"/insreport"}>Generate Report</Link></button>
 
 
             {input.map((userprof, index)=>

@@ -67,7 +67,7 @@ render(){
         
 
         <div className='searchinsArea'>
-        <button className='btn btn-primary'><Link to={"/instructorReport"}>Report Generate</Link></button>
+        <button className='btn btn-primary greport'><Link to={"/instructorReport"}>Report Generate</Link></button>
 
         {this.state.instructors.map((instructors, index) =>
 
