@@ -18,6 +18,12 @@ export default function RegisterInstructor() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const validateEmail = (email) => {
+    return email.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+  };
+
   function sendData(e){
     const newForm={
 
@@ -43,6 +49,9 @@ export default function RegisterInstructor() {
     swal("email Field is empty")
 }else if(password === ''){
     swal("password Field is empty")
+}
+else if (!validateEmail(email)) {
+    swal("Enter a valid email");
 }
 else{
 
@@ -114,6 +123,7 @@ else{
                     <div className='name'>
                         <input
                         name='email'
+                        type={email}
                         onChange={(e) => (
                             setEmail(e.target.value)
                              )}
@@ -122,6 +132,7 @@ else{
                     <div className='name'>
                         <input
                         name='password'
+                        type={password}
                         onChange={(e) => (
                             setPassword(e.target.value)
                              )}

@@ -3,6 +3,7 @@ import Header from "../Admin/AdminHeader";
 import axios from "axios";
 import './studentPayment.css';
 import Dsahboard from '../AdminDashboard/Dsahboard';
+import { Link } from 'react-router-dom';
 
 
 class StudentPayment extends React.Component{
@@ -39,6 +40,8 @@ retrievePaymentH(){
        <Dsahboard/>
         <div class='SParea'>
             <h1>Payment History</h1>
+            <button  class="btn  btn-primary" style={{ textDecoration:'none' }}><Link to={"/stureport"}>Generate Report</Link></button>
+
 
             {this.state.paymentH.map((paymentH, index)=>
 
