@@ -59,7 +59,7 @@ export default function AdminLogin() {
                 <NotRegHeader />
                 <center>
                     <div className='regArea'>
-                        <h2>Login Now</h2>
+                        <h2>Admin Login</h2>
                         <div className='regui'>
 
                             <div className='name'>
