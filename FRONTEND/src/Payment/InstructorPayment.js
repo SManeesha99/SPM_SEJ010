@@ -3,8 +3,6 @@ import Header from '../Header/Header';
 import Dsahboard from '../AdminDashboard/Dsahboard';
 import './studentPayment.css';
 
-import Dsahboard from '../AdminDashboard/Dsahboard';
-
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
@@ -32,7 +30,7 @@ export default function InstructorPayment() {
             <h1>Instructor Payment History</h1>
 
             <h1>Payment History</h1>
-            <button  class="btn  btn-primary" style={{ marginBottom: 25 }}><Link to={"/insreport"}>Generate Report</Link></button>
+            <button  class="btn  btn-primary" style={{textDecoration:'none', color:'white', marginBottom: 25}}><Link to={"/insreport"}>Generate Report</Link></button>
 
 
             {input.map((userprof, index)=>
