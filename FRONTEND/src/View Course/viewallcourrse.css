@@ -1,3 +1,17 @@
 .report{
     padding: 50px 0px 0px 0px;
 }
+.greport{
+    width: 150px;
+    height: 40px;
+}
+
+.greport a {
+    color: white;
+    text-decoration: none;
+}
+.payarea{
+    width: 100%;
+    height: auto;
+    padding: 90px 10% 40px 25%;
+}

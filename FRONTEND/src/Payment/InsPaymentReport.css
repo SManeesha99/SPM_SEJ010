@@ -14,6 +14,11 @@
     border-color: #dee2e6;
   }
 
+  .greport a {
+    color: white;
+    text-decoration: none;
+}
+
   .btn-report {
     display: inline-block;
     font-weight: 400;

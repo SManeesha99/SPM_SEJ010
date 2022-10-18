@@ -17,3 +17,8 @@
     position: relative;
     top:30px;
 }
+
+.greport a {
+    color: white;
+    text-decoration: none;
+}

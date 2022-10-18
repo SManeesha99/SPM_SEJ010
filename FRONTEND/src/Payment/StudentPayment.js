@@ -42,7 +42,7 @@ retrievePaymentH(){
 
             <h1>Student Payment History</h1>
             <h1>Payment History</h1>
-            <button  class="btn  btn-primary" style={{ textDecoration:'none' }}><Link to={"/stureport"}>Generate Report</Link></button>
+            <button  class="btn  btn-primary greport" style={{ textDecoration:'none' }}><Link to={"/stureport"}>Generate Report</Link></button>
 
 
             {this.state.paymentH.map((paymentH, index)=>
