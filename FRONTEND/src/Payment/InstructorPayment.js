@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import Header from '../Header/Header';
+import Dsahboard from '../AdminDashboard/Dsahboard';
 import './studentPayment.css';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 export default function InstructorPayment() {
 
@@ -20,17 +22,20 @@ export default function InstructorPayment() {
   return (
     <div>
         <Header/>
+        <Dsahboard/>
         <div class='SParea'>
             <h1>Payment History</h1>
+            <button  class="btn  btn-primary" style={{ marginBottom: 25 }}><Link to={"/insreport"}>Generate Report</Link></button>
 
             {input.map((userprof, index)=>
             <div class='profArea'>
-            
+                
                 <div class='row prof'>
 
                     <div class='col-sm-9 profLeft'>
 
                         <div className='profileimg'>
+                            
 
                         </div>
                         <div className='nameNdate'>
