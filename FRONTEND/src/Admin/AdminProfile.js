@@ -64,7 +64,7 @@ const AdminDashboard =() =>{
         <Header/>
             {/* <SideNav/> */}
         
-          <div className="allcoursesviewArea">
+          <div className="allcoursesviewArea" >
             <div className="page-content">
               <div className="container-fluid">
                 <div className="row">
