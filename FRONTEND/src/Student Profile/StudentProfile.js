@@ -100,7 +100,7 @@ export default function StudentProfile() {
 
                 <h3><span>M</span>y <span>C</span>ourses</h3>
 
-            <>
+            {/* <>
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -110,9 +110,9 @@ export default function StudentProfile() {
         }}
         modules={[FreeMode, Pagination]}
         className="mySwiper swipperArea"
-      >
+      > */}
         {courses.map((scourse, index) =>
-        <SwiperSlide className="SwiperSlide">
+        // <SwiperSlide className="SwiperSlide">
 
 
 
@@ -168,10 +168,10 @@ export default function StudentProfile() {
 
 
 
-        </SwiperSlide>
+    //     </SwiperSlide>
         )}
-      </Swiper>
-    </>
+    {/* //   </Swiper>
+    // </> */}
 
             </div>
 
